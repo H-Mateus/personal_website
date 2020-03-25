@@ -52,5 +52,5 @@ The early results are promising and contributes to laying the groundwork for cre
 This internship gave me an insight into cutting edge biomedical research that has helped me further develop my skills as a scientist.
 
 During my PhD I have a new-found love of data science and a passion for R and Python.<br> 
-You can see the files I made to create this website on my [Github](https://github.com/H-Mateus/H-Mateus.github.io).
+You can see the files I made to create this website on my [Github](https://github.com/H-Mateus/personal_website).<br>
 My full CV is available [here](files/cv_2020-02-06.pdf)

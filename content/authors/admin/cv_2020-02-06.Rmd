@@ -1,0 +1,144 @@
+---
+title: "Gabriel Mateus Bernardo Harrington's resume"
+author: Gabriel Mateus Bernardo Harrington
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: false
+# uncomment this line to produce HTML and PDF in RStudio:
+knit: pagedown::chrome_print
+---
+
+Aside
+================================================================================
+
+
+![Gabriel Mateus Bernardo Harrington](https://intersog.com/wp-content/uploads/2016/07/pythonvsr-1024x484.jpg){width=80%}
+
+
+Contact Info {#contact}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-envelope"></i> g.m.bernardo.harrington@keele.ac.uk
+- <i class="fa fa-github"></i> [github.com/H-Mateus](https://github.com/H-Mateus)
+- <i class="fa fa-phone"></i> +1 000-000-0000
+- <i class="fa fa-link"></i> [h-mateus.github.io](https://h-mateus.github.io/)
+- For more information, please contact me via email.
+
+
+Skills {#skills}
+--------------------------------------------------------------------------------
+
+- Experienced in statistical analysis, statistical learning models, optimization methods and bioinformatics.
+
+- Full experience with next generation sequencing data analysis.
+
+- Highly skilled in R, Bash, Python, LaTeX
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+This resume was made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
+
+Last updated on `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+Gabriel Mateus Bernardo Harrington {#title}
+--------------------------------------------------------------------------------
+
+### Currently searching for a data science role
+
+Currently searching for a position that allows me to build tools leveraging 
+a combination of visualization, machine learning and software engineering 
+to help people explore and understand their data in new an useful ways.
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### Lancaster University
+
+BSc in Biological Sciences
+
+Lancaster, UK
+
+2016
+
+Thesis: 5-prime genotyping of Enterovirus 71
+
+### Keele University
+
+PhD in Regenerative Medicine
+
+Oswestry, UK
+
+2021
+
+Thesis: Prognostic modelling in spinal cord injury
+
+
+Research Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+### Graduate Research Internship
+
+Bionics Institute
+
+Melbourne, Australia
+
+2016 - 2017
+
+- Began instial work towards building a next-generation cochlea implant
+- Established the viability of using a viral vector for optogenetic modification of mouse cochlea
+  
+
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+### Data Scientist, intern
+
+temp
+
+temp, location
+
+2014
+
+::: concise
+- Taught R language to beginners. 
+- Wrote Shiny app demos.
+- Converted statistical tutorials from SPSS to R language.
+:::
+
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+### Introduction to R Language for Beginners.
+
+temp
+
+temp, location
+
+2014
+
+
+Selected Publications and Posters {data-icon=file}
+--------------------------------------------------------------------------------
+
+### [A Preliminary Cohort Study Assessing Routine Blood Analyte Levels and Neurological Outcome after Spinal Cord Injury](https://doi.org/10.1089/neu.2019.6495)
+
+Journal of Neurotrauma 2020 Jan 9
+
+N/A
+
+2020
+
+Sharon J. Brown, **Gabriel M.B. Harrington**, Charlotte H. Hulme, Rachel Morris, Anna Bennett, Wai-Hung Tsang, Aheed Osman, Joy Chowdhury, Naveen Kumar, and Karina T. Wright
+
+### next publication
+

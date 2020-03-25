@@ -44,7 +44,7 @@ user_groups:
 ---
 
 I am currently a PhD student at [Keele Univeristy](https://www.keele.ac.uk/research/). My research focuses on the prognosis of spinal cord injury. 
-I have been investigating the value of blood paramaters measured as part of routine care in predicting the level of neurological recovery a patient may have.
+I have been investigating the value of blood parameters measured as part of routine care in predicting the level of neurological recovery a patient may have.
 I am also using proteomic techniques and ELISAs to further analyse patient blood to identify potential novel biomarkers that may predict recovery.
 
 I graduated from the [Lancaster University](https://www.lancaster.ac.uk/) in with a BSc in biological sciences in 2016. 
@@ -54,6 +54,6 @@ I was able to complete a small project based on viral gene therapy in mice for o
 The early results are promising and contributes to laying the groundwork for creating a new generation of cochlear implant. 
 This internship gave me an insight into cutting edge biomedical research that has helped me further develop my skills as a scientist.
 
-During my PhD I have a new-found love of data science and a passion for R and Python.<br> 
+During my PhD I have developed a new-found love of data science, reproducible research and a passion for programming in R and Python.<br> 
 You can see the files I made to create this website on my [Github](https://github.com/H-Mateus/personal_website).<br>
 My full CV is available [here](/cv_2020-02-06.pdf)

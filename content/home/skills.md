@@ -31,5 +31,23 @@ subtitle = ""
   icon_pack = "fab"
   name = "Python"
   description = "60%"
+  
+[[feature]]
+  icon = "language"
+  icon_pack = "fas"
+  name = "Portuguese"
+  description = "50%"
+  
+[[feature]]
+  icon = "linux"
+  icon_pack = "fab"
+  name = "Arch-Linux"
+  description = "80%"
+  
+[[feature]]
+  icon = "markdown"
+  icon_pack = "fab"
+  name = "R-Markdown"
+  description = "90%"
 
 +++

@@ -93,7 +93,7 @@ Melbourne, Australia
 
 2016 - 2017
 
-- Began instial work towards building a next-generation cochlea implant
+- Began initial work towards building a next-generation cochlea implant
 - Established the viability of using a viral vector for optogenetic modification of mouse cochlea
   
 

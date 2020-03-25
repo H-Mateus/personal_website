@@ -53,4 +53,4 @@ This internship gave me an insight into cutting edge biomedical research that ha
 
 During my PhD I have a new-found love of data science and a passion for R and Python.<br> 
 You can see the files I made to create this website on my [Github](https://github.com/H-Mateus/personal_website).<br>
-My full CV is available [here](files/cv_2020-02-06.pdf)
+My full CV is available [here](../../../static/cv_2020-02-06.pdf)

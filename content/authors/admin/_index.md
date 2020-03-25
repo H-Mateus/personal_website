@@ -34,6 +34,9 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/H-Mateus
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/mateus-harrington-33657b68/
 superuser: true
 user_groups:
 - Researchers

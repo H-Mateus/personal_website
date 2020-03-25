@@ -18,18 +18,16 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
+  title = "PhD in Regenerative medicine"
+  company = "Keele University"
   company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  location = "Staffordshire, UK"
+  date_start = "2018-10-01"
   date_end = ""
   description = """
-  Responsibilities include:
+  Project title: 
+  Exploring the serum proteome of spinal cord injured patients: Identifying prognostic biomarkers and new treatment targets
   
-  * Analysing
-  * Modelling
-  * Deploying
   """
 
 [[experience]]
@@ -39,6 +37,15 @@ date_format = "Jan 2006"
   location = "Melbourne, Australia"
   date_start = "2016-08-01"
   date_end = "2017-03-31"
-  description = """Began initial work towards bulding a next-generation cochlea implant, and established the viablity of using a viral vector for optogenetic modification of mouse cochlea"""
+  description = """Began initial work towards building a next-generation cochlea implant by established the viability of using a viral vector for optogenetic modification of mouse cochlea"""
+  
+  [[experience]]
+  title = "BSc in Biological Sciences"
+  company = "Lancaster University"
+  company_url = "https://www.lancaster.ac.uk/"
+  location = "Lancaster, UK"
+  date_start = "2013-09-01"
+  date_end = "2016-07-01"
+  description = """Dissertation: 5-prime genotyping of enterovirus 71"""
 
 +++

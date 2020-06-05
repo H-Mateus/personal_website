@@ -7,7 +7,7 @@ categories: []
 tags:
   - Demo
   - R Markdown
-subtitle: ''
+subtitle: 'Getting a bit of practice with the blogdown workflow'
 summary: ''
 authors: []
 lastmod: '2020-06-05T12:07:18+01:00'
@@ -21,9 +21,10 @@ projects: []
 
 # Hello world!
 This is my very first blog post using an R Markdown file within blogdown.
-The other blog posts came with the template, but I'm leaving them there for now as they are great introductory resources for R Markdown, Hugo and the Academic template. 
 
-This post (and this whole site!) wouldn't be possible without the excellent teaching material from [Dr. Alison Hill](https://alison.rbind.io/), and the lovely people who made R and her many brilliant packages.
+The other blog posts on this site came with the template, but I'm leaving them there for now as they are great introductory resources for R Markdown, Hugo and the Academic template. 
+
+This post (and this whole site!) wouldn't be possible without the excellent teaching material from [Dr. Alison Hill](https://alison.rbind.io/), and the lovely people who made R and her many brilliant packages for which I offer all the gratitude I can muster!
 
 For practice, I'm going to demonstrate how we can include the following in a single post:
 
@@ -59,15 +60,17 @@ scatter + geom_point(aes(color=Species, shape=Species)) +
 
 Using markdown syntax `![Cute red panda](cute-red-panda-40.jpg)` to generate the image below:
 
-I'm still wondering how to get the caption to show up when I embed images in this way.
-
 <center> ![Cute red panda](cute-red-panda-40.jpg){width=500px} </center>
+
 <br>
 
 # 4) Using knitr
 
 We can also accomplish this with a code chunk, setting the following parameter `out.width="500px", fig.align='center'`
-```{r, out.width="500px", fig.align='center'}
+
+(ref:caption-example) We can do nice auto-numbered captions as well!
+
+```{r, fig.cap='(ref:caption-example)', out.width="500px", fig.align='center'}
 knitr::include_graphics("cute-red-panda-40.jpg")
 ```
 

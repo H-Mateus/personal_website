@@ -13,6 +13,7 @@ education:
 email: "g.m.bernardo.harrington@keele.ac.uk"
 interests:
 - Artificial Intelligence
+- Data Science
 - Programming
 - Linux
 - Spinal cord injury

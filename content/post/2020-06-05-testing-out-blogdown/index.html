@@ -1,0 +1,128 @@
+---
+title: Testing Out Blogdown
+author: Gabriel Mateus Bernardo Harrington
+date: '2020-06-05'
+slug: testing-out-blogdown
+categories: []
+tags:
+  - Demo
+  - R Markdown
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-06-05T12:07:18+01:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="hello-world" class="section level1">
+<h1>Hello world!</h1>
+<p>This is my very first blog post using an R Markdown file within blogdown.
+The other blog posts came with the template, but I’m leaving them there for now as they are great introductory resources for R Markdown, Hugo and the Academic template.</p>
+<p>This post (and this whole site!) wouldn’t be possible without the excellent teaching material from <a href="https://alison.rbind.io/">Dr. Alison Hill</a>, and the lovely people who made R and her many brilliant packages.</p>
+<p>For practice, I’m going to demonstrate how we can include the following in a single post:</p>
+<ol style="list-style-type: decimal">
+<li>R code</li>
+<li>A plot</li>
+<li>An image (via markdown syntax)</li>
+<li>An image (via <code>knitr::include_graphics</code>)</li>
+<li>A relative link to another section in my site</li>
+<li>Reading in data</li>
+</ol>
+</div>
+<div id="iris-data-set" class="section level1">
+<h1>1) Iris data set</h1>
+<p>Let’s make a plot using the <code>iris</code> data set in <code>ggplot2</code>.</p>
+<pre class="r"><code>library(ggplot2)
+# Dataset
+head(iris)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p><br></p>
+</div>
+<div id="plotting" class="section level1">
+<h1>2) Plotting</h1>
+<pre class="r"><code>scatter &lt;- ggplot(data=iris, aes(x= Sepal.Length, y = Sepal.Width))
+scatter + geom_point(aes(color=Species, shape=Species)) +
+  xlab(&quot;Sepal Length&quot;) + ylab(&quot;Sepal Width&quot;) +
+  theme_bw()</code></pre>
+<p><img src="/post/2020-06-05-testing-out-blogdown/index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><br></p>
+</div>
+<div id="embedding-a-bundled-image" class="section level1">
+<h1>3) Embedding a bundled image</h1>
+<p>Using markdown syntax <code>![Cute red panda](cute-red-panda-40.jpg)</code> to generate the image below:</p>
+<p>I’m still wondering how to get the caption to show up when I embed images in this way.</p>
+<center>
+<img src="cute-red-panda-40.jpg" title="fig:" width="500" alt="Cute red panda" />
+</center>
+<p><br></p>
+</div>
+<div id="using-knitr" class="section level1">
+<h1>4) Using knitr</h1>
+<p>We can also accomplish this with a code chunk, setting the following parameter <code>out.width="500px", fig.align='center'</code></p>
+<pre class="r"><code>knitr::include_graphics(&quot;cute-red-panda-40.jpg&quot;)</code></pre>
+<p><img src="cute-red-panda-40.jpg" width="500px" style="display: block; margin: auto;" /></p>
+<p><br></p>
+</div>
+<div id="relative-links" class="section level1">
+<h1>5) Relative links</h1>
+<p>I can also include some relative links to, for example, tell you to check out this <a href="../../../../home/../">other section of my site</a>!</p>
+<p>The structure of relative links is a bit confusing.
+When specifying the location of the page you want to get to, the reference point is the directory that your post lives in (and NOT the project root directory).</p>
+<p><br></p>
+</div>
+<div id="reading-in-data" class="section level1">
+<h1>6) Reading in data</h1>
+<p>Let’s read in some topical data for England and Wales, and make another plot.</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ tibble  3.0.1     ✓ dplyr   0.8.5
+## ✓ tidyr   1.0.3     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0
+## ✓ purrr   0.3.4</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>covid_deaths &lt;- read_csv(&quot;covid_deaths_by_age_2020-06-05.csv&quot;)</code></pre>
+<pre><code>## Warning: Missing column names filled in: &#39;X2&#39; [2], &#39;X3&#39; [3]</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   `The rate of non-COVID-19 deaths per 100,000 is highest in the 90 years and over age category, among whom the rate of deaths involving COVID-19 is also highest` = col_character(),
+##   X2 = col_character(),
+##   X3 = col_character()
+## )</code></pre>
+<pre class="r"><code># let&#39;s select the rows of actual data
+covid_deaths_filtered &lt;- covid_deaths[7:16,]
+# set column names 
+names(covid_deaths_filtered) &lt;- c(&quot;age_group&quot;, &quot;non-covid_excess_mortality&quot;, &quot;covid_excess_mortality&quot;)
+# convert to long-format dataframe
+covid_deaths_long &lt;- pivot_longer(covid_deaths_filtered, -age_group, names_to = &quot;mortality_type&quot;, values_to = &quot;deaths&quot;)
+# convert deaths to a numeric
+covid_deaths_long$deaths &lt;- as.numeric(covid_deaths_long$deaths)
+# plot 
+ggplot(covid_deaths_long, aes(x = age_group, y = deaths)) +
+  geom_bar(aes(fill = mortality_type), stat=&quot;identity&quot;, position=position_dodge()) +
+  ylab(&quot;Deaths registered per 100,000&quot;) +
+  xlab(&quot;Age Group&quot;) +
+  theme_bw() +
+  theme(legend.position = &quot;top&quot;,
+        legend.direction = &quot;horizontal&quot;) +
+  scale_fill_manual(name = &quot;&quot;, 
+                    labels = c(&quot;COVID-19 mortality rate&quot;, &quot;Non-COVID-19 excess mortality rate&quot;), 
+                    values = c(&quot;tomato&quot;, &quot;steelblue&quot;)) +
+  labs(caption = &quot;Source: Office for National Statistics&quot;)</code></pre>
+<p><img src="/post/2020-06-05-testing-out-blogdown/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>

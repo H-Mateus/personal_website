@@ -95,21 +95,29 @@ covid_deaths <- read_csv("covid_deaths_by_age_2020-06-05.csv")
 # let's select the rows of actual data
 covid_deaths_filtered <- covid_deaths[7:16,]
 # set column names 
-names(covid_deaths_filtered) <- c("age_group", "non-covid_excess_mortality", "covid_excess_mortality")
+names(covid_deaths_filtered) <- c("age_group", 
+                                  "non-covid_excess_mortality", 
+                                  "covid_excess_mortality")
 # convert to long-format dataframe
-covid_deaths_long <- pivot_longer(covid_deaths_filtered, -age_group, names_to = "mortality_type", values_to = "deaths")
+covid_deaths_long <- pivot_longer(covid_deaths_filtered, 
+                                  -age_group, 
+                                  names_to = "mortality_type", 
+                                  values_to = "deaths")
 # convert deaths to a numeric
 covid_deaths_long$deaths <- as.numeric(covid_deaths_long$deaths)
 # plot 
 ggplot(covid_deaths_long, aes(x = age_group, y = deaths)) +
-  geom_bar(aes(fill = mortality_type), stat="identity", position=position_dodge()) +
+  geom_bar(aes(fill = mortality_type), 
+           stat="identity", 
+           position=position_dodge()) +
   ylab("Deaths registered per 100,000") +
   xlab("Age Group") +
   theme_bw() +
   theme(legend.position = "top",
         legend.direction = "horizontal") +
   scale_fill_manual(name = "", 
-                    labels = c("COVID-19 mortality rate", "Non-COVID-19 excess mortality rate"), 
+                    labels = c("COVID-19 mortality rate", 
+                               "Non-COVID-19 excess mortality rate"), 
                     values = c("tomato", "steelblue")) +
   labs(caption = "Source: Office for National Statistics")
 ```

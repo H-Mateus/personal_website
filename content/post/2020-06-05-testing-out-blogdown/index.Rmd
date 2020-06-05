@@ -87,7 +87,7 @@ When specifying the location of the page you want to get to, the reference point
 
 # 6) Reading in data
 
-Let's read in some topical data for England and Wales, and make another plot.
+Let's flex our R muscles a little more by reading in some topical data, and making a fancier plot.
 
 ```{r}
 library(tidyverse)

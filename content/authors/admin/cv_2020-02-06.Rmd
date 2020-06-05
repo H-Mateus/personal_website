@@ -23,18 +23,18 @@ Contact Info {#contact}
 - <i class="fa fa-envelope"></i> g.m.bernardo.harrington@keele.ac.uk
 - <i class="fa fa-github"></i> [github.com/H-Mateus](https://github.com/H-Mateus)
 - <i class="fa fa-phone"></i> +1 000-000-0000
-- <i class="fa fa-link"></i> [h-mateus.github.io](https://h-mateus.github.io/)
+- <i class="fa fa-link"></i> [https://gmbernardoharrington.netlify.app/](https://gmbernardoharrington.netlify.app/)
 - For more information, please contact me via email.
 
 
 Skills {#skills}
 --------------------------------------------------------------------------------
 
-- Experienced in statistical analysis, statistical learning models, optimization methods and bioinformatics.
+- Experienced in statistical analysis, statistical learning models, electronic health data and bioinformatics.
 
-- Full experience with next generation sequencing data analysis.
+- Full experience with proteomic and electronic health data analysis.
 
-- Highly skilled in R, Bash, Python, LaTeX
+- Highly skilled in R, Bash, Python, LaTeX, SQL
 
 
 Disclaimer {#disclaimer}

@@ -41,7 +41,7 @@ subtitle = ""
 [[feature]]
   icon = "linux"
   icon_pack = "fab"
-  name = "Arch-Linux"
+  name = "Linux"
   description = "80%"
   
 [[feature]]

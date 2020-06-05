@@ -89,6 +89,8 @@ When specifying the location of the page you want to get to, the reference point
 
 Let's flex our R muscles a little more by reading in some topical data, and making a fancier plot.
 
+The data is total non-COVID-19 excess deaths per 100,000 and deaths involving COVID-19 per 100,000 for each 10-year age group from England and Wales, Week 11 to Week 18.
+
 ```{r}
 library(tidyverse)
 covid_deaths <- read_csv("covid_deaths_by_age_2020-06-05.csv")
@@ -122,3 +124,26 @@ ggplot(covid_deaths_long, aes(x = age_group, y = deaths)) +
   labs(caption = "Source: Office for National Statistics")
 ```
 
+If you're curious about explanations surrounding the increase in non-COVID-19 related deaths [this article](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/articles/analysisofdeathregistrationsnotinvolvingcoronaviruscovid19englandandwales28december2019to1may2020/technicalannex) lists some theories. 
+
+Interestingly, in the age groups up to 50 the non-COVID-19 death rate has declined slightly
+
+```{r}
+print(covid_deaths_filtered)
+```
+
+And for a little context for these numbers, the [Royal Society for the Prevention of Accidents](https://www.rospa.com/leisure-safety/advice/lightning/) reports that 30-60 people are stuck by lightning each year. 
+
+The [Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2019) estimated the population in the UK to be 66,796,807 in mid-2019.
+So if we take then high end of 60 lightning strikes, the odds of getting stuck by lightning in the UK is:
+
+```{r}
+# stop scientific notation
+options(scipen=999)
+# calculate risk per 100,000
+risk = (60 / 66796807) * 100000
+# print result
+print(paste("The inidence rate of lightning strikes per 100,000 = ", round(risk, 5), sep = ""))
+```
+
+So if we assume all humans are equally likely to get stuck by lightning in a given year, then it's several times more likely for a 0-9 year old to get stuck by lightning than die of COVID-19.

@@ -143,7 +143,7 @@ options(scipen=999)
 # calculate risk per 100,000
 risk = (60 / 66796807) * 100000
 # print result
-print(paste("The inidence rate of lightning strikes per 100,000 = ", round(risk, 5), sep = ""))
+print(paste("The incidence rate of lightning strikes per 100,000 = ", round(risk, 5), sep = ""))
 ```
 
 So if we assume all humans are equally likely to get stuck by lightning in a given year, then it's several times more likely for a 0-9 year old to get stuck by lightning than die of COVID-19.

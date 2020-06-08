@@ -94,12 +94,12 @@ When specifying the location of the page you want to get to, the reference point
 <p>Let’s flex our R muscles a little more by reading in some topical data, and making a fancier plot.</p>
 <p>The data is total non-COVID-19 excess deaths per 100,000 and deaths involving COVID-19 per 100,000 for each 10-year age group from England and Wales, Week 11 to Week 18.</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
 ## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0
 ## ✓ purrr   0.3.4</code></pre>
-<pre><code>## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>covid_deaths &lt;- read_csv(&quot;covid_deaths_by_age_2020-06-05.csv&quot;)</code></pre>
@@ -163,7 +163,7 @@ options(scipen=999)
 # calculate risk per 100,000
 risk = (60 / 66796807) * 100000
 # print result
-print(paste(&quot;The inidence rate of lightning strikes per 100,000 = &quot;, round(risk, 5), sep = &quot;&quot;))</code></pre>
-<pre><code>## [1] &quot;The inidence rate of lightning strikes per 100,000 = 0.08982&quot;</code></pre>
+print(paste(&quot;The incidence rate of lightning strikes per 100,000 = &quot;, round(risk, 5), sep = &quot;&quot;))</code></pre>
+<pre><code>## [1] &quot;The incidence rate of lightning strikes per 100,000 = 0.08982&quot;</code></pre>
 <p>So if we assume all humans are equally likely to get stuck by lightning in a given year, then it’s several times more likely for a 0-9 year old to get stuck by lightning than die of COVID-19.</p>
 </div>

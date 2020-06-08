@@ -1,0 +1,67 @@
+---
+title: Joint CDT Conference 2020
+author: Gabriel Mateus Bernardo Harrington
+date: '2020-06-08'
+slug: joint-cdt-conference-2020
+categories:
+  - Academia
+tags:
+  - Poster
+  - Academic
+  - R Markdown
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-06-08T15:36:43+01:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="welcome" class="section level1">
+<h1>Welcome!</h1>
+<p>This post relates to the poster I presented at the virtual Joint CDT conference of 2020.</p>
+</div>
+<div id="poster-formatting" class="section level1">
+<h1>Poster formatting</h1>
+<p>If anyone is actually reading this I’m guessing this is what caught your attention.</p>
+<p>The poster was made in R-Markdown with a great package called <code>posterdown</code> by <a href="https://github.com/brentthorne/posterdown">Brent Thorne</a> and follows the formatting rules outlined by <a href="https://twitter.com/mikemorrison">Mike Morrison</a></p>
+<p>Mike explains his rationale in this <a href="https://www.youtube.com/watch?v=1RwJbhkCA58&amp;feature=youtu.be">video</a>, but the goal is to refocus scientific posters to emphasize the key finding of a piece of work in a easily digestible way.
+This format has a lot less information than the typical wall of text and data found in most scientific posters, but that’s the whole point!</p>
+<p>Many people won’t read or remember these kinds of walls of information and frankly likely don’t care.
+If someone <strong>does</strong> want more information they can use the QR code included in the format or ask the poster author.</p>
+<p>Typically this QR code would link to a publication of the work if it’s available.
+This is much easier to both make and read the poster, hopefully facilitating more communication of science by making it possible to digest more posters, which is the whole point of a conference.</p>
+<p>This rest of this post is non-technical explanation of the work my poster presents.
+We hope to publish this work later this year so if/when it goes up I’ll update this post with a link to that.</p>
+</div>
+<div id="proteomics-in-spinal-cord-injury-recovery" class="section level1">
+<h1>Proteomics in spinal cord injury recovery</h1>
+<p>So the poster presents some ongoing proteomic analysis which investigates recovery following spinal cord injury (SCI).</p>
+<p>Plasma was collected from 17 SCI patients within 2 weeks post-injury and approximately 3 months post-injury.
+All these patients were AIS grade C, meaning they had “medium” severity SCI in terms of neurological function loss.</p>
+<p>Of these 17 patients, 10 experienced an AIS grade conversion, meaning they had significant recovery of neurological function.
+The remaining 7 patients did not experience this level of neurological recovery.</p>
+<p>In an effort to investigate why some patients recovered much more than others we used the plasma collected to conduct some <a href="https://en.wikipedia.org/wiki/Proteomics">proteomic</a> experiments.</p>
+</div>
+<div id="data-analysis" class="section level1">
+<h1>Data analysis</h1>
+<p>We choose to do an 4-plex isobaric tag for relative and absolute quantitation (<a href="https://en.wikipedia.org/wiki/Isobaric_tag_for_relative_and_absolute_quantitation">iTRAQ</a>) experiment.
+This means we’re comparing the relative levels of proteins in 4 groups, where each group is a pooled sample (from each patients in this case).</p>
+<p>Our groups were as follows:</p>
+<ul>
+<li>AIS conversion patients (“improvers”) at 2 weeks</li>
+<li>AIS conversion patients (“improvers”) at 3 months</li>
+<li>AIS stable patients (“non-improvers”) at 2 weeks</li>
+<li>AIS stable patients (“non-improvers”) at 3 months</li>
+</ul>
+<p>As we don’t have a <a href="https://en.wikipedia.org/wiki/Mass_spectrometry">mass spectrometer</a> for proteomic work at Oswestry, we sent our pooled to a lab at <a href="https://www.st-andrews.ac.uk/">St. Andrews</a> lab.
+They also did the raw data processing with the mass spec vendor software called ProteinPilot.
+This is where the data in the poster figure comes from.</p>
+</div>

@@ -34,7 +34,7 @@ projects: []
 <p>The poster was made in R-Markdown with a great package called <code>posterdown</code> by <a href="https://github.com/brentthorne/posterdown">Brent Thorne</a> and follows the formatting rules outlined by <a href="https://twitter.com/mikemorrison">Mike Morrison</a></p>
 <p>Mike explains his rationale in this <a href="https://www.youtube.com/watch?v=1RwJbhkCA58&amp;feature=youtu.be">video</a>, but the goal is to refocus scientific posters to emphasize the key finding of a piece of work in a easily digestible way.
 This format has a lot less information than the typical wall of text and data found in most scientific posters, but that’s the whole point!</p>
-<p>Many people won’t read or remember these kinds of walls of information and frankly likely don’t care.
+<p>Many people won’t read or remember these kinds of walls of information and frankly, they likely don’t care about the highly specific details.
 If someone <strong>does</strong> want more information they can use the QR code included in the format or ask the poster author.</p>
 <p>Typically this QR code would link to a publication of the work if it’s available.
 This is much easier to both make and read the poster, hopefully facilitating more communication of science by making it possible to digest more posters, which is the whole point of a conference.</p>
@@ -61,7 +61,37 @@ This means we’re comparing the relative levels of proteins in 4 groups, where 
 <li>AIS stable patients (“non-improvers”) at 2 weeks</li>
 <li>AIS stable patients (“non-improvers”) at 3 months</li>
 </ul>
-<p>As we don’t have a <a href="https://en.wikipedia.org/wiki/Mass_spectrometry">mass spectrometer</a> for proteomic work at Oswestry, we sent our pooled to a lab at <a href="https://www.st-andrews.ac.uk/">St. Andrews</a> lab.
+<p>As we don’t have a <a href="https://en.wikipedia.org/wiki/Mass_spectrometry">mass spectrometer</a> for proteomic work at Oswestry, we sent our pooled samples to a lab at <a href="https://www.st-andrews.ac.uk/">St. Andrews</a>.
 They also did the raw data processing with the mass spec vendor software called ProteinPilot.
 This is where the data in the poster figure comes from.</p>
+</div>
+<div id="reproducible-research" class="section level1">
+<h1>Reproducible research</h1>
+<p>Reproducible research is <a href="https://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/">important</a>.</p>
+<p>No <a href="https://lgatto.github.io/rr-publ/">really</a>. It matters.</p>
+<p>You may think this is obvious.
+Patronising even.</p>
+<p>However, even at my young age, I’ve seen many a scientist who think this only applies to their experiments.
+Of course, your experiments should have well documented methods that allow others to reproduce your work and hopefully get the same result.
+But what about your data analysis?</p>
+<p>When we use software like Microsoft Excel or SPSS, there is no record of exactly what we’ve done.
+Sure you can write some like “A T-test was performed” in your method but there’s nothing that tells me precisely how you went from the raw data your experiments generate to the graphs and tables I see in your paper.</p>
+<p>This can be especially problematic in a case like this proteomic work.
+The software ProteinPilot was create by the vendor who sells the mass spec.
+It takes the data the mass spec generates and gives nice, easy to work with fold-changes of proteins between our groups.
+It’s even generous enough to give the user some options when it process the data.</p>
+<p>But it isn’t clear exactly what the software <strong>does</strong> to the data.
+There are many important steps in processing this data, in turning m/z values and their intensities into peptides, then proteins, and correcting for false discovery rates.
+There are many more important steps which could dramatically change your results, and each presents a forest of a thousand paths one could take.
+But the software just does it all for you.
+It even uses some fancy proprietary algorithms in it’s protein identification!</p>
+<p>Now if I wanted to go back 10 years later, and do the same analysis on the same data, would I be able to?
+Would this software even exist?
+Would the algorithm have been quietly tweaked in the mean time?
+How can any academic scrutinize what I’ve done if I have no clue what assumptions this software makes behind the scenes?</p>
+<p>It’s for these reasons that I’m currently looking into redoing the processing of the raw data in R.
+This will allow me to have a script that I and others can use to properly understand what was done.
+This is also a big undertaking as I have no formal training in bioinformatics but I want to try regardless.
+Simply because I firmly believe that scientific research should be reproducible.
+And a little because I’m a nerd who enjoys figuring this kind of thing out.</p>
 </div>

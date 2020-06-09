@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Proteomic analysis of bloods from SCI patients</title>
+
+<script src="sci_proteomics_pagedown_2020-06-08_files/header-attrs-2.2/header-attrs.js"></script>
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rasa' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 46in 32in;
+margin: 0;
+padding: 0;
+background-color: #ffffff;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 46in;
+height: 32in;
+text-align: justify;
+font-size: 45px;
+background-color: #FFFFFF;
+color: #000000;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #00FA21E924;
+color: #1AD91A;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #1AD91A20;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 20px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 46in;
+height: 32in;
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%;
+-webkit-column-rule-style: solid;
+-moz-column-rule-style: solid;
+column-rule-style: solid;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+-webkit-column-gap: 50%;
+background-color: #ffffff;
+font-family: Rasa;
+color: #000000;
+}
+span.citation {
+  color: #00FA21E9;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #00FA21E9;
+}
+#title {
+font-size: 125pt;
+text-align: left;
+margin: 0;
+line-height: 90%;
+border-bottom: 0;
+}
+#author {
+color: #1AD91A;
+margin: 0;
+line-height: 90%;
+font-size: 1.17em;
+}
+#affiliation {
+padding-top: 1em;
+color: #00000060;
+font-style: italic;
+font-size: 25px;
+margin: 0;
+}
+sup {
+color: #cc0000;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #00FA21E9;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+}
+.outer h1 {
+text-align: center;
+margin-top: 0.5in;
+margin-bottom: 0.5in;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p {
+color: #000000;
+}
+.outer ol {
+text-align: left;
+}
+.main {
+width: calc(46in / 2);
+height: 32in;
+position: absolute;
+margin-left: calc(46in / 4);
+background-color: #1AD91A;
+color: #FFFFFF;
+font-family: Roboto;
+background-image: linear-gradient(#1AD91A 50%, #00FA21E9);
+}
+.main strong {
+color: #FFFFFF;
+}
+img.main-img-left {
+width: 20%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+img.main-img-right {
+width: 18%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+padding-top: 20%;
+font-size: 150px;
+text-align: left;
+}
+.fab {
+color: #00000060;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000060;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000060;
+font-size: 35px;
+}
+.envelope {
+color: #00000060;
+font-size: 5px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 46in;
+height: 32in;
+padding: 0cm;
+background-color: #ffffff;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+.main p {
+  padding-left: 30mm;
+  padding-right: 30mm;
+}
+.main_pic {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.orcid img {
+  width: 3%;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="column outer">
+<br>
+<div class="title section">
+<h1 id="title">Proteomic analysis of bloods from SCI patients</h1>
+<br>
+<h3 id="author" class="author">
+
+Gabriel Mateus Bernardo Harrington<sup> 1, <a class="orcid" href="https://orcid.org/0000-0001-6075-3619"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup><br>
+<a class="twitter" href="https://mobile.twitter.com/Hmateus4"><i class="fab fa-twitter"></i>&nbsp;&nbsp;@Hmateus4</a><br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:g.m.bernardo.harrington@keele.ac.uk" class="email">g.m.bernardo.harrington@keele.ac.uk</a> <br>
+   </h3>
+
+<h5 id="author_extra" class="author_extra">
+ Charlotte Hulme<sup>1</sup>
+ Paul Cool<sup>1, 2</sup>
+ Karina Wright<sup>1</sup>
+</h5>
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> Department of Pharmacy and Bioengineering, Keele University<br> <sup>2</sup> Robert Jones and Agnes Hunt Orthopaedic Hospital NHS Foundation Trust
+</p>
+
+</div>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<ul>
+<li>Neurological outcomes following spinal cord injury (SCI) are currently difficult to predict.</li>
+<li>Initial American Spinal Injury Association (ASIA) Impairment Scale (AIS) grade can give an estimate of outcome, but this is unreliable.</li>
+<li>This has stoked interest in biomarker discovery</li>
+<li>This study compared the proteomes from the plasma of AIS grade C patients who experience an AIS grade conversion (“improvers”, n=10) and those who did not (“non-improvers”, n=7).</li>
+</ul>
+</div>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<ul>
+<li>This study used iTRAQ labelling MALDI TOF/TOF mass spectrometry to investigate potential biomarkers from blood with an unbiased methodology.</li>
+<li>Plasma was collected within 2 weeks (“acute”) of injury and at approximately 3 months (“sub-acute”) post-injury.</li>
+<li>Data analysis was initially conducted with the ProteinPilot software, but is currently being re-examined via open-source packages in the R programming language, for greater reproducibility.</li>
+</ul>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<ul>
+<li>Data analysis is ongoing.</li>
+<li>Initial examination indicates several proteins with large fold changes between improvers and non-improvers at both time points (Figures <a href="#fig:fold-change-plots-acute">1</a> &amp; <a href="#fig:fold-change-plots-subacute">2</a>).</li>
+<li>The proteins retinol-binding protein (RPB-4), serum amyloid A-1 protein (SAA1), apolipoprotein A-IV precursor (APOA4) and alpha-2-macroglobulin precursor (A2M) were selected for enzyme-linked immunosorbent assay (ELISA) validation based on the fold change and biological relevance.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:fold-change-plots-acute"></span>
+<img src="sci_proteomics_pagedown_2020-06-08_files/figure-html/fold-change-plots-acute-1.png" alt="Change in relative plasma protein expresion at less than two weeks post-injury between AIS C grade patients who experienced a grade conversion and those who did not." width="80%" />
+<p class="caption">
+Figure 1: Change in relative plasma protein expresion at less than two weeks post-injury between AIS C grade patients who experienced a grade conversion and those who did not.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:fold-change-plots-subacute"></span>
+<img src="sci_proteomics_pagedown_2020-06-08_files/figure-html/fold-change-plots-subacute-1.png" alt="Change in relative plasma protein expresion at 3 months post-injury between AIS C grade patients who experienced a grade conversion and those who did not." width="80%" />
+<p class="caption">
+Figure 2: Change in relative plasma protein expresion at 3 months post-injury between AIS C grade patients who experienced a grade conversion and those who did not.
+</p>
+</div>
+</div>
+<div id="discussion" class="section level1">
+<h1>Discussion</h1>
+<ul>
+<li>The data observed thus far demonstrates a clear and substantial difference in the proteomes of SCI patients who experience a positive AIS grade conversion and those who do not.</li>
+<li>Whilst data analysis is ongoing, preliminary examination suggests that some of the proteins may be implicated with liver function, which corroborates the results found in our previous studies.<span class="citation">(Brown et al. <a href="#ref-brown_preliminary_2019-1" role="doc-biblioref">2019</a>)</span></li>
+<li>More research is needed to establish whether or not the relationship between SCI recovery and liver function is causal.</li>
+</ul>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references hanging-indent">
+<div id="ref-brown_preliminary_2019-1">
+<p>Brown, Sharon, Gabriel Mateus Bernardo Harrington, Charlotte Hulme, Rachel Morris, Anna Bennett, Wai-Hung Tsang, Aheed Osman, Joy Chowdhury, Naveen Kumar, and Karina Wright. 2019. “A Preliminary Cohort Study Assessing Routine Blood Analyte Levels and Neurological Outcome Following Spinal Cord Injury.” <em>Journal of Neurotrauma</em>, July. <a href="https://doi.org/10.1089/neu.2019.6495">https://doi.org/10.1089/neu.2019.6495</a>.</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="main">
+<p>Spinal cord injury patients who experience an AIS grade conversion have a distinct proteome compared to those who do not.<br><br> <img src="" class="main_pic" /></p>
+<img src="sci_proteomics_pagedown_2020-06-08_files/cdt_2020_poster_qr_code.png" class="main-img-left" />
+<img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png" class="main-img-right" />
+</div>
+</div>
+
+
+
+</body>
+</html>

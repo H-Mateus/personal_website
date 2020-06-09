@@ -23,7 +23,7 @@ projects: []
 
 # Welcome!
 
-This post relates to the poster I presented at the virtual Joint CDT conference of 2020.
+This post relates to the [poster](sci_proteomics_pagedown_2020-06-08.html) I presented at the virtual Joint CDT conference of 2020.
 
 # Poster formatting
 

@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
     # set it to true for a self-contained HTML page but it'll take longer to render
-    self_contained: false
+    self_contained: true
 # uncomment this line to produce HTML and PDF in RStudio:
 knit: pagedown::chrome_print
 ---
@@ -21,10 +21,9 @@ Contact Info {#contact}
 --------------------------------------------------------------------------------
 
 - <i class="fa fa-envelope"></i> g.m.bernardo.harrington@keele.ac.uk
-- <i class="fa fa-github"></i> [github.com/H-Mateus](https://github.com/H-Mateus)
-- <i class="fa fa-phone"></i> +1 000-000-0000
-- <i class="fa fa-link"></i> [https://gmbernardoharrington.netlify.app/](https://gmbernardoharrington.netlify.app/)
-- For more information, please contact me via email.
+- <i class="fa fa-github"></i> [GitHub: H-Mateus](https://github.com/H-Mateus)
+- <i class="fa fa-home"></i> [Personal website](https://gmbernardoharrington.netlify.app/)
+- For more information, please see my personal website linked above, or contact me via email.
 
 
 Skills {#skills}
@@ -96,7 +95,7 @@ Melbourne, Australia
 - Began initial work towards building a next-generation cochlea implant
 - Established the viability of using a viral vector for optogenetic modification of mouse cochlea
   
-
+```{r eval=FALSE, include=FALSE}
 Professional Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
@@ -125,6 +124,9 @@ temp
 temp, location
 
 2014
+```
+
+
 
 
 Selected Publications and Posters {data-icon=file}
@@ -139,6 +141,4 @@ N/A
 2020
 
 Sharon J. Brown, **Gabriel M.B. Harrington**, Charlotte H. Hulme, Rachel Morris, Anna Bennett, Wai-Hung Tsang, Aheed Osman, Joy Chowdhury, Naveen Kumar, and Karina T. Wright
-
-### next publication
 

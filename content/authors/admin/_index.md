@@ -38,6 +38,9 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/mateus-harrington-33657b68/
+- icon: orcid
+  icon_pack: fab
+  link: https://orcid.org/0000-0001-6075-3619
 superuser: true
 user_groups:
 - Researchers
@@ -57,4 +60,4 @@ This internship gave me an insight into cutting edge biomedical research that ha
 
 During my PhD I have developed a new-found love of data science, reproducible research and a passion for programming in R and Python.<br> 
 You can see the files I made to create this website on my [Github](https://github.com/H-Mateus/personal_website).<br>
-My full CV is available [here](/cv_2020-02-06.pdf)
+My full CV is available [here](/cv_2020-02-06.pdf) 

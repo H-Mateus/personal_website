@@ -13,7 +13,7 @@ authors: []
 lastmod: '2020-06-05T12:07:18+01:00'
 featured: no
 image:
-  caption: ''
+  caption: 'Image credit: [**Medium**](https://medium.com/@eraylson_/the-hello-world-in-data-science-and-machine-learning-32b85946eb67)'
   focal_point: ''
   preview_only: no
 projects: []
@@ -22,7 +22,7 @@ projects: []
 # Hello world!
 This is my very first blog post using an R Markdown file within blogdown.
 
-The other blog posts on this site came with the template, but I'm leaving them there for now as they are great introductory resources for R Markdown, Hugo and the Academic template. 
+The three prior blog posts on this site came with the template, but I'm leaving them there for now as they are great introductory resources for using [Academic](https://sourcethemes.com/academic/). 
 
 This post (and this whole site!) wouldn't be possible without the excellent teaching material from [Dr. Alison Hill](https://alison.rbind.io/), and the lovely people who made R and her many brilliant packages for which I offer all the gratitude I can muster!
 
@@ -68,7 +68,7 @@ Using markdown syntax `![Cute red panda](cute-red-panda-40.jpg)` to generate the
 
 We can also accomplish this with a code chunk, setting the following parameter `out.width="500px", fig.align='center'`
 
-(ref:caption-example) We can do nice auto-numbered captions as well!
+(ref:caption-example) We can do nice auto-numbered captions as well! Image credit: [**Unsplash**](https://unsplash.com/photos/QZwf5yNopUo)
 
 ```{r, fig.cap='(ref:caption-example)', out.width="500px", fig.align='center'}
 knitr::include_graphics("cute-red-panda-40.jpg")

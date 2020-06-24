@@ -71,6 +71,12 @@ As we don't have a [mass spectrometer](https://en.wikipedia.org/wiki/Mass_spectr
 They also did the raw data processing with the mass spec vendor software called ProteinPilot.
 This is where the data in the poster figure comes from.
 
+Of the proteins identified in this initial analysis, some of them are associated with liver function, which is of particular interest as our [previous work](https://www.liebertpub.com/doi/10.1089/neu.2019.6495) has identified liver function as being predictive of recovery following SCI.
+This data also shows large differences in the proteomes (the abundance of given proteins) of patients who experience a large improvement as compared to those who do not.
+The STRING plots indicate that the proteins identified are all related in function, and are largely pathways associated with the immune system.
+
+Having said all this, I'm am generally distrustful of proprietary, closed-source software, as it isn't clear what the software actually does to your data, which is not conducive to reproducibility.
+
 # Reproducible research
 
 Reproducible research is [important](https://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/).
@@ -80,12 +86,12 @@ No [really](https://lgatto.github.io/rr-publ/). It matters.
 You may think this is obvious.
 Patronising even.
 
-However, even at my young age, I've seen many a scientist who think this only applies to their experiments.
+However, even at this early stage in my career, I've seen many a scientist who think this only applies to their experiments.
 Of course, your experiments should have well documented methods that allow others to reproduce your work and hopefully get the same result.
 But what about your data analysis?
 
 When we use software like Microsoft Excel or SPSS, there is no record of exactly what we've done.
-Sure you can write some like "A T-test was performed" in your method but there's nothing that tells me precisely how you went from the raw data your experiments generate to the graphs and tables I see in your paper.
+Sure you can write something like "A T-test was performed" in your method but there's nothing that tells me precisely how you went from the raw data your experiments generate to the graphs and tables I see in your paper/poster/talk.
 
 This can be especially problematic in a case like this proteomic work.
 The software ProteinPilot was create by the vendor who sells the mass spec.
@@ -103,7 +109,7 @@ Would this software even exist?
 Would the algorithm have been quietly tweaked in the mean time?
 How can any academic scrutinize what I've done if I have no clue what assumptions this software makes behind the scenes?
 
-It's for these reasons that I'm currently looking into redoing the processing of the raw data in R.
+It's for these reasons that I'm currently looking into redoing the processing of the raw data in R and/or other open-source tools.
 This will allow me to have a script that I and others can use to properly understand what was done.
 This is also a big undertaking as I have no formal training in bioinformatics but I want to try regardless. 
 Simply because I firmly believe that scientific research should be reproducible.

@@ -45,6 +45,7 @@ superuser: true
 user_groups:
 - Researchers
 - Visitors
+description: "Personal website of Gabriel Mateus Bernardo Harrington"
 ---
 
 I am currently a PhD student at [Keele Univeristy](https://www.keele.ac.uk/research/). My research focuses on the prognosis of spinal cord injury. 

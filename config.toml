@@ -71,5 +71,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   publication_type = "publication_types"
   author = "authors"
 
+googleAnalytics = "UA-171428188-1"
+
 [permalinks]
     post = "/:year/:month/:day/:slug/"

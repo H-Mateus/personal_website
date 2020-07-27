@@ -17,7 +17,7 @@ interests:
 - Programming
 - Linux
 - Spinal cord injury
-name: 
+name: Gabriel Mateus Bernardo Harrington
 organizations:
 - name: Keele Univeristy
   url: ""

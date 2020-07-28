@@ -18,36 +18,36 @@ subtitle = ""
   icon = "r-project"
   icon_pack = "fab"
   name = "R"
-  description = "90%"
+  description = "My first programming language! It has it's quirks but I love it. RStudio is my happy place (>‿♥)"
   
 [[feature]]
   icon = "chart-line"
   icon_pack = "fas"
   name = "Statistics"
-  description = "80%"  
+  description = "There's always more to learn, but I'm pretty comfortable building and validating models"  
   
 [[feature]]
   icon = "python"
   icon_pack = "fab"
   name = "Python"
-  description = "60%"
+  description = "My second programming language! It also has it's quirks but I also love it (─‿‿─)"
   
 [[feature]]
   icon = "language"
   icon_pack = "fas"
   name = "Portuguese"
-  description = "50%"
+  description = "Intermediate level"
   
 [[feature]]
   icon = "linux"
   icon_pack = "fab"
   name = "Linux"
-  description = "80%"
+  description = "I've been daily driving Linux for over a year now and it's been great! BTW, I use Arch (¬‿¬)"
   
 [[feature]]
   icon = "markdown"
   icon_pack = "fab"
   name = "R-Markdown"
-  description = "90%"
+  description = "Reproducible research FTW ╍●‿●╍ Most of this website is some flavour of markdown, and I'm writing my thesis with the lovely [bookdown package](https://bookdown.org/)"
 
 +++

@@ -121,8 +121,11 @@ So happy days!
 knitr::include_graphics("https://media.giphy.com/media/1136UBdSNn6Bu8/giphy.gif")
 ```
 
-Both papers suggest that several blood markers associated with liver function add value to predictions of outcome.
-This has peaked out interest and we hope to further investigate this link in subsequent work.
+Both papers also suggest that several blood markers associated with liver function add value to predictions of outcome.
+This has peaked our interest and we hope to further investigate this link in subsequent work.
+
+My next work will involve looking at SCI patient plasma with [proteomics](https://en.wikipedia.org/wiki/Proteomics) to see what differences there are in protein expression between people who experience significant neurological recovery as compared to those who don't.
+Here's hoping it doesn't take another year to publish!
 
 ## Feedback welcome!
 

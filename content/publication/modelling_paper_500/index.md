@@ -46,7 +46,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
+url_pdf: https://www.liebertpub.com/doi/pdf/10.1089/neu.2020.7144
 url_code:
 url_dataset:
 url_poster:

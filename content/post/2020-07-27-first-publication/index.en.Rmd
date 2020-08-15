@@ -20,11 +20,17 @@ image:
 projects: []
 ---
 
+```{r, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
 ## Happy days!
 
 So I finally got my [first proper publication](https://www.liebertpub.com/doi/10.1089/neu.2020.7144)!
+The paper is open access now as well!
 
-Proper here meaning I'm first author which, if you aren't familiar with the fun(?) nuances of academia, is the only authorship that's worth a damn (other than last author, which is also good).
+Proper here meaning I'm first author which, if you aren't familiar with the fun(?) nuances of academia, is the only authorship that's worth much (other than last author, which is also good).
 
 It's not that middle authorships are worthless.  
 It's that they're almost worthless.
@@ -42,7 +48,7 @@ Also so I can continue my endless quest to procrastinate on my thesis, but that'
 
 ## So what's prognostic modelling anyway?
 
-(ref:caption-example) Artists rendition of me pretending to work. Except not really. Image credit: [**iStock**](https://www.istockphoto.com/)
+(ref:caption-example) Artist rendition of me pretending to work. Except not really. Image credit: [**iStock**](https://www.istockphoto.com/)
 
 ```{r, fig.cap='(ref:caption-example)', out.width="500px", fig.align='center'}
 knitr::include_graphics("data_science.jpg")
@@ -88,12 +94,12 @@ Right, so without wishing to go into somewhat complex math, we took a bunch of d
 
 Importantly, we also included any blood tests that were taken as part of routine care.
 To be clear, these are not blood tests that we scientists requested be done, but just done as part of normal care.
-We're interested in routine bloods because we suspected they could provide valuable insight into outcomes at no cost to the healthcare provider, as the data had already been collected anyway.
+We're interested in routine bloods because we suspected they could provide valuable insight into outcomes at no additional cost to the healthcare provider, as the data had already been collected anyway.
 
 This is in contrast to most of the other literature in this field, which focuses on [cerebral spinal fluid (CSF)](https://en.wikipedia.org/wiki/Cerebrospinal_fluid).
 CSF would almost certainly have useful information for predicting SCI outcomes, but a very invasive procure is required to collect it, which introduces additional cost for the healthcare provider and risk to the patent.
 
-(ref:spinal-cord) A nice cartoon of the spinal cord. Image credit: [**Nature Reviews**](https://www.nature.com/articles/nrdp201718/figures/1)
+(ref:spinal-cord) A nice cartoon of the spinal cord that illustrates which parts of the cord control which [myotome](https://www.kenhub.com/en/library/anatomy/myotomes) (muscle groups). Image credit: [**Nature Reviews**](https://www.nature.com/articles/nrdp201718/figures/1)
 
 ```{r, fig.cap='(ref:spinal-cord)', out.width="500px", fig.align='center'}
 knitr::include_graphics("spinal_cord.jpg")
@@ -106,7 +112,7 @@ In brief, it worked.
 I should stress at this point, for all my preamble, the main focus of the work at this stage is more to see if routine bloods can add predictive value for SCI outcomes rather than actual build a model that could be used in clinic. 
 
 The models we built were reasonably accurate at predicting outcomes, but to create something good enough to use in the clinic we would need an enormous sample size that goes way beyond the scope of these two papers.
-To give you a sense of scale, we used around 80 patients in our first preliminary paper and around 430 in this follow paper.
+To give you a sense of scale, we used around 80 patients in our first preliminary paper and around 430 in this follow-up paper.
 We'd need many thousands if we wanted to propose the model be used in clinic.
 
 We do hope to get there someday, but that's certainly beyond the scope of my PhD so meh ¯\\_( ͡ಠ ͜ʖ ͡ಠ)_/¯

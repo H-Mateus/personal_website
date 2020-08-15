@@ -25,8 +25,9 @@ projects: []
 
 <div id="happy-days" class="section level2">
 <h2>Happy days!</h2>
-<p>So I finally got my <a href="https://www.liebertpub.com/doi/10.1089/neu.2020.7144">first proper publication</a>!</p>
-<p>Proper here meaning I’m first author which, if you aren’t familiar with the fun(?) nuances of academia, is the only authorship that’s worth a damn (other than last author, which is also good).</p>
+<p>So I finally got my <a href="https://www.liebertpub.com/doi/10.1089/neu.2020.7144">first proper publication</a>!
+The paper is open access now as well!</p>
+<p>Proper here meaning I’m first author which, if you aren’t familiar with the fun(?) nuances of academia, is the only authorship that’s worth much (other than last author, which is also good).</p>
 <p>It’s not that middle authorships are worthless.<br />
 It’s that they’re almost worthless.</p>
 <p>And to think, it only took just over a year (╥﹏╥)</p>
@@ -39,11 +40,10 @@ The rest of this post aims to summaries this work in a (hopefully) lay-friendly 
 <div id="so-whats-prognostic-modelling-anyway" class="section level2">
 <h2>So what’s prognostic modelling anyway?</h2>
 
-<pre class="r"><code>knitr::include_graphics(&quot;data_science.jpg&quot;)</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
-<img src="data_science.jpg" alt="Artists rendition of me pretending to work. Except not really. Image credit: iStock" width="500px" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="data_science.jpg" alt="Artist rendition of me pretending to work. Except not really. Image credit: iStock" width="500px" />
 <p class="caption">
-Figure 1: Artists rendition of me pretending to work. Except not really. Image credit: <a href="https://www.istockphoto.com/"><strong>iStock</strong></a>
+Figure 1: Artist rendition of me pretending to work. Except not really. Image credit: <a href="https://www.istockphoto.com/"><strong>iStock</strong></a>
 </p>
 </div>
 <p>A prognostic model is something that aims to predict outcomes.
@@ -59,8 +59,7 @@ They may ask questions like:</p>
 </ul>
 <p>To which a clinician is often unable to give any answer beyond “No” in the most severe SCI cases and “I don’t know” in other cases, which is the majority of the time.</p>
 
-<pre class="r"><code>knitr::include_graphics(&quot;https://media.giphy.com/media/K6VhXtbgCXqQU/giphy.gif&quot;)</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
 <img src="https://media.giphy.com/media/K6VhXtbgCXqQU/giphy.gif" alt="What does it even mean to “know” something in these crazy times anyway…? Image credit: Giphy" width="500px" />
 <p class="caption">
 Figure 2: What does it even mean to “know” something in these crazy times anyway…? Image credit: <a href="https://giphy.com/gifs/idk-shrug-shrugging-K6VhXtbgCXqQU"><strong>Giphy</strong></a>
@@ -80,15 +79,14 @@ This massively increases the costs of testing therapies which slows their progre
 <p>Right, so without wishing to go into somewhat complex math, we took a bunch of data relevant to the patient injury, such as initial injury severity, age, diabetes status, etc., and built several models which aim to predict outcome scores for motor and sensor function at discharge and 12-months post-injury.</p>
 <p>Importantly, we also included any blood tests that were taken as part of routine care.
 To be clear, these are not blood tests that we scientists requested be done, but just done as part of normal care.
-We’re interested in routine bloods because we suspected they could provide valuable insight into outcomes at no cost to the healthcare provider, as the data had already been collected anyway.</p>
+We’re interested in routine bloods because we suspected they could provide valuable insight into outcomes at no additional cost to the healthcare provider, as the data had already been collected anyway.</p>
 <p>This is in contrast to most of the other literature in this field, which focuses on <a href="https://en.wikipedia.org/wiki/Cerebrospinal_fluid">cerebral spinal fluid (CSF)</a>.
 CSF would almost certainly have useful information for predicting SCI outcomes, but a very invasive procure is required to collect it, which introduces additional cost for the healthcare provider and risk to the patent.</p>
 
-<pre class="r"><code>knitr::include_graphics(&quot;spinal_cord.jpg&quot;)</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
-<img src="spinal_cord.jpg" alt="A nice cartoon of the spinal cord. Image credit: Nature Reviews" width="500px" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="spinal_cord.jpg" alt="A nice cartoon of the spinal cord that illustrates which parts of the cord control which myotome (muscle groups). Image credit: Nature Reviews" width="500px" />
 <p class="caption">
-Figure 3: A nice cartoon of the spinal cord. Image credit: <a href="https://www.nature.com/articles/nrdp201718/figures/1"><strong>Nature Reviews</strong></a>
+Figure 3: A nice cartoon of the spinal cord that illustrates which parts of the cord control which <a href="https://www.kenhub.com/en/library/anatomy/myotomes">myotome</a> (muscle groups). Image credit: <a href="https://www.nature.com/articles/nrdp201718/figures/1"><strong>Nature Reviews</strong></a>
 </p>
 </div>
 </div>
@@ -97,14 +95,13 @@ Figure 3: A nice cartoon of the spinal cord. Image credit: <a href="https://www.
 <p>In brief, it worked.</p>
 <p>I should stress at this point, for all my preamble, the main focus of the work at this stage is more to see if routine bloods can add predictive value for SCI outcomes rather than actual build a model that could be used in clinic.</p>
 <p>The models we built were reasonably accurate at predicting outcomes, but to create something good enough to use in the clinic we would need an enormous sample size that goes way beyond the scope of these two papers.
-To give you a sense of scale, we used around 80 patients in our first preliminary paper and around 430 in this follow paper.
+To give you a sense of scale, we used around 80 patients in our first preliminary paper and around 430 in this follow-up paper.
 We’d need many thousands if we wanted to propose the model be used in clinic.</p>
 <p>We do hope to get there someday, but that’s certainly beyond the scope of my PhD so meh ¯\<em>( ͡ಠ ͜ʖ ͡ಠ)</em>/¯</p>
 <p>However, these papers provided evidence that routine blood markers can be somewhat predictive out outcome, which is what we were interested in.</p>
 <p>So happy days!</p>
 
-<pre class="r"><code>knitr::include_graphics(&quot;https://media.giphy.com/media/1136UBdSNn6Bu8/giphy.gif&quot;)</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
 <img src="https://media.giphy.com/media/1136UBdSNn6Bu8/giphy.gif" alt="One happy looking rabbit. I wonder what drugs they gave it… Image credit: Giphy" width="500px" />
 <p class="caption">
 Figure 4: One happy looking rabbit. I wonder what drugs they gave it… Image credit: <a href="https://giphy.com/gifs/happy-smile-smiling-1136UBdSNn6Bu8"><strong>Giphy</strong></a>
@@ -126,8 +123,7 @@ The reality is that journals can often shun better written, more understandable 
 So I welcome any feedback you might have about my writing as I’m keen to improve!</p>
 <p>Thanks for reading, and have one final celebratory .gif for the road</p>
 
-<pre class="r"><code>knitr::include_graphics(&quot;https://media.giphy.com/media/Ge86XF8AVY1KE/giphy.gif&quot;)</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
 <img src="https://media.giphy.com/media/Ge86XF8AVY1KE/giphy.gif" alt="\( ͡&gt; ‿‿ ͡&lt;)/ Image credit: Giphy" width="500px" />
 <p class="caption">
 Figure 5: \( ͡&gt; ‿‿ ͡&lt;)/ Image credit: <a href="https://giphy.com/gifs/Ge86XF8AVY1KE/links"><strong>Giphy</strong></a>

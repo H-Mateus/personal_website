@@ -55,7 +55,7 @@ Gabriel Mateus Bernardo Harrington {#title}
 
 Currently searching for a position that allows me to build tools leveraging 
 a combination of visualization, machine learning and software engineering 
-to help people explore and understand their data in new an useful ways.
+to help people explore and understand their data in new and useful ways.
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -142,12 +142,12 @@ N/A
 
 Sharon J. Brown, **Gabriel M.B. Harrington**, Charlotte H. Hulme, Rachel Morris, Anna Bennett, Wai-Hung Tsang, Aheed Osman, Joy Chowdhury, Naveen Kumar, and Karina T. Wright
 
-### [Proteomic analysis of bloods from SCI patients](https://gmbernardoharrington.netlify.app/2020/06/08/joint-cdt-conference-2020/)
+### [Routinely Measured Hematological Markers Can Help to Predict American Spinal Injury Association Impairment Scale Scores after Spinal Cord Injury](https://doi.org/10.1089/neu.2020.7144)
 
-CDT Joint conference 2020 Jun 24
+Journal of Neurotrauma 2020 Aug 28
 
 N/A
 
 2020
 
-**Gabriel M.B. Harrington**, Charlotte H. Hulme, Paul Cool, Karina T. Wright
+**Gabriel Mateus Bernardo Harrington**, Paul Cool, Charlotte Hulme, Aheed Osman, Joy Roy Chowdhury, Naveen Kumar, Srinivasa Budithi, and Karina Wright

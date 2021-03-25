@@ -8,7 +8,7 @@ authors:
 - Charlotte Hulme
 - Aheed Osman
 - Joy Chowdhury
-- Naveen Kuma
+- Naveen Kumar
 - Srinivasa Budithi
 - Karina Wright
 date: 2020-07-23T16:53:28+01:00

@@ -1,0 +1,198 @@
+---
+title: "Gabriel Mateus Bernardo Harrington's resume"
+author: Gabriel Mateus Bernardo Harrington
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+# uncomment this line to produce HTML and PDF in RStudio:
+knit: pagedown::chrome_print
+---
+
+Aside
+================================================================================
+
+
+![Gabriel Mateus Bernardo Harrington](https://intersog.com/wp-content/uploads/2016/07/pythonvsr-1024x484.jpg){width=80%}
+
+
+Contact Info {#contact}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-envelope"></i> g.m.bernardo.harrington@keele.ac.uk
+- <i class="fa fa-github"></i> [GitHub: H-Mateus](https://github.com/H-Mateus)
+- <i class="fa fa-home"></i> [Personal website](https://gmbernardoharrington.netlify.app/)
+- For more information, please see my personal website linked above, or contact me via email.
+
+
+Skills {#skills}
+--------------------------------------------------------------------------------
+
+- Experienced in statistical analysis, statistical learning models, proteomics, electronic health data and bioinformatics, including the use of high performance cluster computation.
+
+- Experience in both technical and lay-friendly science communication via oral and poster presentation at multiple conferences, local schools and science fairs.
+
+- Highly skilled in R, Bash, Python, LaTeX, SQL, Linux
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Last updated on `r Sys.Date()`.
+
+Main
+================================================================================
+
+Gabriel Mateus Bernardo Harrington {#title}
+--------------------------------------------------------------------------------
+
+### Research profile
+
+Currently a final-year PhD student at Keele University based in the Spinal Studies group at The Robert Jones and Agnes Hunt Orthopaedic Hospital.
+Spinal cord injury (SCI) is damage to the spinal cord due to trauma, degeneration or disease that results in a temporary or permanent change to its neurological function, recovery from which is highly variable.
+SCI can lead to devastating consequences for both the physical and mental health of patients, particularly due to the uncertainty of neurological outcomes in the first two weeks post-injury.
+The variability of recovery has also stymied development of novel therapies as it makes powering clinical trials extremely difficult.
+
+I endeavour to discover novel biomarkers of SCI outcomes, both to minimise this uncertainty and to expand our understanding of the underlying pathology of neurological recovery.
+I use a combination of modelling historic patient data and proteomic techniques to this end, and have found evidence of a relationship between markers of liver health and SCI recovery.
+I am currently validating our prior models with external datasets and seeking to carry out a metabolomics experiment to better elucidate the link between the liver and SCI.
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### Lancaster University
+
+BSc in Biological Sciences
+
+Lancaster, UK
+
+2016
+
+Dissertation: 5-prime genotyping of Enterovirus 71
+
+### Keele University
+
+PhD Student
+
+Oswestry, UK
+
+2017 - present (Expected submission 2021)
+
+Thesis: Exploring the serum proteome of spinal cord injured patients: Identifying prognostic biomarkers and new treatment targets
+
+
+Research Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+### Graduate Research Internship
+
+Bionics Institute
+
+Melbourne, Australia
+
+2016 - 2017
+
+- Began initial work towards building a next-generation cochlea implant
+- Established the viability of using a viral vector for optogenetic modification of mouse cochlea
+- Gained extensive experience in immunohistochemistry, cryosectioning, imaging, research animal handling
+
+```{r eval=FALSE, include=FALSE}
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+### Data Scientist, intern
+
+temp
+
+temp, location
+
+2014
+
+::: concise
+- Taught R language to beginners.
+- Wrote Shiny app demos.
+- Converted statistical tutorials from SPSS to R language.
+:::
+
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+### Introduction to R Language for Beginners.
+
+temp
+
+temp, location
+
+2014
+```
+
+
+
+
+Selected Publications {data-icon=file}
+--------------------------------------------------------------------------------
+
+### [A Preliminary Cohort Study Assessing Routine Blood Analyte Levels and Neurological Outcome after Spinal Cord Injury](https://doi.org/10.1089/neu.2019.6495)
+
+Journal of Neurotrauma 2020 Jan 9
+
+N/A
+
+2020
+
+Sharon J. Brown, **Gabriel M.B. Harrington**, Charlotte H. Hulme, Rachel Morris, Anna Bennett, Wai-Hung Tsang, Aheed Osman, Joy Chowdhury, Naveen Kumar, and Karina T. Wright
+
+### [Routinely Measured Hematological Markers Can Help to Predict American Spinal Injury Association Impairment Scale Scores after Spinal Cord Injury](https://doi.org/10.1089/neu.2020.7144)
+
+Journal of Neurotrauma 2020 Aug 28
+
+N/A
+
+2020
+
+**Gabriel Mateus Bernardo Harrington**, Paul Cool, Charlotte Hulme, Aheed Osman, Joy Roy Chowdhury, Naveen Kumar, Srinivasa Budithi, and Karina Wright
+
+Oral and Poster presentations {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+### [SCI and the liver](https://h-mateus.github.io/presentations/liver_sci_talk_2021-01-27/index.html#/sec-title-slide)
+
+Research day, 2021
+
+The Robert Jones and Agnes Hunt Orthopaedic Hospital, Virtual
+
+2021
+
+N/A
+
+### Reproducible Research
+
+[Centre for Doctoral Training (CDT)](https://epsrc.ukri.org/skills/students/centres/) Conference, 2019
+
+Manchester University
+
+2019
+
+N/A
+
+### Biomarkers for SCI
+
+Postgraduate Conference, 2018
+
+Keele University
+
+2018
+
+N/A
+
+### [Proteomic analysis of bloods from SCI patients](https://gmbernardoharrington.netlify.app/2020/06/08/joint-cdt-conference-2020/)
+
+CDT Joint conference, 2020
+
+Virtual
+
+2020
+
+**Gabriel M.B. Harrington**, Charlotte H. Hulme, Paul Cool, Karina T. Wright

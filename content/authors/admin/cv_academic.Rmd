@@ -65,6 +65,15 @@ g.m.bernardo.harrington@keele.ac.uk
 - <i class="fa fa-home"></i> [Personal website](https://gmbernardoharrington.netlify.app/)
 - For more information, please see my personal website linked above, or contact me via email.
 
+Grants and awards {#grants}
+--------------------------------------------------------------------------------
+
+- Awarded £4,000 consumable grant from the Centre for Doctoral Training for metabolomics experiments, 2021
+
+- Awarded travel grant from the Keele Postgraduate Research Committee to attend an international conference, 2020 (switched to a virtual setting owing to COVID-19
+
+- [Duke of Edinburgh](https://www.dofe.org/) silver award, 2010
+
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
@@ -92,7 +101,7 @@ Education {data-icon=graduation-cap data-concise=true}
 
 ### Lancaster University
 
-BSc in Biological Sciences
+BSc in Biological Sciences, 2:1
 
 Lancaster, UK
 
@@ -129,8 +138,9 @@ N/A
 - Use of super computers for modelling
 - Submission for ethical approval of research
 - Working under the jurisdiction of the Human Tissue Act
-- Both technical and lay-friendly science communication via oral and poster presentation at multiple conferences, career guidance at local schools and booth presentations at science fairs.
+- Technical and lay-friendly science communication via oral and poster presentations at conferences, career guidance at local schools and booth presentations at science fairs.
 - Highly skilled in R, Bash, Python, LaTeX, SQL, Linux
+- Web lab work including 3D tissue culture, microscopy and research animal handling
 :::
 
 Research Experience {data-icon=laptop}

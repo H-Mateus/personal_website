@@ -140,7 +140,7 @@ N/A
 - Working under the jurisdiction of the Human Tissue Act
 - Technical and lay-friendly science communication via oral and poster presentations at conferences, career guidance at local schools and booth presentations at science fairs.
 - Highly skilled in R, Bash, Python, LaTeX, SQL, Linux
-- Web lab work including 3D tissue culture, microscopy and research animal handling
+- Wet lab work including 3D tissue culture, microscopy and research animal handling
 :::
 
 Research Experience {data-icon=laptop}

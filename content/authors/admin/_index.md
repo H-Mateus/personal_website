@@ -61,4 +61,5 @@ This internship gave me an insight into cutting edge biomedical research that ha
 
 During my PhD I have developed a new-found love of data science, reproducible research and a passion for programming in R and Python, and a fondness for Linux.<br>
 You can see the files I made to create this website on my [Github](https://github.com/H-Mateus/personal_website).<br>
+I'm also the author and maintainer of the [OsKOR website](https://oskor.netlify.app)<br>
 My full CV is available [here](/cv_current.pdf)

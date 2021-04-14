@@ -35,19 +35,19 @@ sup {
 
 /* Customize some of the sizing variables */
 :root {
-  --sidebar-width: 12rem; /* Shrink sidebar width  */
+  --sidebar-width: 9rem; /* Shrink sidebar width  */
   --sidebar-background-color: #f7fbff; /* Make sidebar blue */
-  --sidebar-horizontal-padding: 0.01in; /* Reduce sidebar padding */
+  --sidebar-horizontal-padding: 0.001in; /* Reduce sidebar padding */
   --decorator-outer-dim: 10px; /* Make position deliniating circles larger */
   --decorator-border: 2px solid #bdd7e7; /* Make timeline a blue as well*/
 }
 
 .details .place {
-  margin-top: 0.20rem;
+  margin-top: 0.08rem;
 }
 
 .main-block:not(.concise) .details div {
-  padding-top: 0.005rem;
+  padding-top: 0.00005rem;
 }
 
 /* Laptop icon isn't centered by default which is lame */
@@ -124,5 +124,5 @@ sup {
 
 /* Make the network viz go up near the top */
 svg {
-  margin-top: -1.25in;
+  margin-top: -1in;
 }

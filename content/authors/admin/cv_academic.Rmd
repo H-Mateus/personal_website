@@ -28,7 +28,6 @@ plot(network)
 # color palette
 library(RColorBrewer)
 coul <- brewer.pal(nlevels(as.factor(mtcars$cyl)), "Set2")
-
 # Map the color to cylinders
 my_color <- coul[as.numeric(as.factor(mtcars$cyl))]
 # plot
@@ -59,7 +58,7 @@ Contact Info {#contact}
 --------------------------------------------------------------------------------
 
 <i class="fa fa-envelope"></i>
-g.m.bernardo.harrington@keele.ac.uk
+g.m.bernardo.harrington@<br>keele.ac.uk
 
 - <i class="fa fa-github"></i> [GitHub: H-Mateus](https://github.com/H-Mateus)
 - <i class="fa fa-home"></i> [Personal website](https://gmbernardoharrington.netlify.app/)
@@ -82,19 +81,23 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Gabriel Mateus Bernardo Harrington {#title}
+<p style='font-size: 25px'>Gabriel Mateus Bernardo Harrington</style> {#title}
 --------------------------------------------------------------------------------
 
 ### Research profile
 
-Currently a final-year PhD student at Keele University based in the Spinal Studies group at The Robert Jones and Agnes Hunt Orthopaedic Hospital.
-Spinal cord injury (SCI) is damage to the spinal cord due to trauma, degeneration or disease that results in a temporary or permanent change to its neurological function, recovery from which is highly variable.
+Currently a final-year PhD student at Keele University based in the [OsKOR](https://oskor.netlify.app/) group at The [RJAH Orthopaedic Hospital](https://www.rjah.nhs.uk/).
+Spinal cord injury (SCI) is damage to the spinal cord due to trauma, degeneration or disease that results in a temporary/permanent change to neurological function, recovery from which is highly variable, stymieing development of novel therapies as powering clinical trials is extremely difficult.
 SCI can lead to devastating consequences for both the physical and mental health of patients, particularly due to the uncertainty of neurological outcomes in the first two weeks post-injury.
-The variability of recovery has also stymied development of novel therapies as it makes powering clinical trials extremely difficult.
 
 I endeavour to discover novel biomarkers of SCI outcomes, both to minimise this uncertainty and to expand our understanding of the underlying pathology of neurological recovery.
-I use a combination of modelling historic patient data and proteomic techniques to this end, and have found evidence of a relationship between markers of liver health and SCI recovery.
-I am currently validating our prior models with external datasets and seeking to carry out a metabolomics experiment to better elucidate the link between the liver and SCI.
+I use a combination of modelling patient data and proteomic techniques to this end, and have identified a relationship between markers of liver health and SCI recovery.
+
+The lab rotations in the first year of my PhD also allowed me to greatly develop my skills at the bench.
+At Loughborough University, I investigated genetic expression in hydrogels, gaining experience in 3D tissue culture, hydrogels and PCR.
+At Nottingham University I studied the effects of alternating current on interfacing wires grown via wireless electrochemistry and gained experience in 3D printing, electrodeposition and microscopy.
+At Keele University I cultured multiple cell types in 3D and compared viability and growth kinetics via cell staining, fluorescent microscopy.
+These experiences have given me a highly cross-disciplinary skillset making me a flexible and versatile scientist.
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -133,12 +136,11 @@ N/A
 ::: concise
 - Statistical learning models
 - Proteomics
-- Patient data
 - Electronic health data
 - Use of super computers for modelling
 - Submission for ethical approval of research
 - Working under the jurisdiction of the Human Tissue Act
-- Technical and lay-friendly science communication via oral and poster presentations at conferences, career guidance at local schools and booth presentations at science fairs.
+- Technical and lay-friendly science communication
 - Highly skilled in R, Bash, Python, LaTeX, SQL, Linux
 - Wet lab work including 3D tissue culture, microscopy and research animal handling
 :::
@@ -161,31 +163,20 @@ Melbourne, Australia
 ```{r eval=FALSE, include=FALSE}
 Professional Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
-
 ### Data Scientist, intern
-
 temp
-
 temp, location
-
 2014
-
 ::: concise
 - Taught R language to beginners.
 - Wrote Shiny app demos.
 - Converted statistical tutorials from SPSS to R language.
 :::
-
-
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
-
 ### Introduction to R Language for Beginners.
-
 temp
-
 temp, location
-
 2014
 ```
 
@@ -206,7 +197,7 @@ Sharon J. Brown, **Gabriel Mateus Bernardo Harrington**, Charlotte H. Hulme, Rac
 
 Journal of Neurotrauma 2020 Aug 28
 
-Gabriel Mateus Bernardo Harrington
+N/A
 
 2020
 

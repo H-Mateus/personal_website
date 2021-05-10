@@ -19,7 +19,7 @@ image:
 projects: []
 ---
 
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <div id="hello-world" class="section level1">
@@ -58,7 +58,7 @@ head(iris)</code></pre>
 scatter + geom_point(aes(color=Species, shape=Species)) +
   xlab(&quot;Sepal Length&quot;) + ylab(&quot;Sepal Width&quot;) +
   theme_bw()</code></pre>
-<p><img src="/post/2020-06-05-testing-out-blogdown/index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p><br></p>
 </div>
 <div id="embedding-a-bundled-image" class="section level1">
@@ -92,19 +92,22 @@ When specifying the location of the page you want to get to, the reference point
 <div id="reading-in-data" class="section level1">
 <h1>6) Reading in data</h1>
 <p>Let’s flex our R muscles a little more by reading in some topical data, and making a fancier plot.</p>
-<p>The data is total non-COVID-19 excess deaths per 100,000 and deaths involving COVID-19 per 100,000 for each 10-year age group from England and Wales, Week 11 to Week 18.</p>
+<p>The data is total non-COVID-19 excess deaths per 100,000 and deaths involving COVID-19 per 100,000 for each 10-year age group from England and Wales, Week 11 to Week 18.
+The numbers around COVID-19 as in constant flux, so please be aware of the date.
+This data was downloaded from the Office of National Statistics on 2020-06-05.</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
-<pre><code>## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
-## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
-## ✓ readr   1.3.1     ✓ forcats 0.5.0
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
+<pre><code>## ✓ tibble  3.1.1     ✓ dplyr   1.0.6
+## ✓ tidyr   1.1.3     ✓ stringr 1.4.0
+## ✓ readr   1.4.0     ✓ forcats 0.5.1
 ## ✓ purrr   0.3.4</code></pre>
-<pre><code>## ── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>covid_deaths &lt;- read_csv(&quot;covid_deaths_by_age_2020-06-05.csv&quot;)</code></pre>
 <pre><code>## Warning: Missing column names filled in: &#39;X2&#39; [2], &#39;X3&#39; [3]</code></pre>
-<pre><code>## Parsed with column specification:
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
 ## cols(
 ##   `The rate of non-COVID-19 deaths per 100,000 is highest in the 90 years and over age category, among whom the rate of deaths involving COVID-19 is also highest` = col_character(),
 ##   X2 = col_character(),
@@ -112,33 +115,33 @@ When specifying the location of the page you want to get to, the reference point
 ## )</code></pre>
 <pre class="r"><code># let&#39;s select the rows of actual data
 covid_deaths_filtered &lt;- covid_deaths[7:16,]
-# set column names 
-names(covid_deaths_filtered) &lt;- c(&quot;age_group&quot;, 
-                                  &quot;non-covid_excess_mortality&quot;, 
+# set column names
+names(covid_deaths_filtered) &lt;- c(&quot;age_group&quot;,
+                                  &quot;non-covid_excess_mortality&quot;,
                                   &quot;covid_excess_mortality&quot;)
 # convert to long-format dataframe
-covid_deaths_long &lt;- pivot_longer(covid_deaths_filtered, 
-                                  -age_group, 
-                                  names_to = &quot;mortality_type&quot;, 
+covid_deaths_long &lt;- pivot_longer(covid_deaths_filtered,
+                                  -age_group,
+                                  names_to = &quot;mortality_type&quot;,
                                   values_to = &quot;deaths&quot;)
 # convert deaths to a numeric
 covid_deaths_long$deaths &lt;- as.numeric(covid_deaths_long$deaths)
-# plot 
+# plot
 ggplot(covid_deaths_long, aes(x = age_group, y = deaths)) +
-  geom_bar(aes(fill = mortality_type), 
-           stat=&quot;identity&quot;, 
+  geom_bar(aes(fill = mortality_type),
+           stat=&quot;identity&quot;,
            position=position_dodge()) +
   ylab(&quot;Deaths registered per 100,000&quot;) +
   xlab(&quot;Age Group&quot;) +
   theme_bw() +
   theme(legend.position = &quot;top&quot;,
         legend.direction = &quot;horizontal&quot;) +
-  scale_fill_manual(name = &quot;&quot;, 
-                    labels = c(&quot;COVID-19 mortality rate&quot;, 
-                               &quot;Non-COVID-19 excess mortality rate&quot;), 
+  scale_fill_manual(name = &quot;&quot;,
+                    labels = c(&quot;COVID-19 mortality rate&quot;,
+                               &quot;Non-COVID-19 excess mortality rate&quot;),
                     values = c(&quot;tomato&quot;, &quot;steelblue&quot;)) +
-  labs(caption = &quot;Source: Office for National Statistics&quot;)</code></pre>
-<p><img src="/post/2020-06-05-testing-out-blogdown/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+  labs(caption = &quot;Source: Office for National Statistics, 2020-06-05&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>If you’re curious about explanations surrounding the increase in non-COVID-19 related deaths <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/articles/analysisofdeathregistrationsnotinvolvingcoronaviruscovid19englandandwales28december2019to1may2020/technicalannex">this article</a> lists some theories.</p>
 <p>Interestingly, in the age groups up to 50 the non-COVID-19 death rate has declined slightly</p>
 <pre class="r"><code>print(covid_deaths_filtered)</code></pre>
@@ -166,4 +169,8 @@ risk = (60 / 66796807) * 100000
 print(paste(&quot;The incidence rate of lightning strikes per 100,000 = &quot;, round(risk, 5), sep = &quot;&quot;))</code></pre>
 <pre><code>## [1] &quot;The incidence rate of lightning strikes per 100,000 = 0.08982&quot;</code></pre>
 <p>So if we assume all humans are equally likely to get stuck by lightning in a given year, then it’s several times more likely for a 0-9 year old to get stuck by lightning than die with COVID-19.</p>
+<p>I should stress that this isn’t to make light of COVID-19, many people are dying, and no effort should be spared wherever this can be prevented.
+If anything, this should highlight how damaging COVID-19 is with a relatively low fatality rate.
+This pandemic could easily be even worse than it already is with more lethal pathogen behind it, and it is perfectly within the realm of possibility that the next pandemic, which is sadly inevitable, will star a deadlier disease.
+My greatest hope is that we can use this event as a wakeup call to stop ignoring the scientists who have warned this would happen repeatedly, and prepare better to mitigate future pandemics.</p>
 </div>

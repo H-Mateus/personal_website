@@ -64,7 +64,7 @@ Now if you're paying attention you may be wondering:
 
 <center>***What value have the journals added to this process?***</center>
 
-The journal certainly wastes a lot of time for the authors, and in return they either lock the science behind a pay-wall where it can only be read by scientists if their institution pays thousand-millions for journal subscriptions, or the funding body, who already paid for the science to be done, has to pay a massive fee for people to actually be able to disseminate the research.
+The journal certainly wastes a lot of time for the authors, and in return they either lock the science behind a pay-wall where it can only be read by scientists if their institution pays thousands to millions for journal subscriptions, or the funding body, who already paid for the science to be done, has to pay a massive fee for people to actually be able to disseminate the research.
 
 # The role of the journals
 
@@ -77,9 +77,13 @@ We pay for science and then we pay again to read/publish.
 Well actually, it's even more stupid than that.
 For you see, the journals have a strong bias against negative results.
 
-So suppose you're a competent scientist, you design a good experiment, carry out a statistically appropriate analysis of the data, and it turns out your hypothesis was wrong.
+So suppose you're a competent scientist.
+You design a good experiment, carry out a statistically appropriate analysis of the data, and it turns out your data doesn't support your hypothesis wrong.
 That's great!
-As a fellow scientist, I want to know about negative results just as much as positive ones, this'll stop me from wasting time and money pursing ideas that won't work, and further our understanding of the subject.
+As a fellow scientist, I want to know about negative results just as much as positive ones.
+This'll stop me from wasting time and money pursing ideas that won't work.
+Negative results can also help further our understanding of the subject just as much as positive ones.
+We can start investigating *why* it didn't do what you/we may have initially expected.
 Except the journals won't publish your work because they think negative results aren't good clickbait.
 
 # The role of the funders
@@ -89,8 +93,8 @@ knitr::include_graphics("funders.jpg")
 ```
 
 But you ***need*** to publish your results otherwise you won't be able to attract further funding and advance your career.
-The funding bodies don't care about that you've done a good piece of scientific research, they're much too lazy to actually read the work you do.
-They'd rather just look at how many publication and citation you have.
+The funding bodies don't care that you've done a good piece of scientific research, they're much too lazy to actually read the work you do.
+They'd rather just look at how many publications and citations you have.
 That's much quicker after all, and you don't need any scientific or statistical knowledge to understand it either.
 So you have no choice but to start massaging your data to try and find a positive result the journal will accept.
 A common form of this is often referred to as [P-Hacking](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002106).[@head_extent_2015]
@@ -100,7 +104,7 @@ A common form of this is often referred to as [P-Hacking](https://journals.plos.
 So where do the research institutes fit in?
 Their sole motivation is to attract funding because they get a cut of the dosh, and it makes them look good.
 They therefore also don't care about the quality of the science, and don't typically bother teaching their graduates the skills they need to do science well.
-Most importantly statistics, but methodologies for reproducible research are either not taught at all, or taught in a single extremely token module that students will have completely forgotten by the time they graduate.
+Most importantly statistics, but also methodologies for reproducible research are either not taught at all, or taught in a single extremely token module that students will have completely forgotten by the time they graduate.
 But they'll still be able to attract funding for research as a scientist so why would the university care?
 
 There is simply no connection between the quality of a scientists work, and their success as a scientist.
@@ -108,18 +112,19 @@ If you understand the incentive structure scientists are subject to, it's obviou
 
 # A sad example
 
-But maybe you're an real optimistic soul, and you think I'm being too cynical.
+But maybe you're a real optimistic soul, and you think I'm being too cynical.
 Allow me to describe the most emotionally impactful moment of my PhD thus far.
-I'll be vague with some specific to avoid anyone getting into trouble.
+I'll be vague with some specifics to avoid anyone getting into trouble.
 
-Some time ago, I was attending a spinal cord injury (SCI) conference (this was prior to COVID-19).
+Some time ago, I was attending a spinal cord injury (SCI) conference.
+This was prior to COVID-19.
 The last session of the last day was an open debate.
 The leading experts in the field begun debating that state of the field.
-They argued we had be doing the same thing for decades, mostly finding a million ways to grow neurons in a dish, very successfully I might add, but that this had not, and would never likely translated into anything resembling a therapy to treat SCI.
+They argued we had be doing the same thing for decades, mostly finding a million ways to grow neurons in a dish, very successfully I might add, but that this had not, and would never likely translate into anything resembling a therapy to treat SCI.
 Therefore, we needed to go back to basics, to better understand the pathophysiology of SCI, if we were even to make real progress.
 
 It wasn't really a debate as they pretty much all agreed with each other.
-I certainly agreeded, and still do.
+I certainly agreed, and still do.
 At this point they started talking about specific approaches we could take as a field to achieve this.
 
 <center>***For me, this debate was the purest, most beautiful expression of science I had even seen.<br>
@@ -127,12 +132,12 @@ It was exciting.***<br>
 But then someone stood up and took the mic.</center>
 
 From their voice you tell they were annoyed.
-This individual effectively expressed that these experts at the top of their feild were being too negative.
+This individual effectively expressed that these experts at the top of their field were being too negative.
 That we had heard about all this "amazing" work during the conference, and that everything was fine as is, in spite of the total lack of any meaningful advances in the field for past several decades.
 And so the room was silenced, and the debate ended.
 
 Maybe you're wondering why the experts didn't try to reason with this individual.
-The person obviously wasn't a scientist, they didn't offer any specific criticism.
+The person obviously wasn't a scientist, they didn't offer any specific technical criticism.
 They just didn't like the implication that the research done so far hadn't produced much of worth.
 Surely, all they needed to do was explain that our wish as scientists was to make meaningful progress, with the ultimate goal of helping patients as soon as possible?
 
@@ -154,7 +159,7 @@ The funding bodies are the most powerful players in science.
 If they say jump, we'll jump.
 Otherwise we lose our job.
 
-Suggesting that scientists are to blame for this ridiculous system is nothing more than funding pushing pushing the blame onto someone else.
+Suggesting that scientists are to blame for this ridiculous system is nothing more than scapegoating.
 This is very similar to how [manufactures have successfully shifted the burden
 ](https://www.npr.org/2020/09/11/897692090/how-big-oil-misled-the-public-into-believing-plastic-would-be-recycled?t=1620643938203) of waste management onto the public, and [distracted them by pushing the lie of recycling](https://www.theguardian.com/environment/2019/aug/17/plastic-recycling-myth-what-really-happens-your-rubbish).
 
@@ -167,15 +172,21 @@ This problem has been on my mind a lot lately.
 As a third year PhD student I've been thinking about what I'm going to do once I've submitted my thesis.
 
 I was in a very fortunate position as my supervisor had managed to secure some funding for me to carry on my research.
+My current lab is small, but the people are both lovely on a personal level, and extremely supportive professionally as well.
+Sadly, this isn't always a given.
+Having worked in several labs I've seen some pretty callous and petty behaviour in other places.
+So this offer was plenty tempting in a lot of ways.
+
 But because of my burning contempt for the way science is done, I wasn't feeling particularly keen to stay in academia.
 What was the point?
 I have no interest in being a clown for these wretched, incompetent funding bodies for the rest of my life.
+To constantly have to fight to justify my existence whilst they effectively demand I cast aside my integrity to appease them and progress in my career.
 
 And yet, I got this far because I firmly believe that science is one of the most important human endeavours.
 I'm also pretty sure I'm better at it than most scientists, though that's less me thinking I'm great, and more that the bar is so depressingly low.
 
 Through all these thoughts, I was headhunted for a data science role as well.
-The job seemed likely to be rather boring, but it offered better job sectary, probably more money in the long term, and freedom from "publish or perish".
+The job seemed likely to be rather boring, but it offered better job security and probably more money in the long term, and freedom from "publish or perish".
 The absurdity of current science made it seem pretty attractive to me.
 I wonder how much great young talent is lost from science due to these things.
 
@@ -185,13 +196,14 @@ And then I was offered a bioinformatics postdoc in the field of dementia at a Ru
 After much internal strife I've decided I'll give academia another chance.
 Maybe I'm just worn down by this pandemic, and the stress of my looming submission deadline.
 Maybe a bigger lab and a field with more funding will improve my perception.
+Perhaps the larger sums attract more competition and so standards of the funders are higher.
 
-I sure hope so.
+I certainly hope so.
 
 # So what can be done?
 
 Well, writing this has made me sad, so I'm going to have a break now.
-Once I've recharged, I'll aim to write a follow-up article exploring ideas for how science could be improved by the end of the week.
+Once I've recharged, I'll aim to write a follow-up article exploring ideas for how science could be improved.
 
 # References
 

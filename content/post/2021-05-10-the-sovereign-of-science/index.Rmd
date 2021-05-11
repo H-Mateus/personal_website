@@ -7,6 +7,7 @@ categories:
   - Academia
 tags:
   - Reproducible Research
+  - Rant
 subtitle: 'Who is culpable for the quality of science?'
 summary: ''
 authors: []

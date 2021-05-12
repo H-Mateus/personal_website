@@ -82,7 +82,7 @@ So suppose you're a competent scientist.
 You design a good experiment, carry out a statistically appropriate analysis of the data, and it turns out your data doesn't support your hypothesis wrong.
 That's great!
 As a fellow scientist, I want to know about negative results just as much as positive ones.
-This'll stop me from wasting time and money pursing ideas that won't work.
+This will stop me from wasting time and money pursing ideas that won't work.
 Negative results can also help further our understanding of the subject just as much as positive ones.
 We can start investigating *why* it didn't do what you/we may have initially expected.
 Except the journals won't publish your work because they think negative results aren't good clickbait.
@@ -114,7 +114,7 @@ If you understand the incentive structure scientists are subject to, it's obviou
 # A sad example
 
 But maybe you're a real optimistic soul, and you think I'm being too cynical.
-Allow me to describe the most emotionally impactful moment of my PhD thus far.
+Allow me to describe the most depressing moment of my PhD thus far.
 I'll be vague with some specifics to avoid anyone getting into trouble.
 
 Some time ago, I was attending a spinal cord injury (SCI) conference.
@@ -211,4 +211,3 @@ Update:
 That article has been written and can be found [here](../../../../post/how-might-science-be-done-better/)
 
 # References
-

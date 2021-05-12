@@ -8,7 +8,7 @@ categories:
 tags:
   - Reproducible Research
   - Academic
-  - Fantasizing
+  - Fantasising
 subtitle: 'The idle daydreaming of a PhD student'
 summary: 'A follow-up to The Sovereign of Science, exploring how we might improve the way science is done '
 authors: []
@@ -58,7 +58,7 @@ Seriously.
 The only contributions to science they make are harmful ones:
 
 - They reduce the accessibility of science by locking it behind paywalls
-- They [don't care about quality](https://www.theguardian.com/commentisfree/2013/dec/09/how-journals-nature-science-cell-damage-science) 
+- They [don't care about quality](https://www.theguardian.com/commentisfree/2013/dec/09/how-journals-nature-science-cell-damage-science)
 - They steal [billions from both funders and universities](https://www.theguardian.com/science/2017/jun/27/profitable-business-scientific-publishing-bad-for-science)
 
 So why put up with them?
@@ -139,7 +139,7 @@ This way, even if both the first reviewers miss something, it's very likely that
 
 A system like this also lends itself well to making small tweaks.
 Perhaps early career researchers could get something like a "learner" badge, where their peer reviews are only worth half as much as more experienced colleagues.
-PhD students could be required to do a certain number of peer reviews in order to be awarded their doctorate. 
+PhD students could be required to do a certain number of peer reviews in order to be awarded their doctorate.
 
 To add to this, I would show the latest iteration of a given paper on the website, but I would allow users to go back and see each prior version of the paper.
 This could be particularly useful for students to learn from.
@@ -168,7 +168,7 @@ Funding bodies could use this when awarding grants, and postdocs/students could 
 As has been suggested elsewhere, I would also provide a separate doi for the paper, data and container, so these can receive citation and the authors can continue to receive proper credit for their work.
 
 <center>***The key here is that this provides an incentive for scientists to make their research more transparent and reproducible, not to evaluate the impact or even the quality of the work itself.<br>
-The open peer review should sort that part.<br> 
+The open peer review should sort that part.<br>
 Hopefully...***</center>
 
 If their studies are underpowered, or their stats rubbish, this system would make it obvious and easy to call out.

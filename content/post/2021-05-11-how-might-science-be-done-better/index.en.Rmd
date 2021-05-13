@@ -186,10 +186,10 @@ Pragmatically, I think it makes sense for universities to provide the servers to
 This way, even if the servers are damaged/destroyed (in a fire for example), nothing would be lost.
 
 The cost of this would be extremely low, especially compared to what is currently spent by funders on open access fees, and most definitely less than the [literal billions](https://www.theguardian.com/science/2017/jun/27/profitable-business-scientific-publishing-bad-for-science) universities are spending on journal subscriptions.
-I'm pretty confident this proposed system would cost less than 1% of what is currently spent.
-And it would mean don't have to waste huge amounts of time bending over backwards to appease asinine journal requirements.
+I'm pretty confident this proposed system would cost less than 1% of what is currently spent to both establish and maintain.
+And it would mean scientists don't have to waste huge amounts of time bending over backwards to appease asinine journal requirements.
 
-It's not like putting a .pdf on the internet costs a lot.
+It's not like putting a .pdf on the internet costs a lot, which effectively all publication entails.
 This website costs me exactly nothing.
 The system I'm proposing is effectively just a big distributed website with a particular structure, so the cost would be very low, especially when distributed across all research institutions.
 

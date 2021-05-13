@@ -26,7 +26,7 @@ The earliest lesson I remember learning about science as a child, was that "if i
 Fast forward many years, I find myself as a PhD student completely baffled as how there appears to be no real incentive for scientists to do their job well
 Instead, scientists are subject to a "publish or perish" system which compels scientists to purse publications at any cost.
 
-Some have talked about a "reproducibly crisis", which often refers to the softer sciences such as psychology, but it's just a prevalent in the life sciences.[@wen_low_2018; @baker_1500_2016]
+Some have talked about a "reproducibly crisis", which often refers to the softer sciences such as psychology, but it's just a prevalent in the life sciences, with many scientists, myself included, suspecting that over half of scientific literature is wrong.[@smaldino_natural_2016; @wen_low_2018; @baker_1500_2016]
 From my perspective it seems stranger to expect quality science when scientists are both inadequately trained, given no reason to put the effort in the do better, and in many cases, actively incentivised to do science poorly.
 
 There have been some token efforts to push for change, such as encouraging open access publishing and publication of experimental data with papers.

@@ -1,7 +1,7 @@
 ---
 authors:
 - admin
-bio: My research interests include spinal cord injury, bioinformatics, statistical modelling and reproducible research.
+bio: My research interests include dementia, bioinformatics, statistical modelling and reproducible research.
 education:
   courses:
   - course: PhD in Regenerative Medicine
@@ -10,18 +10,18 @@ education:
   - course: BSc in Biological Sciences
     institution: Lancaster University
     year: 2016
-email: "g.m.bernardo.harrington@keele.ac.uk"
+email: "Bernardo-HarringtonG@cardiff.ac.uk"
 interests:
-- Artificial Intelligence
-- Data Science
-- Programming
+- Dementia
+- Genomics
+- Reproducible Research
 - Linux
-- Spinal cord injury
+- Data Science
 name: Gabriel Mateus Bernardo Harrington
 organizations:
-- name: Keele Univeristy
-  url: ""
-role: PhD Student
+- name: Cardiff Univeristy
+  url: "https://www.cardiff.ac.uk/"
+role: Research Associate
 social:
 - icon: envelope
   icon_pack: fas
@@ -48,9 +48,8 @@ user_groups:
 description: "Personal website of Gabriel Mateus Bernardo Harrington"
 ---
 
-I am currently a PhD student at [Keele Univeristy](https://www.keele.ac.uk/research/). My research focuses on the prognosis of spinal cord injury.
-I have been investigating the value of blood parameters measured as part of routine care in predicting the level of neurological recovery a patient may have.
-I am also using proteomic techniques and ELISAs to further analyse patient blood to identify potential novel biomarkers that may predict recovery.
+I am currently a Research Associate as a bioinformatician at the [Dementia Research Institute](https://ukdri.ac.uk/), [Cardiff University](https://www.cardiff.ac.uk/), working on Alzheimer's disease with a focus towards genomics.
+I completed my PhD in biomedical engineering at [Keele Univeristy](https://www.keele.ac.uk/research/) in 2021, where my research focused on biomarkers and prognosis of spinal cord injury.
 
 I graduated from the [Lancaster University](https://www.lancaster.ac.uk/) in with a BSc in biological sciences in 2016.
 Upon completing my degree I obtained an internship at the [Bionics institute](http://www.bionicsinstitute.org/) in Melbourne, Australia.
@@ -59,7 +58,10 @@ I was able to complete a small project based on viral gene therapy in mice for o
 The early results are promising and contributes to laying the groundwork for creating a new generation of cochlear implant.
 This internship gave me an insight into cutting edge biomedical research that has helped me further develop my skills as a scientist.
 
-During my PhD I have developed a new-found love of data science, reproducible research and a passion for programming in R and Python, and a fondness for Linux.<br>
+I subsequently completed a PhD in regenerative medicine at the Center for doctoral training, funded by the EPSRC.
+The experience greatly shaped my interests.
+In particular I learnt to code as part of my research, and in doing so discovered a great love of programming, a fondness for Linux, and other skills related to data science.
+
 You can see the files I made to create this website on my [Github](https://github.com/H-Mateus/personal_website).<br>
 I'm also the author and maintainer of the [OsKOR website](https://oskor.netlify.app)<br>
 My full CV is available [here](/cv_current.pdf)

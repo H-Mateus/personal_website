@@ -47,7 +47,7 @@ They then pay a small fee (typically ~£20-70) for the editor to look at it and 
 Assuming the editor approvers, they will then request other scientists to review the paper to try and ensure the quality of the work, a process called "peer review".
 Importantly, the scientists who do the peer review are volunteers and not paid for their review.
 
-If the peer reviews have any issues or concerns these are anonymously related to the paper authors who are given a chance provide a rebuttal.
+If the peer reviews have any issues or concerns these are anonymously relayed to the paper authors who are given a chance provide a rebuttal.
 This typically involves makes some changes to the paper to address the reviewers concerns, and this process can go through multiple rounds.
 If the reviews are satisfied the paper is good enough, they'll approve it for publication.
 

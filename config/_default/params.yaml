@@ -21,19 +21,19 @@ twitter: 'https://twitter.com/Hmateus4'
 
 # Contact (edit or remove options as required)
 
-email: g.m.bernardo.harrington@keele.ac.uk
+email:
 phone: ''
 address:
-  street: The Robert Jones and Agnes Hunt Orthopaedic Hospital NHS Foundation Trust
-  city: Oswestry
+  street: Hadyn Ellis Building
+  city: Cardiff
   region: ''
-  postcode: 'SY10 7AG'
+  postcode: 'CF24 4HQ'
   country: United Kingdom
   country_code: GB
 coordinates:
-  latitude: '52.884422'
-  longitude: '-3.033414'
-directions: Arc/Tourch building
+  latitude: '51.492458'
+  longitude: '-3.183410'
+#directions: Arc/Tourch building
 office_hours:
   - 'Monday 10:00 to 13:00'
   - 'Wednesday 09:00 to 10:00'

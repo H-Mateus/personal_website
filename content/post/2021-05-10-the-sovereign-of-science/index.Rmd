@@ -79,7 +79,7 @@ Well actually, it's even more stupid than that.
 For you see, the journals have a strong bias against negative results.
 
 So suppose you're a competent scientist.
-You design a good experiment, carry out a statistically appropriate analysis of the data, and it turns out your data doesn't support your hypothesis wrong.
+You design a good experiment, carry out a statistically appropriate analysis of the data, and it turns out your data doesn't support your hypothesis.
 That's great!
 As a fellow scientist, I want to know about negative results just as much as positive ones.
 This will stop me from wasting time and money pursing ideas that won't work.

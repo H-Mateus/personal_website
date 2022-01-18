@@ -57,9 +57,7 @@ dev.off()
 Contact Info {#contact}
 --------------------------------------------------------------------------------
 
-<i class="fa fa-envelope"></i>
-g.m.bernardo.harrington@<br>keele.ac.uk
-
+- <i class="fa fa-envelope"></i>Bernardo-HarringtonG@cardiff.ac.uk
 - <i class="fa fa-github"></i> [GitHub: H-Mateus](https://github.com/H-Mateus)
 - <i class="fa fa-home"></i> [Personal website](https://gmbernardoharrington.netlify.app/)
 - For more information, please see my personal website linked above, or contact me via email.
@@ -86,8 +84,10 @@ Main
 
 ### Research profile
 
-Currently a final-year PhD student at Keele University based in the [OsKOR](https://oskor.netlify.app/) group at The [RJAH Orthopaedic Hospital](https://www.rjah.nhs.uk/).
-Spinal cord injury (SCI) is damage to the spinal cord due to trauma, degeneration or disease that results in a temporary/permanent change to neurological function, recovery from which is highly variable, stymieing development of novel therapies as powering clinical trials is extremely difficult.
+Currently a Research Associate Alzheimer's Disease group within the [Dementia Research Institute](https://ukdri.ac.uk/) at [Cardiff University](https://www.cardiff.ac.uk/) as a bioinformatician.
+
+My PhD at Keele University based in the [OsKOR](https://oskor.netlify.app/) group at The [RJAH Orthopaedic Hospital](https://www.rjah.nhs.uk/) focused on spinal cord injury (SCI).
+SCI is damage to the spinal cord due to trauma, degeneration or disease that results in a temporary/permanent change to neurological function, recovery from which is highly variable, stymieing development of novel therapies as powering clinical trials is extremely difficult.
 SCI can lead to devastating consequences for both the physical and mental health of patients, particularly due to the uncertainty of neurological outcomes in the first two weeks post-injury.
 
 I endeavour to discover novel biomarkers of SCI outcomes, both to minimise this uncertainty and to expand our understanding of the underlying pathology of neurological recovery.
@@ -98,6 +98,19 @@ At Loughborough University, I investigated genetic expression in hydrogels, gain
 At Nottingham University I studied the effects of alternating current on interfacing wires grown via wireless electrochemistry and gained experience in 3D printing, electrodeposition and microscopy.
 At Keele University I cultured multiple cell types in 3D and compared viability and growth kinetics via cell staining, fluorescent microscopy.
 These experiences have given me a highly cross-disciplinary skillset making me a flexible and versatile scientist.
+
+Current Role {data-icon="fa-solid fa-flask" data-concise=true}
+--------------------------------------------------------------------------------
+
+### Bioinformatician
+
+Research Associate
+
+Cardiff University, Wales
+
+2021 - Present
+
+Dementia Research Institute - Alzheimer's Disease
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -118,7 +131,7 @@ PhD Student
 
 Oswestry, UK
 
-2017 - present (Expected submission 2021)
+2017 - 2021
 
 Thesis: Exploring the serum proteome of spinal cord injured patients: Identifying prognostic biomarkers and new treatment targets
 
@@ -205,16 +218,6 @@ N/A
 
 Oral presentations {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
-
-### Biomarkers for SCI
-
-Postgraduate Conference, 2018
-
-Keele University
-
-2018
-
-Gabriel Mateus Bernardo Harrington
 
 ### Reproducible Research
 

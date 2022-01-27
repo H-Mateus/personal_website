@@ -34,7 +34,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-So in my previous article on [The Sovereign of Science](../../../../post/the-sovereign-of-science/) I ranted about how I feel the reproducibility issues science face are a result of the lack of feedback scientists receive pertaining to the quality of their work.
+So in my previous article on [The Sovereign of Science](../../../../post/the-sovereign-of-science/), I ranted about how I feel the reproducibility issues science face are a result of the lack of feedback scientists receive pertaining to the quality of their work.
 Or, to put it more simply, none of the masters of science (the funding bodies, journals and universities) care if their science is any good, and so it inevitably isn't.
 
 Hopefully we can agree that this isn't ideal.
@@ -63,7 +63,10 @@ The only contributions to science they make are harmful ones:
 
 So why put up with them?
 
-<center>***I propose that the major research councils take 1% of what they spend a year on open access fees, and instead create a new platform where the research they fund will be published.***</center>
+<center>***I propose that the major research councils either, take 1% of what they spend a year on open access fees, and instead create a new platform where the research they fund will be published, or just throw their weight behind the [Peer Community in](https://peercommunityin.org/).***</center>
+
+The latter makes more sense to me as it'd require less effort on their part, but I propose the former as I suspect the people who run these bodies may prefer to create their own initiative for egotistical reasons.
+Not that I'm cynical...
 
 # A new publication model
 
@@ -211,3 +214,7 @@ We have the system we do because the people with power are either ignorant, apat
 
 This was more an exercise in articulating my thoughts, and getting some of this vitriol out of my head.
 And I've enjoyed it, so I'll chalk it up as a win.
+
+**Update:** So embarrassingly enough, when I first wrote this I wasn't aware of the [Peer Community in](https://peercommunityin.org/), which actually makes a lot of good progress in respect to the peer-review side of things, particularly in trying to de-couple peer-review from journals, though I still think some of the other ideas I outline here could improve on their model.
+Having said that, it's a really cool initiative, and I hope to publish my future work with them where possible!
+I write more about them in [this post](../../../../post/progress-in-open-research/).

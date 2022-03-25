@@ -37,7 +37,7 @@ social:
   link: https://github.com/H-Mateus
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/mateus-harrington-33657b68/
+  link: https://www.linkedin.com/in/gmb-harrington/
 - icon: orcid
   icon_pack: fab
   link: https://orcid.org/0000-0001-6075-3619

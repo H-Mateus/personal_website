@@ -21,25 +21,14 @@ image:
 projects: []
 ---
 
-```{r, label='setup-options', include=FALSE}
-knitr::opts_chunk$set(
-  eval = TRUE, # eval code chunks
-  echo = FALSE, # include source code
-  #fig.width = 6, # set figure dims
-  #fig.height = 6
-  fig.align = 'center',
-  warning = FALSE, # exclude warnings
-  message = FALSE, # exclude messages
-  error = FALSE # exclude errors
-)
-```
+
 
 So in my previous article on [The Sovereign of Science](../../../../post/the-sovereign-of-science/), I ranted about how I feel the reproducibility issues science face are a result of the lack of feedback scientists receive pertaining to the quality of their work.
 Or, to put it more simply, none of the masters of science (the funding bodies, journals and universities) care if their science is any good, and so it inevitably isn't.
 
 Hopefully we can agree that this isn't ideal.
 
-<center>***But what can we do about?***</center>
+<p style="text-align: center;"><b>But what can we do about?</b></p>
 
 Well I can't do much as a lowly PhD student.
 I simply don't have the power.
@@ -50,9 +39,12 @@ But I do feel they outline an objectively better way of doing science, that save
 
 # Firstly: The journals gotta go
 
-```{r, echo=FALSE, fig.cap='And never come back! Image credit: [**Unsplash**](https://unsplash.com/photos/mTehrY1mH-s)', out.width='50%'}
-knitr::include_graphics("exit.jpg")
-```
+
+
+<div class="figure" style="text-align: center">
+<img src="exit.jpg" alt="And never come back! Image credit: Unsplash" width="50%" />
+<p class="caption">Figure 1: And never come back! Image credit: <a href="https://unsplash.com/photos/mTehrY1mH-s"><strong>Unsplash</strong></a></p>
+</div>
 
 Seriously.
 The only contributions to science they make are harmful ones:
@@ -63,28 +55,31 @@ The only contributions to science they make are harmful ones:
 
 So why put up with them?
 
-<center>***I propose that the major research councils either, take 1% of what they spend a year on open access fees, and instead create a new platform where the research they fund will be published, or just throw their weight behind the [Peer Community in](https://peercommunityin.org/).***</center>
+<p style="text-align: center;"><b>I propose that the major research councils either, take 1% of what they spend a year on open access fees, and instead create a new platform where the research they fund will be published, or just throw their weight behind the [Peer Community in](https://peercommunityin.org/).</b></p>
 
 The latter makes more sense to me as it'd require less effort on their part, but I propose the former as I suspect the people who run these bodies may prefer to create their own initiative for egotistical reasons.
 Not that I'm cynical...
 
 # A new publication model
 
-```{r, echo=FALSE, fig.cap='Image credit: [**Unsplash**](https://unsplash.com/photos/UJ7Udasi4iE)', out.width="60%"}
-knitr::include_graphics("publish.jpg")
-```
+
+
+<div class="figure" style="text-align: center">
+<img src="publish.jpg" alt="Image credit: Unsplash" width="60%" />
+<p class="caption">Figure 2: Image credit: <a href="https://unsplash.com/photos/UJ7Udasi4iE"><strong>Unsplash</strong></a></p>
+</div>
 
 All the work published here will of course be freely available.
 In order to publish, authors would be required to create an account, with their real name, contact information and crucially, their research institution.
 
-<center>***This is so the platform has no anonymity and both individual scientists, and their institutions can be held accountable for any poor behaviour.***</center>
+<p style="text-align: center;"><b>This is so the platform has no anonymity and both individual scientists, and their institutions can be held accountable for any poor behaviour.</b></p>
 
 As soon as a paper is uploaded by the authors, it would only be viewable by peer reviewers.
 Before the paper is freely viewable, the authors would be required to review as many papers as their own has authors.
 So if the paper has 5 authors, they must peer review 5 papers.
 This could all be done by one author, each author could do 1, or anything in between.
 
-<center>***This ensures that there will always be enough peer reviewers available.***</center>
+<p style="text-align: center;"><b>This ensures that there will always be enough peer reviewers available.</b></p>
 
 Once they have completed this requirement, the paper would go live.
 If the paper has received at least 2 peer reviews supporting the quality of the work, it would be designated as having been reviewed and approved.
@@ -92,13 +87,16 @@ If not, it would instead be designated as "under review".
 
 # Rethinking peer review
 
-```{r, echo=FALSE, fig.cap='Image credit: [**Unsplash**](https://unsplash.com/photos/-fRAIQHKcc0)'}
-knitr::include_graphics("review.jpg")
-```
+
+
+<div class="figure" style="text-align: center">
+<img src="review.jpg" alt="Image credit: Unsplash" width="2000" />
+<p class="caption">Figure 3: Image credit: <a href="https://unsplash.com/photos/-fRAIQHKcc0"><strong>Unsplash</strong></a></p>
+</div>
 
 Here is what I suspect will be my most controversial suggestion:
 
-<center>***The peer review process should be completely transparent.***</center>
+<p style="text-align: center;"><b>The peer review process should be completely transparent.</b></p>
 
 I haven't really addressed this till now, but you may have thought something along the lines of:
 
@@ -149,9 +147,12 @@ This could be particularly useful for students to learn from.
 
 # Providing a reason to care about reproducibility
 
-```{r, echo=FALSE, fig.cap='Image credit: [**Kristian Niemi**](https://search.creativecommons.org/photos/2207415d-ea6c-4c18-b609-59437b957d0d)', fig.align='center'}
-knitr::include_graphics("care.jpg")
-```
+
+
+<div class="figure" style="text-align: center">
+<img src="care.jpg" alt="Image credit: Kristian Niemi" width="500" />
+<p class="caption">Figure 4: Image credit: <a href="https://search.creativecommons.org/photos/2207415d-ea6c-4c18-b609-59437b957d0d"><strong>Kristian Niemi</strong></a></p>
+</div>
 
 I would also propose papers be given some kind of "reproducibility score".
 I imagine this functioning like a checklist:
@@ -170,9 +171,9 @@ Funding bodies could use this when awarding grants, and postdocs/students could 
 
 As has been suggested elsewhere, I would also provide a separate doi for the paper, data and container, so these can receive citation and the authors can continue to receive proper credit for their work.
 
-<center>***The key here is that this provides an incentive for scientists to make their research more transparent and reproducible, not to evaluate the impact or even the quality of the work itself.<br>
+<p style="text-align: center;"><b>The key here is that this provides an incentive for scientists to make their research more transparent and reproducible, not to evaluate the impact or even the quality of the work itself.<br>
 The open peer review should sort that part.<br>
-Hopefully...***</center>
+Hopefully...</b></p>
 
 If their studies are underpowered, or their stats rubbish, this system would make it obvious and easy to call out.
 This would reflect poorly on the authors, and perhaps more importantly on their institution.
@@ -180,9 +181,12 @@ Thus, it would behove them to make sure their researchers are well trained and e
 
 # Sounds great, but who pays for this system?
 
-```{r, echo=FALSE, fig.cap='Image credit: [**Unsplash**](https://unsplash.com/photos/ZihPQeQR2wM)'}
-knitr::include_graphics("money.jpg")
-```
+
+
+<div class="figure" style="text-align: center">
+<img src="money.jpg" alt="Image credit: Unsplash" width="2808" />
+<p class="caption">Figure 5: Image credit: <a href="https://unsplash.com/photos/ZihPQeQR2wM"><strong>Unsplash</strong></a></p>
+</div>
 
 I would suggest a combination of the funding bodies and major research institutions.
 Pragmatically, I think it makes sense for universities to provide the servers to host their own research, and for software to automatically back this up to other university servers.
@@ -198,9 +202,12 @@ The system I'm proposing is effectively just a big distributed website with a pa
 
 # Feedback welcome
 
-```{r, fig.cap="Sometimes I wonder if I'm just too idealistic. Image credit: [**Unsplash**](https://unsplash.com/photos/W_6b8pWBUKY)", out.width="60%"}
-knitr::include_graphics("madness.jpg")
-```
+
+
+<div class="figure" style="text-align: center">
+<img src="madness.jpg" alt="Sometimes I wonder if I’m just too idealistic. Image credit: Unsplash" width="60%" />
+<p class="caption">Figure 6: Sometimes I wonder if I’m just too idealistic. Image credit: <a href="https://unsplash.com/photos/W_6b8pWBUKY"><strong>Unsplash</strong></a></p>
+</div>
 
 This is of course just my 2 cents.
 And I should reiterate, I'm sure these proposals would have their own issues, and certainly introduce some major teething pains.

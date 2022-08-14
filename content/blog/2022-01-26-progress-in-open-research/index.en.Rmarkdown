@@ -10,16 +10,10 @@ tags:
   - Publications
   - Journals
   - Open Research
-subtitle: '[Peer Community in](https://peercommunityin.org/) - A promising inititive in the fight for better science'
+subtitle: |
+  [Peer Community in](https://peercommunityin.org/) - A promising inititive in the fight for better science
 summary: ''
-authors: []
 lastmod: '2022-01-26T15:49:50Z'
-featured: no
-image:
-  caption: 'Image credit: **[Unsplash](https://unsplash.com/photos/_MMdxl-jUHo)**'
-  focal_point: ''
-  preview_only: no
-projects: []
 ---
 
 ```{r, label='setup-options', include=FALSE}
@@ -41,11 +35,11 @@ I also started my new role as a *Research Associate* (the posh formal title for 
 
 But, I recently came across a really cool initiative that attempts to implement some of the ideas I explored in the [last post](../../../../post/how-might-science-be-done-better/), called the [Peer Community in](https://peercommunityin.org/).
 
-<center>
-```{r, echo=FALSE, fig.cap='Image credit: [**PCI**](https://peercommunityin.org/)'}
+(ref:pci-journals1) Image credit: [**PCI**](https://peercommunityin.org/)
+
+```{r pci-journals1, echo=FALSE, fig.cap='(ref:pci-journals1)', fig.align='center'}
 knitr::include_graphics("pci_outline.jpg")
 ```
-</center>
 
 Looking at the above outline, the PCI works by inviting authors to first submit their papers to a preprint servers with their code and data.
 Then the authors can submit their DOI to the PCI whereupon a member of the community can recommend the paper as worthy of review.
@@ -56,11 +50,11 @@ At this stage the authors can submit their article to a [PCI-friendly journal](h
 The key benefit here is that the peer-review is divorced from the various biases a journal can bring to this process.
 The PCI also have their own [Peer Community Journal](https://peercommunityjournal.org/) which will always accept the recommendation and publish the article as open-access for free!
 
-<center>
-```{r, label='pci-journals', fig.cap='Image credit: [**PCI**](https://peercommunityin.org/pci-friendly-journals/)'}
+(ref:pci-journals) Image credit: [PCI](https://peercommunityin.org/pci-friendly-journals/)
+
+```{r, label='pci-journals', fig.cap='(ref:pci-journals)', fig.align='center'}
 knitr::include_graphics("pci_journals.png")
 ```
-</center>
 
 This last option of publishing with the Peer Community Journal is particularly appealing to me, especially at a time where other journals are exploiting their position to charge an outrageous open-access fee [of up to €9,500 ($11,500) per paper](https://www.nature.com/articles/d41586-020-03324-y).
 I won't rehash my rant outlining my feeling towards these parasitic journals, if you need a refresher though, that post can be [found here](../../../../post/the-sovereign-of-science/).

@@ -67,13 +67,15 @@ So to summarise:
 
 Now if you're paying attention you may be wondering:
 
-<center>***What value have the journals added to this process?***</center>
+<p style="text-align: center;"><b>What value have the journals added to this process?</b></p>
 
 The journal certainly wastes a lot of time for the authors, and in return they either lock the science behind a pay-wall where it can only be read by scientists if their institution pays thousands to millions for journal subscriptions, or the funding body, who already paid for the science to be done, has to pay a massive fee for people to actually be able to disseminate the research.
 
 # The role of the journals
 
-```{r, echo=FALSE, fig.cap='Image credit: [Unsplash](https://unsplash.com/photos/FPNnKfjcbNU)'}
+(ref:journals) Image credit: [Unsplash](https://unsplash.com/photos/FPNnKfjcbNU)
+
+```{r journals, echo=FALSE, fig.cap='(ref:journals)'}
 knitr::include_graphics("journals.jpg")
 ```
 
@@ -93,7 +95,9 @@ Except the journals won't publish your work because they think negative results 
 
 # The role of the funders
 
-```{r, echo=FALSE, fig.cap='Image credit: [Unsplash](https://unsplash.com/photos/5f1RsK-pyZQ)'}
+(ref:funders) Image credit: [Unsplash](https://unsplash.com/photos/5f1RsK-pyZQ)
+
+```{r funders, echo=FALSE, fig.cap='(ref:funders)'}
 knitr::include_graphics("funders.jpg")
 ```
 
@@ -132,9 +136,9 @@ It wasn't really a debate as they pretty much all agreed with each other.
 I certainly agreed, and still do.
 At this point they started talking about specific approaches we could take as a field to achieve this.
 
-<center>***For me, this debate was the purest, most beautiful expression of science I had even seen.<br>
-It was exciting.***<br>
-But then someone stood up and took the mic.</center>
+<p style="text-align: center;"><b>For me, this debate was the purest, most beautiful expression of science I had even seen.<br>
+It was exciting.</b><br>
+But then someone stood up and took the mic.</p>
 
 From their voice you tell they were annoyed.
 This individual effectively expressed that these experts at the top of their field were being too negative.
@@ -151,14 +155,14 @@ This person was on the board for one of the main funding bodies in the field.
 This was the most powerful person in the room.
 This was the hand that feeds, and none of them would dare bite it for fear they'd never get another grant.
 
-<center>**This was our Sovereign.**</center>
+<p style="text-align: center;"><b>This was our Sovereign.</b></p>
 
 They had borne witness to the most wonderful expression of science I had ever seen and they hated it.
 
-<center>In this moment I realised something.<br>
+<p style="text-align: center;">In this moment I realised something.<br>
 We weren't scientists.<br>
 We weren't here to expand the boundaries of human knowledge, to solve problems or to cure disease.<br>
-We were clowns, here merely dance so that this idiot child could tell themselves that they were making a difference.</center>
+We were clowns, here merely dance so that this idiot child could tell themselves that they were making a difference.</p>
 
 The funding bodies are the most powerful players in science.
 If they say jump, we'll jump.
@@ -195,7 +199,7 @@ The job seemed likely to be rather boring, but it offered better job security an
 The absurdity of current science made it seem pretty attractive to me.
 I wonder how much great young talent is lost from science due to these things.
 
-<center>**That may well be the greatest cost of all this stupidity.**</center>
+<p style="text-align: center;"><b>That may well be the greatest cost of all this stupidity.</b></p>
 
 And then I was offered a bioinformatics postdoc in the field of dementia at a Russle Group university.
 After much internal strife I've decided I'll give academia another chance.

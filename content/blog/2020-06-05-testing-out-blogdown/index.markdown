@@ -38,22 +38,37 @@ For practice, I'm going to demonstrate how we can include the following in a sin
 
 # 1) Iris data set
 Let's make a plot using the `iris` data set in `ggplot2`.
-```{r}
+
+```r
 library(ggplot2)
 # Dataset
-head(iris)
+knitr::kable(head(iris))
 ```
+
+
+
+| Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species |
+|------------:|-----------:|------------:|-----------:|:-------|
+|          5.1|         3.5|          1.4|         0.2|setosa  |
+|          4.9|         3.0|          1.4|         0.2|setosa  |
+|          4.7|         3.2|          1.3|         0.2|setosa  |
+|          4.6|         3.1|          1.5|         0.2|setosa  |
+|          5.0|         3.6|          1.4|         0.2|setosa  |
+|          5.4|         3.9|          1.7|         0.4|setosa  |
 
 
 <br>
 
 # 2) Plotting
-```{r}
+
+```r
 scatter <- ggplot(data=iris, aes(x= Sepal.Length, y = Sepal.Width))
 scatter + geom_point(aes(color=Species, shape=Species)) +
   xlab("Sepal Length") + ylab("Sepal Width") +
   theme_bw()
 ```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
 <br>
 
@@ -61,7 +76,14 @@ scatter + geom_point(aes(color=Species, shape=Species)) +
 
 Using markdown syntax `![Cute red panda](cute-red-panda-40.jpg)` to generate the image below:
 
-<center> ![Cute red panda](cute-red-panda-40.jpg){width=500px} </center>
+<img 
+    style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 50%;"
+    src="cute-red-panda-40.jpg" 
+    alt="Cute red panda">
+</img>
 
 <br>
 
@@ -69,11 +91,17 @@ Using markdown syntax `![Cute red panda](cute-red-panda-40.jpg)` to generate the
 
 We can also accomplish this with a code chunk, setting the following parameter `out.width="500px", fig.align='center'`
 
-(ref:caption-example) We can do nice auto-numbered captions as well! Image credit: [**Unsplash**](https://unsplash.com/photos/QZwf5yNopUo)
 
-```{r, fig.cap='(ref:caption-example)', out.width="500px", fig.align='center'}
+
+
+```r
 knitr::include_graphics("cute-red-panda-40.jpg")
 ```
+
+<div class="figure" style="text-align: center">
+<img src="cute-red-panda-40.jpg" alt="We can do nice auto-numbered captions as well! Image credit: Unsplash" width="500px" />
+<p class="caption">Figure 1: We can do nice auto-numbered captions as well! Image credit: <a href="https://unsplash.com/photos/QZwf5yNopUo"><strong>Unsplash</strong></a></p>
+</div>
 
 <br>
 
@@ -94,7 +122,8 @@ The data is total non-COVID-19 excess deaths per 100,000 and deaths involving CO
 The numbers around COVID-19 as in constant flux, so please be aware of the date.
 This data was downloaded from the Office of National Statistics on 2020-06-05.
 
-```{r}
+
+```r
 library(tidyverse)
 covid_deaths <- read_csv("covid_deaths_by_age_2020-06-05.csv")
 # let's select the rows of actual data
@@ -127,26 +156,53 @@ ggplot(covid_deaths_long, aes(x = age_group, y = deaths)) +
   labs(caption = "Source: Office for National Statistics, 2020-06-05")
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+
 If you're curious about explanations surrounding the increase in non-COVID-19 related deaths [this article](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/articles/analysisofdeathregistrationsnotinvolvingcoronaviruscovid19englandandwales28december2019to1may2020/technicalannex) lists some theories.
 
 Interestingly, in the age groups up to 50 the non-COVID-19 death rate has declined slightly
 
-```{r}
-print(covid_deaths_filtered)
+
+```r
+knitr::kable(covid_deaths_filtered)
 ```
+
+
+
+|age_group   |non-covid_excess_mortality |covid_excess_mortality |
+|:-----------|:--------------------------|:----------------------|
+|0 to 9      |-0.792423313               |0.014000412            |
+|10 to 19    |-1.056672991               |0.130274752            |
+|20 to 29    |-2.228613119               |0.653169144            |
+|30 to 39    |-1.362056932               |1.944003908            |
+|40 to 49    |-2.631069137               |6.697752064            |
+|50 to 59    |4.289242454                |20.72845098            |
+|60 to 69    |2.420093746                |55.40162727            |
+|70 to 79    |46.66123612                |152.8772002            |
+|80 to 89    |165.364023                 |516.5874406            |
+|90 and over |752.7944396                |1190.274376            |
 
 And for a little context for these numbers, the [Royal Society for the Prevention of Accidents](https://www.rospa.com/leisure-safety/advice/lightning/) reports that 30-60 people are stuck by lightning each year.
 
 The [Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2019) estimated the population in the UK to be 66,796,807 in mid-2019.
 So if we take then high end of 60 lightning strikes, the odds of getting stuck by lightning in the UK is:
 
-```{r}
+
+```r
 # stop scientific notation
-options(scipen=999)
+options(scipen = 999)
 # calculate risk per 100,000
 risk = (60 / 66796807) * 100000
 # print result
-print(paste("The incidence rate of lightning strikes per 100,000 = ", round(risk, 5), sep = ""))
+print(paste(
+  "The incidence rate of lightning strikes per 100,000 = ",
+  round(risk, 5),
+  sep = ""
+))
+```
+
+```
+## [1] "The incidence rate of lightning strikes per 100,000 = 0.08982"
 ```
 
 So if we assume all humans are equally likely to get stuck by lightning in a given year, then it's several times more likely for a 0-9 year old to get stuck by lightning than die with COVID-19.

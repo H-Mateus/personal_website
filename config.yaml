@@ -2,7 +2,7 @@ baseURL: https://gmbernardoharrington.netlify.app/
 theme: hugo-apero
 languageCode: en
 title: Gabriel Mateus Bernardo Harrington
-author: Gabriel Mateus Bernardo Harrington
+author: Mateus Harrington
 copyright: '&copy; Gabriel Mateus Bernardo Harrington <script>document.write( new Date().getFullYear() );</script>'
 googleAnalytics: 'UA-171428188-1'
 disqusShortname: ''

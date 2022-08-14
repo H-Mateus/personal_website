@@ -1,7 +1,7 @@
 # once per work session
 library(blogdown)
 # once per project
-new_site(theme = "gcushen/hugo-academic", 
+new_site(theme = " hugo-apero/hugo-apero", 
          sample = TRUE, 
          theme_example = TRUE, 
          empty_dirs = TRUE,

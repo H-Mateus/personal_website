@@ -2,18 +2,18 @@
 action_label: Read More &rarr;
 action_link: /about
 action_type: text
-description: I'm currently a bioinformatician at the 
+description: Welcome to my website! I'm currently a bioinformatician at the 
   [Dementia Research Institute](https://ukdri.ac.uk/) in 
   [Cardiff University](https://www.cardiff.ac.uk/), working on Alzheimer's 
   disease.
-image_left: false
-images:
-- img/avatar.png
+image_left: true
+# images:
+# - img/avatar.png
 show_action_link: true
 show_social_links: true
-subtitle: My name is Mateus, welcome to my personal website
+subtitle: Bioinformatics | Data Science | Statistics | Reproducible Research
 text_align_left: false
-title: Hello!
+title: Gabriel Mateus Bernardo Harrington
 type: home
 ---
 

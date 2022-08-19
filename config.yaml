@@ -128,6 +128,10 @@ menu:
       title: Talks
       url: /talk/
       weight: 4
+    - name: Teaching
+      title: Teaching
+      url: /teaching/
+      weight: 5
     # - name: A collection
     #   title: A collection
     #   url: /collection/

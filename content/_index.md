@@ -8,7 +8,7 @@ description: Welcome to my website! I'm currently a bioinformatician at the
   disease.
 image_left: true
 # images:
-# - img/avatar.png
+#  - img/avatar.jpg
 show_action_link: true
 show_social_links: true
 subtitle: Bioinformatics | Data Science | Statistics | Reproducible Research

@@ -209,4 +209,4 @@ Note, that even in cases where it is fairly obvious the data is skewed, it can b
 Also note that the Shapiro-Wilk test become sensitive to small deviations from normality at larger sample sizes (>50), so it's generally good to check the visualisations **and** the test.
 
 Finally, if you have a larger sample size and still in doubt about the normality of your data, just use non-parametric stats to be safe.
-You'll lose a little power, so long as the sample size is large enough it's unlikely to be critical. 
+You'll lose a little power, but so long as the sample size is large enough, it's unlikely to be critical. 

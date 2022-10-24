@@ -31,7 +31,7 @@ Note that the [central limit theorem](https://en.wikipedia.org/wiki/Central_limi
 Let's start by loading our packages.
 We'll use `ggpubr` as it makes nice plots, and has a handy function for [Q-Q plots](https://data.library.virginia.edu/understanding-q-q-plots/), and `cowplot` for arranging plots into grids.
 
-`rstatix` is for pipe-friendly versions of the base R stat functions, and `tidyveres` for data manipulation.
+`rstatix` is for pipe-friendly versions of the base R stat functions, and `tidyverse` for data manipulation.
 
 Note that `librarian` is a neat package for automatically installing and loading packages!
 
@@ -135,8 +135,27 @@ By contrast, the skewed data has a very low p-value, indicating it is unlikely t
 If we have two independent groups, we'd want to check their normality separately.
 If the underlying distributions are truly different, then they wouldn't be normally distributed if measured together (it'd be bimodal in the case of 2 groups).
 
-This is nice and easy to do with long-format data:
+This is nice and easy to do with long-format data.
+We'll use the built-in `ToothGrowth` dataset to demonstrate:
 
+
+```r
+## display some random rows of ToothGrowth
+ToothGrowth %>%
+  sample_n_by(supp, dose, size = 1)
+```
+
+```
+## # A tibble: 6 × 3
+##     len supp   dose
+##   <dbl> <fct> <dbl>
+## 1  21.5 OJ      0.5
+## 2  23.6 OJ      1  
+## 3  26.4 OJ      2  
+## 4   5.2 VC      0.5
+## 5  16.5 VC      1  
+## 6  23.6 VC      2
+```
 
 ```r
 ## check normality for long-format grouped data
@@ -161,8 +180,24 @@ ToothGrowth %>%
 ## 2 VC    len          0.966 0.428
 ```
 
-To apply Shapiro-Wilk's across columns is easy enough:
+To apply Shapiro-Wilk's across columns is easy enough.
+We'll use another built-in dataset, `iris`, to demonstrate with wide-format data:
 
+
+```r
+## display some rows of iris
+iris %>%
+  sample_n_by(Species, size = 1)
+```
+
+```
+## # A tibble: 3 × 5
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species   
+##          <dbl>       <dbl>        <dbl>       <dbl> <fct>     
+## 1          4.7         3.2          1.6         0.2 setosa    
+## 2          5.5         2.3          4           1.3 versicolor
+## 3          7.2         3.6          6.1         2.5 virginica
+```
 
 ```r
 ## with column names
@@ -201,6 +236,8 @@ ggqqplot(iris_long, x = "value", color = "variable", facet.by = "Species")
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-2.png" width="672" />
 
+I'd recommend checking out the principals of [tidy data](https://tidyr.tidyverse.org/articles/tidy-data.html) if you're unsure of how best to structure your own data.
+
 # Summary
 
 Hopefully this gives you a sense of how to check for normality.
@@ -208,5 +245,5 @@ Note, that even in cases where it is fairly obvious the data is skewed, it can b
 
 Also note that the Shapiro-Wilk test become sensitive to small deviations from normality at larger sample sizes (>50), so it's generally good to check the visualisations **and** the test.
 
-Finally, if you have a larger sample size and still in doubt about the normality of your data, just use non-parametric stats to be safe.
+Finally, if you have a larger sample size and still in doubt about the normality of your data, you can just use non-parametric stats to be safe.
 You'll lose a little power, but so long as the sample size is large enough, it's unlikely to be critical. 

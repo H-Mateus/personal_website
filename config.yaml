@@ -68,7 +68,7 @@ params:
       url: https://twitter.com/Hmateus4
     - icon: google-scholar
       icon_pack: ai
-      link: https://scholar.google.co.uk/citations?user=FB3HdaYAAAAJ&hl=en
+      url: https://scholar.google.co.uk/citations?user=FB3HdaYAAAAJ&hl=en
     - icon: orcid
       icon_pack: ai
       url: https://orcid.org/0000-0001-6075-3619

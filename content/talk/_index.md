@@ -1,5 +1,5 @@
 ---
-author: Mateus Harrington
+#author: Mateus Harrington
 cascade:
   author: Mateus Harrington
   show_author_byline: true
@@ -11,7 +11,8 @@ cascade:
     text_link_label: View recent talks
     text_link_url: /talk/
 description: |
-  This is a list of talks and posters I've presented
+  This is a list of talks and posters I've presented<br>
+  You can find a list of slide decks [here](https://h-mateus.github.io/presentations/)
 layout: list
 show_author_byline: true
 show_button_links: true

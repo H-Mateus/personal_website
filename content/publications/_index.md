@@ -8,7 +8,8 @@ cascade:
     show_sidebar_adunit: true
     text_link_label: View all projects
     text_link_url: /project/
-#description: A list of my papers
+description: This is a list of papers I've published<br>
+    Check out my [Google Scholar](https://scholar.google.co.uk/citations?user=FB3HdaYAAAAJ&hl=en) for a full list
 layout: list-grid
 show_author_byline: true
 show_button_links: false

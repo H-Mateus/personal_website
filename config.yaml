@@ -8,7 +8,7 @@ googleAnalytics: 'UA-171428188-1'
 disqusShortname: ''
 metaDataFormat: yaml
 footnoteReturnLinkContents: '&#8617;'
-paginate: 5
+paginate: 10
 preserveTaxonomyNames: yes
 ignoreFiles:
   - \.Rmd$

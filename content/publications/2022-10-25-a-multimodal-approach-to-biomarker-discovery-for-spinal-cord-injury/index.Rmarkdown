@@ -23,7 +23,7 @@ links:
 - icon: file-pdf
   icon_pack: fa
   name: PDF
-  url: https://eprints.keele.ac.uk/11058/1/BernardoHarringtonPhD2022.pdf
+  url: https://keele-repository.worktribe.com/output/423508/a-multimodal-approach-to-biomarker-discovery-for-spinal-cord-injury#
 # - icon: quotes
 #   icon_pack: fa
 #   name: Cite
@@ -45,16 +45,16 @@ Note that if you happen to interested in R Markdown, I'd highly recommend checki
 
 # Abstract
 
-The extent of the devastating outcomes following spinal cord injury, particularly with respect to neurological function, are difficult to predict. 
-This can make it difficult to plan clinical care and manage patient expectations, both of which can have profound impacts on rehabilitation and mental health. 
-The heterogeneity in neurological recovery also make powering clinical trials challenging, stifling the development of novel therapies. 
-Prognostic biomarkers that can aid in accurately predicting outcomes would therefore be of value in both clinical and research settings. 
-They could also serve to uncover novel understanding as to the pathophysiological factors in heterogeneous outcomes, potentially revealing novel therapeutic targets. 
-Whilst cerebral spinal fluid is an obvious target for identifying such biomarkers, the risk and cost associated with collecting such samples possess a challenge. 
-Blood by contrast is easily accessible, with little risk and cost to healthcare providers, making it an ideal source for testing. 
-This project aims to identify novel blood biomarkers for spinal cord injury via unbiased methods. 
-Specifically, prognostic models of discharge and 12-month post-injury neurology were developed utilising admission neurology scores, basic demographic information and routinely measured haematological markers. 
-Here, blood markers commonly associated with liver function, including alanine transaminase and alkaline phosphatase, were found to add modest but statistically significant predictive value. 
-This would suggest that liver health, or perhaps metabolic health more broadly, is at least partially related to variance of neurological outcomes. 
-Further, both labelled and unlabelled shotgun proteomics of plasma from human patients revealed proteins associated with the complement cascade to be of particular importance for both severity of injury, and differential functional recovery. 
+The extent of the devastating outcomes following spinal cord injury, particularly with respect to neurological function, are difficult to predict.
+This can make it difficult to plan clinical care and manage patient expectations, both of which can have profound impacts on rehabilitation and mental health.
+The heterogeneity in neurological recovery also make powering clinical trials challenging, stifling the development of novel therapies.
+Prognostic biomarkers that can aid in accurately predicting outcomes would therefore be of value in both clinical and research settings.
+They could also serve to uncover novel understanding as to the pathophysiological factors in heterogeneous outcomes, potentially revealing novel therapeutic targets.
+Whilst cerebral spinal fluid is an obvious target for identifying such biomarkers, the risk and cost associated with collecting such samples possess a challenge.
+Blood by contrast is easily accessible, with little risk and cost to healthcare providers, making it an ideal source for testing.
+This project aims to identify novel blood biomarkers for spinal cord injury via unbiased methods.
+Specifically, prognostic models of discharge and 12-month post-injury neurology were developed utilising admission neurology scores, basic demographic information and routinely measured haematological markers.
+Here, blood markers commonly associated with liver function, including alanine transaminase and alkaline phosphatase, were found to add modest but statistically significant predictive value.
+This would suggest that liver health, or perhaps metabolic health more broadly, is at least partially related to variance of neurological outcomes.
+Further, both labelled and unlabelled shotgun proteomics of plasma from human patients revealed proteins associated with the complement cascade to be of particular importance for both severity of injury, and differential functional recovery.
 Many of the proteins identified were also directly linked to the liver, once again suggesting the organ may have more significance to outcomes of spinal cord injury than previously appreciated.

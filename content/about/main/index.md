@@ -19,7 +19,7 @@ intro: |
   There, I contributed to groundbreaking research in viral gene therapy and optogenetics in the cochlea, working alongside an internationally renowned research team.
   This experience involved comprehensive laboratory work including surgeries, tissue processing, immunohistochemistry, and microscopy, contributing to the development of next-generation cochlear implants.
 
-  You can find my CV [here](/cv_current.pdf)
+  You can find my CV [here](/cv.html)
 show_outro: false
 # outro: |
 #   <i class="fas fa-glass-cheers pr2"></i>Sincere thanks to [Maëlle Salmon](https://masalmon.eu/) for her help naming this Hugo theme!

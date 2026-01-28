@@ -1,0 +1,20 @@
+"The rate of non-COVID-19 deaths per 100,000 is highest in the 90 years and over age category, among whom the rate of deaths involving COVID-19 is also highest",,
+"Total non-COVID-19 excess deaths per 100,000 and deaths involving COVID-19 per 100,000 for each 10-year age group, England and Wales, Week 11 to Week 18",,
+,,
+Notes,"1. Figures include the deaths of non-residents.
+2. Based on date a death was registered rather than occurred.
+3. All figures for 2020 are provisional.
+4. Individual weeks may not sum to the year-to-date analysis as previous weeks have been recalculated in order to have the most up-to-date figures.",
+Unit,"Deaths registered per 100,000",
+,,
+Age groups,Non-COVID-19 excess mortality rate,COVID-19 mortality rate
+0 to 9,-0.792423313,0.014000412
+10 to 19,-1.056672991,0.130274752
+20 to 29,-2.228613119,0.653169144
+30 to 39,-1.362056932,1.944003908
+40 to 49,-2.631069137,6.697752064
+50 to 59,4.289242454,20.72845098
+60 to 69,2.420093746,55.40162727
+70 to 79,46.66123612,152.8772002
+80 to 89,165.364023,516.5874406
+90 and over,752.7944396,1190.274376

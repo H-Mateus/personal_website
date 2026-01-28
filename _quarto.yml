@@ -1,0 +1,109 @@
+project:
+  type: website
+
+website:
+  # title: "Gabriel Mateus Bernardo Harrington"
+  site-url: https://mateusharrington.com
+  repo-url: https://github.com/H-Mateus/personal_website
+  description: "Bioinformatics | Data Science | Reproducible Research"
+  favicon: images/icon.png
+  page-navigation: true
+  back-to-top-navigation: true
+  # comments:
+  #   utterances:
+  #     repo: H-Mateus/mateus
+  #     label: utterances
+  #     theme: body-light
+  #     issue-term: title
+  navbar:
+    logo: images/icon.png
+    tools:
+      - icon: github
+        href: https://www.github.com/H-Mateus/personal_website
+    right:
+      - text: About
+        aria-label: "About Me"
+        href: about/index.qmd
+      - text: Blog
+        aria-label: "Ramblings on academia"
+        href: blog/index.qmd
+      - text: Publications
+        aria-label: "Publications"
+        href: publications/index.qmd
+      - text: Teaching
+        aria-label: "Teaching"
+        href: teaching/index.qmd
+      - text: Talks
+        aria-label: "Presented Talks"
+        href: talk/index.qmd
+
+  page-footer:
+    left: >-
+      &#169; 2026 Mateus Harrington &#8729; Made with [Quarto](https://quarto.org)
+    center: |
+      <a class="link-dark me-1" href="https://linkedin.com/in/gmb-harrington" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
+      <a class="link-dark me-1" href="https://hachyderm.io/@H_Mateus" title="Mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
+      <a class="link-dark me-1" href="https://github.com/H-Mateus" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+      <a class="link-dark me-1" href="https://orcid.org/0000-0001-6075-3619" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
+      <a class="link-dark me-1" href="https://scholar.google.com/citations?user=FB3HdaYAAAAJ&hl=en" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a>
+
+    # right:
+    #   - text: "Accessibility"
+    #     aria-label: "Accessibility Commitment"
+    #     href: accessibility.qmd
+    #   - text: "Contact"
+    #     aria-label: "Contact Form"
+    #     href: "contact.qmd"
+    #   - text: "License"
+    #     aria-label: "License Details"
+    #     href: license.qmd
+    #   - icon: rss
+    #     href: blog/index.xml
+
+# format:
+#   html:
+#     theme:
+#       light: flatly
+#       dark: darkly
+#     css: styles.scss
+#     toc: true
+#     code-link: true
+#     pagetitle: "{{< meta title >}}"
+#     lightbox: true
+
+format:
+  html:
+    theme:
+      light: assets/ek-theme-light.scss
+      dark: assets/ek-theme-dark.scss
+    css: assets/ek-styles.css
+    code-block-border-left: true
+    highlight-style:
+      light: assets/ek-light.theme
+      dark: assets/ek-dark.theme
+    smooth-scroll: true
+    link-external-newwindow: true
+
+# format:
+#   html:
+#     theme:
+#       light:
+#         - cosmo
+#         - assets/silvia-theme-light.scss
+#         - assets/silvia/colors-light.scss
+#         - assets/silvia/fonts.scss
+#       dark:
+#         - cosmo
+#         - assets/silvia-theme-dark.scss
+#         - assets/silvia/colors-dark.scss
+#     highlight-style:
+#       light: assets/silvia/a11y-light.theme
+#       dark: assets/silvia/a11y-dark.theme
+
+execute:
+  freeze: auto
+
+# include-in-header:
+#   - assets/silvia/umami.html
+#   - assets/silvia/google-search-console.html
+

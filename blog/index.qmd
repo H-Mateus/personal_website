@@ -1,5 +1,6 @@
 ---
 title: "Ramblings on academia"
+author: ""
 listing: 
   contents: 
     - "**/index.qmd"

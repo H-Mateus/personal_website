@@ -34,29 +34,15 @@ For practice, I'm going to demonstrate how we can include the following in a sin
 # 1) Iris data set
 Let's make a plot using the `iris` data set in `ggplot2`.
 
-```r
+```{r}
 library(ggplot2)
 # Dataset
 knitr::kable(head(iris))
 ```
 
-
-
-| Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species |
-|------------:|-----------:|------------:|-----------:|:-------|
-|          5.1|         3.5|          1.4|         0.2|setosa  |
-|          4.9|         3.0|          1.4|         0.2|setosa  |
-|          4.7|         3.2|          1.3|         0.2|setosa  |
-|          4.6|         3.1|          1.5|         0.2|setosa  |
-|          5.0|         3.6|          1.4|         0.2|setosa  |
-|          5.4|         3.9|          1.7|         0.4|setosa  |
-
-
-<br>
-
 # 2) Plotting
 
-```r
+```{r}
 scatter <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width))
 scatter +
   geom_point(aes(color = Species, shape = Species)) +
@@ -65,31 +51,15 @@ scatter +
   theme_bw()
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
-
-<br>
-
 # 3) Embedding a bundled image
 
 Using markdown syntax `![Cute red panda](cute-red-panda-40.jpg)` to generate the image below:
 
-<img 
-    style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 50%;"
-    src="cute-red-panda-40.jpg" 
-    alt="Cute red panda">
-</img>
-
-<br>
+![Cute red panda](cute-red-panda-40.jpg){fig-alt="Cute red panda" width=50%}
 
 # 4) Using knitr
 
 We can also accomplish this with a code chunk, setting the following parameter `out.width="500px", fig.align='center'`
-
-
-
 
 ```r
 knitr::include_graphics("cute-red-panda-40.jpg")
@@ -100,16 +70,16 @@ knitr::include_graphics("cute-red-panda-40.jpg")
 <p class="caption">Figure 1: We can do nice auto-numbered captions as well! Image credit: <a href="https://unsplash.com/photos/QZwf5yNopUo"><strong>Unsplash</strong></a></p>
 </div>
 
-<br>
-
 # 5) Relative links
 
-I can also include some relative links to, for example, tell you to check out this [other section of my site](../../../../home/../)!
+I can also include some relative links to, for example, tell you to check out this [other section of my site](/about)!
 
 The structure of relative links is a bit confusing.
 When specifying the location of the page you want to get to, the reference point is the directory that your post lives in (and NOT the project root directory).
 
-<br>
+::: {.callout-note}
+Now that I've migrated my site to use Quarto instead of RMarkdown, the relative links now work how you'd expect, which is very nice!
+:::
 
 # 6) Reading in data
 
@@ -120,7 +90,8 @@ The numbers around COVID-19 as in constant flux, so please be aware of the date.
 This data was downloaded from the Office of National Statistics on 2020-06-05.
 
 
-```r
+```{r}
+#| message: false
 library(tidyverse)
 covid_deaths <- read_csv("covid_deaths_by_age_2020-06-05.csv")
 # let's select the rows of actual data
@@ -159,31 +130,14 @@ ggplot(covid_deaths_long, aes(x = age_group, y = deaths)) +
   labs(caption = "Source: Office for National Statistics, 2020-06-05")
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" />
-
 If you're curious about explanations surrounding the increase in non-COVID-19 related deaths [this article](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/articles/analysisofdeathregistrationsnotinvolvingcoronaviruscovid19englandandwales28december2019to1may2020/technicalannex) lists some theories.
 
 Interestingly, in the age groups up to 50 the non-COVID-19 death rate has declined slightly
 
 
-```r
+```{r}
 knitr::kable(covid_deaths_filtered)
 ```
-
-
-
-|age_group   |non-covid_excess_mortality |covid_excess_mortality |
-|:-----------|:--------------------------|:----------------------|
-|0 to 9      |-0.792423313               |0.014000412            |
-|10 to 19    |-1.056672991               |0.130274752            |
-|20 to 29    |-2.228613119               |0.653169144            |
-|30 to 39    |-1.362056932               |1.944003908            |
-|40 to 49    |-2.631069137               |6.697752064            |
-|50 to 59    |4.289242454                |20.72845098            |
-|60 to 69    |2.420093746                |55.40162727            |
-|70 to 79    |46.66123612                |152.8772002            |
-|80 to 89    |165.364023                 |516.5874406            |
-|90 and over |752.7944396                |1190.274376            |
 
 And for a little context for these numbers, the [Royal Society for the Prevention of Accidents](https://www.rospa.com/leisure-safety/advice/lightning/) reports that 30-60 people are stuck by lightning each year.
 
@@ -191,7 +145,7 @@ The [Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandc
 So if we take then high end of 60 lightning strikes, the odds of getting stuck by lightning in the UK is:
 
 
-```r
+```{r}
 # stop scientific notation
 options(scipen = 999)
 # calculate risk per 100,000
@@ -202,10 +156,6 @@ print(paste(
   round(risk, 5),
   sep = ""
 ))
-```
-
-```
-## [1] "The incidence rate of lightning strikes per 100,000 = 0.08982"
 ```
 
 So if we assume all humans are equally likely to get stuck by lightning in a given year, then it's several times more likely for a 0-9 year old to get stuck by lightning than die with COVID-19.

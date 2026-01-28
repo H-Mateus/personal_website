@@ -23,11 +23,11 @@ about:
       aria-label: "LinkedIn"
       href: https://linkedin.com/in/gmb-harrington
 listing:
-- id: project
+- id: teaching
   contents: 
-    - "../project/*/index.qmd"
-    - "../project/*/index.markdown"
-    - "../project/external-items/metadata.yml"
+    - "../teaching/*/index.qmd"
+    - "../teaching/*/index.markdown"
+    - "../teaching/external-items/metadata.yml"
   sort: date desc
   type: grid
   grid-columns: 1
@@ -63,10 +63,10 @@ listing:
   fields: [title, subtitle, image]
   max-items: 1
   image-height: "200"
-- id: publication
+- id: publications
   contents: 
-    - "../publication/*/index.qmd"
-    - "../publication/*/index.markdown"
+    - "../publications/*/index.qmd"
+    - "../publications/*/index.markdown"
   sort: date desc
   type: grid
   grid-columns: 1
@@ -91,7 +91,6 @@ resources:
 <div class="h1">Hi!</div>
 
 Thanks for stopping by!
-
 
 I am a postdoctoral bioinformatician at the [UK Dementia Research Institute](https://ukdri.ac.uk/), [Cardiff University](https://www.cardiff.ac.uk/), I specialise in Alzheimer's disease with a vascular lens.
 Learn more about my research interests in [publications](/publication).
@@ -141,6 +140,7 @@ You can find my CV [here](/assets/cv.html)
 
 :::
 <!-- end grid -->
+
 
 ## Lately ...
 

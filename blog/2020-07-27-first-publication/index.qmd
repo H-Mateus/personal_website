@@ -41,11 +41,7 @@ Also so I can continue my endless quest to procrastinate on my thesis, but that'
 
 ## So what's prognostic modelling anyway?
 
-(ref:caption-example) Artist rendition of me pretending to work. Except not really. Image credit: [**iStock**](https://www.istockphoto.com/)
-
-```{r, fig.cap='(ref:caption-example)', out.width="500px", fig.align='center'}
-knitr::include_graphics("data_science.jpg")
-```
+![Artist rendition of me pretending to work. Except not really. Image credit: [**iStock**](https://www.istockphoto.com/)](data_science.jpg){#fig-work fig-align="center" width=60%}
 
 A prognostic model is something that aims to predict outcomes.
 In our context we're trying to predict the neurological outcome (their motor and sensor function) for a patient following a spinal cord injury (SCI).
@@ -62,11 +58,7 @@ They may ask questions like:
 
 To which a clinician is often unable to give any answer beyond "No" in the most severe SCI cases and "I don't know" in other cases, which is the majority of the time.
 
-(ref:dunno) What does it even mean to "know" something in these crazy times anyway...? Image credit: [**Giphy**](https://giphy.com/gifs/idk-shrug-shrugging-K6VhXtbgCXqQU)
-
-```{r, fig.cap='(ref:dunno)', out.width="500px", fig.align='center'}
-knitr::include_graphics("https://media.giphy.com/media/K6VhXtbgCXqQU/giphy.gif")
-```
+![What does it even mean to "know" something in these crazy times anyway...? Image credit: [**Giphy**](https://giphy.com/gifs/idk-shrug-shrugging-K6VhXtbgCXqQU)](https://media.giphy.com/media/K6VhXtbgCXqQU/giphy.gif){#fig-dunno}
 
 This uncertainty can end up making some patients unrealistically hopeful about their prospects, and others overly pessimistic, both of which can have a negative impact on mental health in both the long and short term. 
 
@@ -92,11 +84,7 @@ We're interested in routine bloods because we suspected they could provide valua
 This is in contrast to most of the other literature in this field, which focuses on [cerebral spinal fluid (CSF)](https://en.wikipedia.org/wiki/Cerebrospinal_fluid).
 CSF would almost certainly have useful information for predicting SCI outcomes, but a very invasive procure is required to collect it, which introduces additional cost for the healthcare provider and risk to the patent.
 
-(ref:spinal-cord) A nice cartoon of the spinal cord that illustrates which parts of the cord control which [myotome](https://www.kenhub.com/en/library/anatomy/myotomes) (muscle groups). Image credit: [**Nature Reviews**](https://www.nature.com/articles/nrdp201718/figures/1)
-
-```{r, fig.cap='(ref:spinal-cord)', out.width="500px", fig.align='center'}
-knitr::include_graphics("spinal_cord.jpg")
-```
+![A nice cartoon of the spinal cord that illustrates which parts of the cord control which [myotome](https://www.kenhub.com/en/library/anatomy/myotomes) (muscle groups). Image credit: [**Nature Reviews**](https://www.nature.com/articles/nrdp201718/figures/1)](spinal_cord.jpg){#fig-sci width=60% fig-align="center"}
 
 ## And the results?
 
@@ -114,13 +102,7 @@ However, these papers provided evidence that routine blood markers can be somewh
 
 So happy days!
 
-(ref:happy-rabbit) One happy looking rabbit. I wonder what drugs they gave it... Image credit: [**Giphy**](https://giphy.com/gifs/happy-smile-smiling-1136UBdSNn6Bu8)
-
-```{r, fig.cap='(ref:happy-rabbit)', out.width="500px", fig.align='center'}
-knitr::include_graphics(
-  "https://media.giphy.com/media/1136UBdSNn6Bu8/giphy.gif"
-)
-```
+![One happy looking rabbit. I wonder what drugs they gave it... Image credit: [**Giphy**](https://giphy.com/gifs/happy-smile-smiling-1136UBdSNn6Bu8)](https://media.giphy.com/media/1136UBdSNn6Bu8/giphy.gif){#fig-happy-rabbit width=60%}
 
 Both papers also suggest that several blood markers associated with liver function add value to predictions of outcome.
 This has peaked our interest and we hope to further investigate this link in subsequent work.
@@ -143,8 +125,4 @@ So I welcome any feedback you might have about my writing as I'm keen to improve
 
 Thanks for reading, and have one final celebratory .gif for the road
 
-(ref:celebrate) \\( ͡> ‿‿ ͡<)/ Image credit: [**Giphy**](https://giphy.com/gifs/Ge86XF8AVY1KE/links)
-
-```{r, fig.cap='(ref:celebrate)', out.width="500px", fig.align='center'}
-knitr::include_graphics("https://media.giphy.com/media/Ge86XF8AVY1KE/giphy.gif")
-```
+![\\( ͡> ‿‿ ͡<)/ Image credit: [**Giphy**](https://giphy.com/gifs/Ge86XF8AVY1KE/links)](https://media.giphy.com/media/Ge86XF8AVY1KE/giphy.gif){#fig-celebrate}

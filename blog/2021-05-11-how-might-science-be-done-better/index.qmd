@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-So in my previous article on [The Sovereign of Science](../../../../post/the-sovereign-of-science/), I ranted about how I feel the reproducibility issues science face are a result of the lack of feedback scientists receive pertaining to the quality of their work.
+So in my previous article on [The Sovereign of Science](/blog/2021-05-10-the-sovereign-of-science/), I ranted about how I feel the reproducibility issues science face are a result of the lack of feedback scientists receive pertaining to the quality of their work.
 Or, to put it more simply, none of the masters of science (the funding bodies, journals and universities) care if their science is any good, and so it inevitably isn't.
 
 Hopefully we can agree that this isn't ideal.
@@ -43,11 +43,7 @@ But I do feel they outline an objectively better way of doing science, that save
 
 # Firstly: The journals gotta go
 
-(ref:exit) And never come back! Image credit: [**Unsplash**](https://unsplash.com/photos/mTehrY1mH-s)
-
-```{r exit, echo=FALSE, fig.cap='(ref:exit)', out.width='50%'}
-knitr::include_graphics("exit.jpg")
-```
+![And never come back! Image credit: [**Unsplash**](https://unsplash.com/photos/mTehrY1mH-s)](exit.jpg){#fig-exit width=50%}
 
 Seriously.
 The only contributions to science they make are harmful ones:
@@ -65,11 +61,7 @@ Not that I'm cynical...
 
 # A new publication model
 
-(ref:newspaper) Image credit: [**Unsplash**](https://unsplash.com/photos/UJ7Udasi4iE)
-
-```{r newspaper, echo=FALSE, fig.cap='(ref:newspaper)', out.width="60%"}
-knitr::include_graphics("publish.jpg")
-```
+![Image credit: [**Unsplash**](https://unsplash.com/photos/UJ7Udasi4iE)](publish.jpg){#fig-newspaper width=60%}
 
 All the work published here will of course be freely available.
 In order to publish, authors would be required to create an account, with their real name, contact information and crucially, their research institution.
@@ -89,12 +81,7 @@ If not, it would instead be designated as "under review".
 
 # Rethinking peer review
 
-(ref:typewriter) Image credit: [**Unsplash**](https://unsplash.com/photos/-fRAIQHKcc0)
-
-```{r typewriter, echo=FALSE, fig.cap='(ref:typewriter)'}
-knitr::include_graphics("review.jpg")
-```
-
+![Image credit: [**Unsplash**](https://unsplash.com/photos/-fRAIQHKcc0)](review.jpg){#fig-typewriter}
 Here is what I suspect will be my most controversial suggestion:
 
 <p style="text-align: center;"><b>The peer review process should be completely transparent.</b></p>
@@ -116,7 +103,7 @@ I suspect this would be enough to keep peer review civil.
 
 It would also allow us to hold peer reviewers to account if they give bad science a pass.
 But why would they ever do that?
-Well, as I touched on in the [prior post](../../../../post/the-sovereign-of-science/), scientists are often woefully statistically incompetent, so even if they read the paper properly, they may be too ignorant to notice poor practices such as a study being underpowered, or data not meeting the assumptions of the statical tests performed.
+Well, as I touched on in the [prior post](/blog/2021-05-10-the-sovereign-of-science/), scientists are often woefully statistically incompetent, so even if they read the paper properly, they may be too ignorant to notice poor practices such as a study being underpowered, or data not meeting the assumptions of the statical tests performed.
 
 And remember, peer reviewers are volunteers, they don't get paid or rewarded at all for their time under the current system.
 
@@ -148,11 +135,7 @@ This could be particularly useful for students to learn from.
 
 # Providing a reason to care about reproducibility
 
-(ref:sharing) Image credit: [**Kristian Niemi**](https://search.creativecommons.org/photos/2207415d-ea6c-4c18-b609-59437b957d0d)
-
-```{r sharing, echo=FALSE, fig.cap='(ref:sharing)', fig.align='center'}
-knitr::include_graphics("care.jpg")
-```
+![Image credit: [**Kristian Niemi**](https://search.creativecommons.org/photos/2207415d-ea6c-4c18-b609-59437b957d0d)](care.jpg){#fig-sharing fig.align="center"}
 
 I would also propose papers be given some kind of "reproducibility score".
 I imagine this functioning like a checklist:
@@ -181,11 +164,7 @@ Thus, it would behove them to make sure their researchers are well trained and e
 
 # Sounds great, but who pays for this system?
 
-(ref:coins) Image credit: [**Unsplash**](https://unsplash.com/photos/ZihPQeQR2wM)
-
-```{r coins, echo=FALSE, fig.cap='(ref:coins)'}
-knitr::include_graphics("money.jpg")
-```
+![Image credit: [**Unsplash**](https://unsplash.com/photos/ZihPQeQR2wM)](money.jpg){#fig-counts}
 
 I would suggest a combination of the funding bodies and major research institutions.
 Pragmatically, I think it makes sense for universities to provide the servers to host their own research, and for software to automatically back this up to other university servers.
@@ -201,11 +180,7 @@ The system I'm proposing is effectively just a big distributed website with a pa
 
 # Feedback welcome
 
-(ref:head) Sometimes I wonder if I'm just too idealistic. Image credit: [**Unsplash**](https://unsplash.com/photos/W_6b8pWBUKY)
-
-```{r head, fig.cap="(ref:head)", out.width="60%"}
-knitr::include_graphics("madness.jpg")
-```
+![Sometimes I wonder if I'm just too idealistic. Image credit: [**Unsplash**](https://unsplash.com/photos/W_6b8pWBUKY)](madness.jpg){#fig-head width=60%}
 
 This is of course just my 2 cents.
 And I should reiterate, I'm sure these proposals would have their own issues, and certainly introduce some major teething pains.
@@ -222,4 +197,4 @@ And I've enjoyed it, so I'll chalk it up as a win.
 
 **Update:** So embarrassingly enough, when I first wrote this I wasn't aware of the [Peer Community in](https://peercommunityin.org/), which actually makes a lot of good progress in respect to the peer-review side of things, particularly in trying to de-couple peer-review from journals, though I still think some of the other ideas I outline here could improve on their model.
 Having said that, it's a really cool initiative, and I hope to publish my future work with them where possible!
-I write more about them in [this post](../../../../post/progress-in-open-research/).
+I write more about them in [this post](/blog/2022-01-26-progress-in-open-research/).

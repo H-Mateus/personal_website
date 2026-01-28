@@ -68,11 +68,7 @@ The journal certainly wastes a lot of time for the authors, and in return they e
 
 # The role of the journals
 
-(ref:journals) Image credit: [Unsplash](https://unsplash.com/photos/FPNnKfjcbNU)
-
-```{r journals, echo=FALSE, fig.cap='(ref:journals)'}
-knitr::include_graphics("journals.jpg")
-```
+![Image credit: [Unsplash](https://unsplash.com/photos/FPNnKfjcbNU)](journals.jpg){#fig-journals}
 
 So you may be thinking this seems completely nonsensical.
 We pay for science and then we pay again to read/publish.
@@ -90,11 +86,7 @@ Except the journals won't publish your work because they think negative results 
 
 # The role of the funders
 
-(ref:funders) Image credit: [Unsplash](https://unsplash.com/photos/5f1RsK-pyZQ)
-
-```{r funders, echo=FALSE, fig.cap='(ref:funders)'}
-knitr::include_graphics("funders.jpg")
-```
+![Image credit: [Unsplash](https://unsplash.com/photos/5f1RsK-pyZQ)](funders.jpg){#fig-funders}
 
 But you ***need*** to publish your results otherwise you won't be able to attract further funding and advance your career.
 The funding bodies don't care that you've done a good piece of scientific research, they're much too lazy to actually read the work you do.
@@ -211,6 +203,6 @@ Once I've recharged, I'll aim to write a follow-up article exploring ideas for h
 
 Update:
 
-That article has been written and can be found [here](../../../../post/how-might-science-be-done-better/)
+That article has been written and can be found [here](/blog/2021-05-11-how-might-science-be-done-better/)
 
 # References

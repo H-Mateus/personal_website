@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-project .list');
+    const listingTargetEl = window.document.querySelector('#listing-teaching .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -90,11 +90,11 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-subtitle','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-project'] = new List('listing-project', options);
+    window['quarto-listings']['listing-teaching'] = new List('listing-teaching', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -165,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-publication .list');
+    const listingTargetEl = window.document.querySelector('#listing-publications .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -174,11 +174,11 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-publication'] = new List('listing-publication', options);
+    window['quarto-listings']['listing-publications'] = new List('listing-publications', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -524,8 +524,23 @@ Hi!
 <div class="grid">
 <section id="teaching" class="level4 g-col-3">
 <h4 data-anchor-id="teaching">Teaching</h4>
-<div id="teaching">
-
+<div id="listing-teaching" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-1">
+<div class="g-col-1" data-index="0" data-categories="TGVjdHVyZSUyMHNlcmllcyUyQ0FjYWRlbWljJTJDUmVwcm9kdWNpYmxlJTIwUmVzZWFyY2glMkNCaW9pbmZvcm1hdGljcw==" data-listing-date-sort="1729551600000" data-listing-file-modified-sort="1769639243561" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="69">
+<a href="../teaching/intro-to-r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/intro-to-r/featured.png" class="thumbnail-image card-img" style="height: 200;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Introduction to R
+</h5>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 <p><a href="../teaching" class="about-links subtitle">See all →</a></p>
 </section>
@@ -578,8 +593,23 @@ Keyboard soldering adventures
 </section>
 <section id="publications" class="level4 g-col-3">
 <h4 data-anchor-id="publications">Publications</h4>
-<div id="publications">
-
+<div id="listing-publications" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-1">
+<div class="g-col-1" data-index="0" data-categories="QWNhZGVtaWMlMkNQYXBlciUyQ1Byb2dub3N0aWMlMjBtb2RlbCUyQ1Byb3Rlb21pY3MlMkNTcGluYWwlMjBDb3JkJTIwSW5qdXJ5" data-listing-date-sort="1666652400000" data-listing-file-modified-sort="1769639243538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
+<a href="../publications/2022-10-25-sci-human-proteomics/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../publications/2022-10-25-sci-human-proteomics/featured.jpg" class="thumbnail-image card-img" style="height: 200;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+A comprehensive proteomic and bioinformatics analysis of human spinal cord injury plasma identifies proteins associated with the complement cascade and liver function as potential prognostic indicators of neurological outcome
+</h5>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 <p><a href="../publications" class="about-links subtitle">See all →</a></p>
 </section>
@@ -590,17 +620,7 @@ Keyboard soldering adventures
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-project">
-<div class="list grid quarto-listing-cols-1">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><div class="quarto-listing quarto-listing-container-grid" id="listing-publication">
-<div class="list grid quarto-listing-cols-1">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

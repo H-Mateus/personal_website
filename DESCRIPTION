@@ -1,0 +1,7 @@
+Package: PersonalWebsite
+Title: Your Quarto Website
+Version: 0.1.0
+Imports:
+    rmarkdown,
+    knitr,
+    tidyverse

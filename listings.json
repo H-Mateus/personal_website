@@ -1,12 +1,5 @@
 [
   {
-    "listing": "/teaching/index.html",
-    "items": [
-      "/teaching/intro-to-r/index.html",
-      "/teaching/intro-to-rmarkdown/index.html"
-    ]
-  },
-  {
     "listing": "/about/index.html",
     "items": [
       "/teaching/intro-to-r/index.html",
@@ -27,15 +20,6 @@
     ]
   },
   {
-    "listing": "/publications/index.html",
-    "items": [
-      "/publications/2022-10-25-sci-human-proteomics/index.html",
-      "/publications/2022-10-25-a-multimodal-approach-to-biomarker-discovery-for-spinal-cord-injury/index.html",
-      "/publications/modelling_paper_500/index.html",
-      "/publications/perlim_modelling_paper/index.html"
-    ]
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/2025-06-01-first-soldering-adventure/index.html",
@@ -53,6 +37,22 @@
       "/talk/2022-08-14-proteomic-and-bioinformatics-analyses-of-plasma-from-sci-neurological-improvers-and-non-improvers/index.html",
       "/talk/2022-08-14-reproducible-data-analysis/index.html",
       "/talk/2020-06-08-joint-cdt-conference-2020/index.html"
+    ]
+  },
+  {
+    "listing": "/teaching/index.html",
+    "items": [
+      "/teaching/intro-to-r/index.html",
+      "/teaching/intro-to-rmarkdown/index.html"
+    ]
+  },
+  {
+    "listing": "/publications/index.html",
+    "items": [
+      "/publications/2022-10-25-sci-human-proteomics/index.html",
+      "/publications/2022-10-25-a-multimodal-approach-to-biomarker-discovery-for-spinal-cord-injury/index.html",
+      "/publications/modelling_paper_500/index.html",
+      "/publications/perlim_modelling_paper/index.html"
     ]
   }
 ]

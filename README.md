@@ -1,3 +1,5 @@
 # Personal website
 
-The live site can be found here: [https://gmbernardoharrington.netlify.app/](https://gmbernardoharrington.netlify.app/)
+This is a personal website built with Quarto
+
+The live site can be found here: [https://mateusharrington.com/](https://mateusharrington.com/)

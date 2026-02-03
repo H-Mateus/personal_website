@@ -27,6 +27,12 @@ code-fold: show
 code-summary: "Toggle the code"
 code-tools: true
 
+format:
+  html:
+    code-overflow: wrap
+    template-partials:
+      - ../_partials/title-block-link-buttons/title-block.html
+
 execute:
   echo: true
   message: true

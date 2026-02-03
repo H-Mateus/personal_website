@@ -14,16 +14,14 @@ excerpt: A gentle introduction to using R Markdown, with a focus on
 image: featured.jpg
 links:
 - icon: door-open
-  icon_pack: fas
   name: website
   url: https://intro-to-rmarkdown.netlify.app/
 - icon: github
-  icon_pack: fab
   name: code
   url: https://github.com/H-Mateus/intro-to-rmarkdown
 location: Virtual
 show_post_time: false
-#subtitle: Testing
+subtitle: ""
 ---
 
 This workshop was part of the [Researcher Summer school at Keele University 2022](https://www.keele.ac.uk/kiite/conferences/researchersummerschool/).

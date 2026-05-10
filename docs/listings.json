@@ -38,8 +38,11 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2026-05-09-homelab-adventures/index.html",
       "/blog/2025-06-01-first-soldering-adventure/index.html",
       "/blog/2022-10-21-testing-normality-in-r/index.html",
+      "/blog/2022-08-13-my-phd-journey/index.html",
+      "/blog/2022-05-09-completing-a-phd/index.html",
       "/blog/2022-01-26-progress-in-open-research/index.html",
       "/blog/2021-05-11-how-might-science-be-done-better/index.html",
       "/blog/2021-05-10-the-sovereign-of-science/index.html",

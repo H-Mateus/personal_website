@@ -1,0 +1,113 @@
+---
+title: "From TrueNAS apps to a Talos Kubernetes cluster — the long way round"
+date: 2026-05-22
+categories:
+  - Homelab
+  - Kubernetes
+  - Self-hosted
+  - Talos Linux
+  - Flux
+  - Tailscale
+  - Grafana
+description: |
+  An honest write-up of the months between my last homelab post and a
+  working kube-prometheus-stack dashboard. Proxmox, Talos, Flux, SOPS,
+  a Tailscale saga that ate a full evening, and one stubbornly broken
+  Immich migration.
+execute:
+  echo: false
+image: index-img/260524-000249.avif
+---
+
+So, a whole 2 weeks ago I [wrote about getting my homelab into git](/blog/2026-05-09-homelab-adventures/index.qmd)
+and learning to like pre-commit hooks. The promise at the end of that
+post was that more was coming: Kubernetes, a real GitOps loop, maybe
+some monitoring.
+
+It took longer than I thought it would. Not because any single thing
+was hard, but because there were a lot of small things in a row, each
+of which had to be done before the next made sense. This is the post
+I wish I'd been able to read before I started.
+
+![Gonna need to put one of these next to the Proxmox box...](index-img/260524-001037.avif){width="50%"}
+
+I'm splitting this into four parts because trying to fit it in one
+post produced something nobody, least of all future-me, was going
+to read.
+
+## The series
+
+1. **[From TrueNAS to Kubernetes: why, and picking the stack][part1]**
+   Why bother with Kubernetes at home. Why Proxmox over bare-metal
+   Talos. Why Talos over a generic Linux + k3s. The first cluster
+   that came up, and the one that came up *correctly* a week later.
+
+2. **[Flux v2 and SOPS: making git the source of truth][part2]**
+   Bootstrapping Flux CD, the bits of GitOps that only make sense
+   once you've done them, encrypting secrets with SOPS + age, and
+   the safety net I built so I can never push a plaintext secret.
+
+3. **[The Tailscale saga][part3]**
+   The part of the journey where I lost the most hours. The Talos
+   `tailscale` extension, the tag split that took two attempts to
+   get right, the kubelet `nodeIP` problem that nuked Flux, the
+   `democratic-csi` controller that couldn't talk to TrueNAS, and
+   the Immich migration that fell out of the same ACL rework.
+
+4. **[Finally, Grafana][part4]**
+   The actual payoff. Helm-released kube-prometheus-stack, Tailscale
+   `Ingress` for nice URLs, NFS-backed persistence so dashboards
+   survive a pod restart. A short post — by the time I got here the
+   hard work was already done.
+
+## TL;DR for impatient future-me
+
+If you're standing where I was three months ago: a TrueNAS box with
+Dockge stacks and a vague feeling that you want "real" infrastructure, 
+here's what I'd do differently:
+
+- **Don't put Kubernetes on the TrueNAS host.** Use a separate
+  Proxmox box, even a small one. Mixing storage and compute makes
+  every reboot scarier than it needs to be.
+- **[Talos Linux](https://www.siderolabs.com/talos-linux) is 
+  genuinely worth the learning curve.** No
+  SSH, no package manager, no shell to get wrong. Everything is a
+  YAML patch. It's GitOps for the OS itself.
+- **Pick your Tailscale tags before you start writing manifests.**
+  Splitting `tag:k8s` (operator-exposed Services) from `tag:k8s-node`
+  (the nodes themselves) is the thing I most wish someone had told
+  me. So is moving TrueNAS to its own `tag:truenas` rather than
+  owning it with a user account.
+- **Encrypt secrets from day one.** [SOPS](https://github.com/getsops/sops) 
+  + [age](https://github.com/FiloSottile/age) takes
+  fifteen minutes to set up and means you never have to do the
+  "shall I really commit this" dance. Add a pre-commit hook that
+  refuses to commit anything ending `.sops.yaml` without a `sops:`
+  block — gitleaks won't catch a missing-encryption case on its own.
+
+## What this isn't
+
+It isn't a tutorial. The
+[Talos docs](https://docs.siderolabs.com/talos/v1.13/overview/what-is-talos), 
+the [Flux docs](https://fluxcd.io/flux/get-started/), and the
+[Tailscale Kubernetes Operator docs](https://tailscale.com/docs/features/kubernetes-operator) 
+are all genuinely good and I'm not going to repeat them here. 
+What it *is* is the gap between those docs: the decisions, 
+the wrong turns, the "obvious in retrospect" stumbling blocks 
+that won't show up in any quickstart.
+
+It also isn't finished. The list of "next things" at the bottom of
+the README is still longer than the list of done things. But the
+hard part, getting from "I have a NAS with some containers on it"
+to "I have a real GitOps loop with monitoring, encrypted secrets,
+and a sensible secure-by-default network model", is done, and
+that turns out to be the part most of the writing is about.
+
+Start with [Part 1][part1] if you're reading top-to-bottom, or jump
+to whichever part is going wrong for you right now if you somehow
+found yourself here from the interwebs.
+
+[part1]: /blog/2026-05-24-from-truenas-to-kubernetes/
+[part2]: /blog/2026-05-25-flux-and-sops/
+[part3]: /blog/2026-05-26-tailscale-the-saga/
+[part4]: /blog/2026-05-27-grafana-finally/

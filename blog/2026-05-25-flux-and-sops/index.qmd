@@ -1,0 +1,237 @@
+---
+title: "Flux v2 and SOPS (Part 2): making git the source of truth"
+date: 2026-05-24
+categories:
+  - Homelab
+  - Kubernetes
+  - Self-hosted
+  - Flux
+  - SOPs
+  - GitOps
+description: |
+  Bootstrapping Flux CD on a fresh Talos cluster, the bits of
+  GitOps that only make sense once you've done them, encrypting
+  secrets with SOPS + age, and the pre-commit safety net I built
+  so I can never push a plaintext secret.
+execute:
+  echo: false
+image: index-img/260524-012732.avif
+---
+
+This is part 2 of a four-part series, start [here][index] if you missed the beginning.
+[Part 1][part1] brought up the Talos cluster. This 
+part is about turning it from a
+cluster into a *system you operate via git*.
+
+## Why Flux (and not Argo)
+
+Both [Flux CD][flux] and [Argo CD][argo] are good. I picked Flux for
+three reasons:
+
+- It's lighter. Flux is a set of controllers; there's no web UI
+  baked in. For a homelab I don't actually want a separate UI, I
+  want `git push` to be the deployment workflow, full stop.
+- Its [SOPS integration is first-class][flux-sops]. The
+  `decryption:` block on a `Kustomization` just works.
+- The pull model fits the homelab. The cluster polls git on its
+  own schedule; I don't need to expose anything to the internet
+  for CI to push to it.
+
+The trade-off is that there's no dashboard to look at. I use
+`flux get all -A` and `kubectl describe` and that's been fine.
+
+I may well try Argo just to get a feel for it as some point in the future though.
+
+## Bootstrapping, the boring way
+
+The Flux docs walk you through `flux bootstrap github`, which
+takes a Personal Access Token and writes the Flux manifests into
+your repo for you. I used it once, then immediately regretted not
+understanding what it had done, so I committed the output and
+read every file. The two manifests that matter are
+`gotk-components.yaml` (the Flux controllers themselves) and
+`gotk-sync.yaml` (the `GitRepository` + `Kustomization` that
+points back at the repo).
+
+After that, my repo layout looks like this:
+
+```
+kubernetes/clusters/talos/
+├── flux-system/
+│   ├── gotk-components.yaml   # The Flux controllers — don't hand-edit
+│   ├── gotk-sync.yaml         # GitRepository + flux-system Kustomization
+│   └── kustomization.yaml     # Lists the two above
+├── sources.yaml               # → kubernetes/infrastructure/sources/
+├── infrastructure.yaml        # → kubernetes/infrastructure/
+└── apps.yaml                  # → kubernetes/apps/
+```
+
+The split into three `Kustomization`s (`sources`, `infrastructure`,
+`apps`) is the most important thing I figured out. Without it,
+Flux tries to apply a `HelmRelease` before its `HelmRepository`
+exists, fails, retries, fails again, and you get to learn what
+Flux looks like when it's mad at you.
+
+With it, each layer `dependsOn` the previous one, and
+`wait: true` blocks until all the resources in a layer are Ready
+before the next layer starts:
+
+```yaml
+# kubernetes/clusters/talos/infrastructure.yaml
+spec:
+  path: ./kubernetes/infrastructure
+  prune: true
+  wait: true
+  timeout: 5m
+  dependsOn:
+    - name: sources
+```
+
+A clean rollout from an empty cluster now comes up in the right
+order without any manual `kubectl` intervention, which is exactly
+what GitOps is supposed to do but doesn't necessarily do out of
+the box.
+
+![This is a nice overview of the pipeline](index-img/260524-102409.avif)
+
+## The bits of GitOps that only make sense once you've done it
+
+A few things took me an embarrassingly long time to internalise:
+
+1. **Prune is the magic.** With `prune: true`, if I delete a file
+   from git, the resource is deleted from the cluster on the next
+   reconcile. The repo is the actual source of truth. Without it,
+   git is a *historical* record of what you've applied, useful,
+   but not load-bearing.
+2. **You want loud failures.** Setting `timeout: 5m` and
+   `wait: true` means a `HelmRelease` that fails to come up
+   eventually causes its parent `Kustomization` to fail loudly
+   with a status I can see in `flux get all -A`. The default
+   ("keep retrying quietly") buried failures and I'd notice them
+   hours later.
+3. **`HelmRelease` `remediation` is your friend.** Three retries
+   on install and upgrade catches transient issues without me
+   having to lift a finger. Catches the things I'd otherwise be
+   reconciling manually at 11pm.
+
+The way I add a new workload now is mechanical:
+
+```bash
+mkdir -p kubernetes/apps/<ns>/<app>
+# Write namespace.yaml, helm-release.yaml (or plain manifests),
+# kustomization.yaml listing them
+git add -A && git commit -m "feat: add <app>" && git push
+# Wait one minute, run `flux get all -A`, done.
+```
+
+That mechanical-ness is the thing I was after when I started this.
+It's probably not the sexiest version of doing GitOps, but for a first attempt I find it very cool!
+
+## SOPS + age: encrypted secrets in git
+
+The single most useful thing I added is [SOPS][sops] with
+[age][age] for secret encryption. Here's how it works at the
+500-foot level:
+
+- `age-keygen` produces a keypair. The **public** key goes into
+  `.sops.yaml` at the repo root, this is safe to commit, that's the
+  whole point of public-key crypto.
+- The **private** key is loaded into the cluster *once*, as a
+  Kubernetes `Secret` in the `flux-system` namespace:
+
+  ```bash
+  kubectl create secret generic sops-age \
+    --namespace=flux-system \
+    --from-file=age.agekey=./age.agekey
+  ```
+
+  After that, I delete the local copy and keep a printed backup
+  in a sealed envelope. The "you got hit by a bus" recovery path.
+- Every `Kustomization` that needs to decrypt secrets has a
+  `decryption:` block pointing at that Secret:
+
+  ```yaml
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+  ```
+
+- I name secret files `*.sops.yaml` and encrypt them in place:
+
+  ```bash
+  sops --encrypt --in-place \
+    kubernetes/apps/monitoring/grafana-admin-secret.sops.yaml
+  ```
+
+  Flux fetches the file, decrypts it in-cluster using the age
+  private key, and applies the resulting `Secret`. The plaintext
+  never touches disk anywhere except inside the cluster's memory.
+
+This is one of those things where reading about it took longer
+than implementing it. Setting it up properly took maybe an
+afternoon, and it has paid for itself many, many times since.
+
+This YouTube video is a nice basic guide:
+
+{{< video https://youtu.be/l_aL13KEOj0?si=-hBa5R1gxSaDEi0k >}}
+
+## The pre-commit safety net
+
+Here's the part I'm proud of. [`gitleaks`][gitleaks] is good but
+it's not SOPS-aware: if I create a new `.sops.yaml` file with
+plaintext in it, gitleaks will probably catch the high-entropy
+strings, but only "probably". I wanted "definitely".
+
+So I wrote a deterministic check in `scripts/check-sops-encrypted.sh`:
+any staged file matching `*.sops.yaml` that doesn't contain a
+`sops:` block fails the pre-commit hook with a clear error. SOPS
+adds the `sops:` block when it encrypts a file; an un-encrypted
+file simply won't have one.
+
+The pre-commit config wires it in:
+
+```yaml
+- repo: local
+  hooks:
+    - id: check-sops-encrypted
+      name: Check .sops.yaml files are encrypted
+      entry: scripts/check-sops-encrypted.sh
+      language: script
+      files: '\.sops\.yaml$'
+```
+
+Together with `gitleaks` running on the rest of the tree, I have
+two independent layers protecting against accidentally committing
+a plaintext secret. They cover different failure modes — gitleaks
+catches *known* secret patterns anywhere; the SOPS check catches
+*missing encryption* on files I intended to encrypt. Either one
+on its own has gaps. Both together don't.
+
+I have not (yet) had either hook catch a real secret. I would like
+to keep it that way.
+
+## What you have at the end of Part 2
+
+A cluster that's actually managed by git. You can:
+
+- Add a new workload by creating a directory and pushing.
+- Remove a workload by deleting the directory and pushing.
+- Roll back any change by reverting the commit.
+- Store secrets in the same repo, encrypted, with two layers of
+  pre-commit protection against leaks.
+
+Now we've got something to run things on, you might be tempted,  
+as I was, to run things on it. That's where the wheels came off
+for a while. That's [Part 3][part3].
+
+[index]: /blog/2026-05-23-homelab-k8s-journey/
+[part1]: /blog/2026-05-24-from-truenas-to-kubernetes/
+[part3]: /blog/2026-05-26-tailscale-the-saga/
+[part4]: /blog/2026-05-27-grafana-finally/
+[flux]: https://fluxcd.io/
+[flux-sops]: https://fluxcd.io/flux/guides/mozilla-sops/
+[argo]: https://argo-cd.readthedocs.io/
+[sops]: https://github.com/getsops/sops
+[age]: https://github.com/FiloSottile/age
+[gitleaks]: https://github.com/gitleaks/gitleaks

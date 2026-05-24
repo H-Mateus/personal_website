@@ -1,5 +1,5 @@
 ---
-title: "Ramblings on academia"
+title: "Ramblings & Learnings"
 author: ""
 listing: 
   contents: 
@@ -18,7 +18,7 @@ listing:
   feed:
     categories: [R]
 description: |
-  These are my own personal ramblings on academia.<br>
+  These are my own personal ramblings (probably on academia) and learnings.<br>
   I'm mainly writing these to force myself to reflect and to
   practise my writing, so any feedback is welcome!
 citation: false

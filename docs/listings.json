@@ -38,6 +38,11 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2026-05-27-grafana-finally/index.html",
+      "/blog/2026-05-26-tailscale-the-saga/index.html",
+      "/blog/2026-05-25-flux-and-sops/index.html",
+      "/blog/2026-05-24-from-truenas-to-kubernetes/index.html",
+      "/blog/2026-05-23-homelab-k8s-journey/index.html",
       "/blog/2026-05-09-homelab-adventures/index.html",
       "/blog/2025-06-01-first-soldering-adventure/index.html",
       "/blog/2022-10-21-testing-normality-in-r/index.html",

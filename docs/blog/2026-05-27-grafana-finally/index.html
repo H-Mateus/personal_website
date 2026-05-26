@@ -518,6 +518,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Set up Alertmanager notifications to something I actually read. Probably a Telegram bot.</li>
 <li>Connect my TrueNAS server and docker services with Grafana, probably via <a href="https://github.com/google/cadvisor">cAdvisor</a> + <a href="https://github.com/prometheus/node_exporter">Node Exporter</a></li>
 <li>Setup <a href="https://docs.paperless-ngx.com/">Paperless-ngx</a> as a test of iSCSI</li>
+<li>Setup my Talos cluster to deploy via <a href="https://opentofu.org/">OpenTofu</a></li>
 </ul>
 </section>
 <section id="a-short-reflection" class="level2">
@@ -1213,39 +1214,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Connect my TrueNAS server and docker services with Grafana,</span>
 <span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>  probably via <span class="co">[</span><span class="ot">cAdvisor</span><span class="co">][cadvisor]</span> + <span class="co">[</span><span class="ot">Node Exporter</span><span class="co">][node-exporter]</span></span>
 <span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Setup <span class="co">[</span><span class="ot">Paperless-ngx</span><span class="co">](https://docs.paperless-ngx.com/)</span> as a test of iSCSI</span>
-<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a><span class="fu">## A short reflection</span></span>
-<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a>The thing nobody warns you about with homelabs is that the</span>
-<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a>*operational* maturity creeps up on you. There was no single</span>
-<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>moment where I "graduated" from running Docker Compose by hand</span>
-<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a>to running a real GitOps platform with encrypted secrets, dynamic</span>
-<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a>storage, monitoring, and a sane network model. It happened one</span>
-<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>weekend evening at a time, over months.</span>
-<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a>If you're at the start of that, the advice I'd give myself is:</span>
-<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a>**don't try to do all of it before you do any of it.** Get the</span>
-<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>cluster up. Get one workload deployed via Flux. Move on. The</span>
-<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a>Tailscale tag rework, the SOPS hook, the</span>
-<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a><span class="in">`democratic-csi`</span>-controller egress trick, the Immich migration —</span>
-<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a>all of those are things I'd have happily done as one-evening</span>
-<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a>side quests if I'd known they were one-evening side quests. They</span>
-<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a>only feel insurmountable when you try to plan them all at once.</span>
-<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a>Future-me, if you're reading this because Grafana is broken</span>
-<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a>again: it's probably the <span class="in">`truenas-nfs`</span> PVC. Or the operator</span>
-<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a>forgot to provision the Ingress device. Or you renamed something</span>
-<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>in the ACL. Good luck.</span>
-<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a><span class="ot">[index]: </span>/blog/2026-05-23-homelab-k8s-journey/</span>
-<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a><span class="ot">[part1]: </span>/blog/2026-05-23-from-truenas-to-kubernetes/</span>
-<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a><span class="ot">[part2]: </span>/blog/2026-05-23-flux-and-sops/</span>
-<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a><span class="ot">[part3]: </span>/blog/2026-05-23-tailscale-the-saga/</span>
-<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a><span class="ot">[kps]: https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack</span></span>
-<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a><span class="ot">[tsop]: https://tailscale.com/kb/1236/kubernetes-operator</span></span>
-<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a><span class="ot">[readme]: https://github.com/H-Mateus/homelab</span></span>
-<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a><span class="ot">[cadvisor]: https://github.com/google/cadvisor</span></span>
-<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a><span class="ot">[node-exporter]: https://github.com/prometheus/node_exporter</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Setup my Talos cluster to deploy via <span class="co">[</span><span class="ot">OpenTofu</span><span class="co">](https://opentofu.org/)</span></span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a><span class="fu">## A short reflection</span></span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a>The thing nobody warns you about with homelabs is that the</span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>*operational* maturity creeps up on you. There was no single</span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a>moment where I "graduated" from running Docker Compose by hand</span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a>to running a real GitOps platform with encrypted secrets, dynamic</span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>storage, monitoring, and a sane network model. It happened one</span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a>weekend evening at a time, over months.</span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a>If you're at the start of that, the advice I'd give myself is:</span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>**don't try to do all of it before you do any of it.** Get the</span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a>cluster up. Get one workload deployed via Flux. Move on. The</span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a>Tailscale tag rework, the SOPS hook, the</span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a><span class="in">`democratic-csi`</span>-controller egress trick, the Immich migration —</span>
+<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a>all of those are things I'd have happily done as one-evening</span>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a>side quests if I'd known they were one-evening side quests. They</span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a>only feel insurmountable when you try to plan them all at once.</span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a>Future-me, if you're reading this because Grafana is broken</span>
+<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a>again: it's probably the <span class="in">`truenas-nfs`</span> PVC. Or the operator</span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>forgot to provision the Ingress device. Or you renamed something</span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a>in the ACL. Good luck.</span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a><span class="ot">[index]: </span>/blog/2026-05-23-homelab-k8s-journey/</span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a><span class="ot">[part1]: </span>/blog/2026-05-23-from-truenas-to-kubernetes/</span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a><span class="ot">[part2]: </span>/blog/2026-05-23-flux-and-sops/</span>
+<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a><span class="ot">[part3]: </span>/blog/2026-05-23-tailscale-the-saga/</span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a><span class="ot">[kps]: https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack</span></span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a><span class="ot">[tsop]: https://tailscale.com/kb/1236/kubernetes-operator</span></span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a><span class="ot">[readme]: https://github.com/H-Mateus/homelab</span></span>
+<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a><span class="ot">[cadvisor]: https://github.com/google/cadvisor</span></span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a><span class="ot">[node-exporter]: https://github.com/prometheus/node_exporter</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

@@ -209,6 +209,7 @@ things at the top of it are:
 - Connect my TrueNAS server and docker services with Grafana,
   probably via [cAdvisor][cadvisor] + [Node Exporter][node-exporter]
 - Setup [Paperless-ngx](https://docs.paperless-ngx.com/) as a test of iSCSI
+- Setup my Talos cluster to deploy via [OpenTofu](https://opentofu.org/)
 
 ## A short reflection
 

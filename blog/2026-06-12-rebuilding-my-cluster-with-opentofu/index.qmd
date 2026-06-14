@@ -1,0 +1,258 @@
+---
+title: "Rebuilding my homelab Kubernetes cluster with OpenTofu"
+date: 2026-06-12
+categories:
+  - Homelab
+  - Kubernetes
+  - Self-hosted
+  - Tailscale
+  - OpenTofu
+description: |
+  Putting the Talos cluster in code. Three small OpenTofu modules,
+  an HA control plane via Talos's native VIP, encrypted remote
+  state on Garage over Tailscale. Plus four unrelated things that
+  went wrong during bring-up, including my work Mac silently
+  dropping every Go binary's outbound traffic to the LAN.
+execute:
+  echo: false
+image: index-img/260613-082553.avif
+---
+
+A while back I built a small Kubernetes cluster on my Proxmox box using
+Talos Linux. One control plane, two workers, very much a "let's see if
+this works" setup. It did work, and I've been running Flux against it
+for a few weeks, Immich for the photos, the *arr stack for everything
+else, monitoring, the usual homelab fare.
+
+The problem with the cluster was how it was built. I'd followed the
+Talos docs, generated machine configs in a `proxmox/` directory, pushed
+them with `talosctl apply-config`, and called it done. Which is fine
+until you want to change something. Then you're doing exactly the
+vibes-based YAML editing you'd be doing on a hand-built vanilla
+Kubernetes cluster. The thing that drew me to Talos in the first place,
+that the OS is an API, not a system you ssh into, was getting
+wasted by my own laziness.
+
+So I wanted to put the cluster in IaC. Specifically OpenTofu, because
+the Terraform-vs-OpenTofu thing is settled enough now that going with
+the fork is the safe choice. The `siderolabs/talos` provider works
+against both, the `bpg/proxmox` provider works against both, the
+OpenTofu CLI is a drop-in for `terraform`, and in the unlikely event
+HashiCorp pulls another licensing surprise I'd rather be on the side
+that didn't sign up for it.
+
+Long story short, over the past couple of evenings I rebuilt the whole
+thing, learned a bunch of stuff I didn't know I needed to know, and
+have a five-node HA cluster running where there used to be three nodes
+held together with my bash history. This is the writeup.
+
+## What I was going for
+
+End-state goals:
+
+- Three control planes for actual high availability (the old setup had
+  one, a fact I lived with by sleeping on it).
+- Two workers (the max I can get away with on my current hardware).
+- A floating VIP for the Kubernetes API so I don't have to remember
+  which control plane is the canonical one.
+- Talos system extensions baked into the install (qemu-guest-agent,
+  iscsi-tools, tailscale, util-linux-tools), same as before, but
+  described in code instead of curl'd into being by hand.
+- Static IPs configured *inside* Talos's machine config rather than
+  via DHCP reservations in pfSense.
+- Remote `tfstate`, encrypted, on something I host myself.
+
+That last bit took some thinking. The obvious answer used to be MinIO,
+but MinIO got archived by upstream in April after the company pivoted
+to a paid product. I'm not running an archived project for new work, so
+I went with [Garage](https://garagehq.deuxfleurs.fr/), a small,
+single-binary S3-compatible server designed for exactly this kind of
+small-scale self-hosted use case. It runs in about 50 MB of RAM on the
+same TrueNAS box that hosts everything else, exposed only over
+Tailscale.
+
+## The modules
+
+I ended up with three small OpenTofu modules:
+
+- `talos-image` turns a list of system extensions into a stable
+  schematic ID via the [Talos Image Factory](https://factory.talos.dev/),
+  then downloads the resulting ISO into Proxmox's local datastore.
+- `proxmox-vm` is one Talos-friendly VM, no cloud-init.
+- `talos-cluster` does the actual cluster work: secrets, per-node
+  machine config patches, the apply step, etcd bootstrap, health check.
+
+The thing I'm most pleased about is the separation. `proxmox-vm`
+doesn't know it's running Talos. `talos-cluster` doesn't know it's on
+Proxmox. They're glued together in the live config, but I could swap
+either side without rewriting the other. This is the kind of thing I
+find satisfying after years of writing R scripts that became their own
+opposite over time.
+
+## The first `tofu apply`
+
+The plan looked great. Five VMs, ISO download, Talos secrets, machine
+configs, bootstrap, health check. About fifteen minutes expected for a
+clean apply.
+
+I ran apply. Five VMs created. ISO downloaded. Then this:
+
+```
+Error: ... static hostname is already set in v1alpha1 config
+```
+
+Right.
+
+Turns out the Talos folks split hostname out of the
+`machine.network.hostname` field and into a dedicated `HostnameConfig`
+document somewhere in the 1.12 release. The
+`terraform-provider-talos` auto-emits one with `auto: stable` by
+default, and if I'm also setting hostname the old way, validation
+complains. Five minutes of patch-template editing and the apply
+progressed past the config-validation step.
+
+Then bootstrap ran. Then the health check started waiting. And
+waiting. Eventually it gave up with:
+
+```
+192.168.1.34: service "etcd" not in expected state "Running"
+```
+
+cp-02 wasn't joining the etcd cluster. The etcd logs on cp-02 made it
+clear why:
+
+```
+"initial-cluster":"talos-cp-01=https://100.96.187.43:2380,..."
+```
+
+That's a Tailscale IP. The `siderolabs/tailscale` extension joins each
+node to the tailnet at boot, which means every node has *two* IPv4
+addresses: the LAN one I asked for, and the `100.64.0.0/10` tailnet
+one Tailscale assigns. Talos picked the wrong one when populating
+etcd's `--advertise-peer-urls` flag on cp-01, and cp-02 was trying to
+join cp-01 over the tailnet. My Tailscale ACLs don't grant
+node-to-node traffic on arbitrary ports for `tag:k8s-node`, so the
+join was hanging on `i/o timeout`.
+
+There's a config knob for exactly this: `cluster.etcd.advertisedSubnets`.
+Constrain it to the LAN CIDR and Talos picks an IP from that range for
+etcd peer URLs. Add to the patch, gate it on control-plane role
+(workers reject `cluster.etcd` outright), commit, push.
+
+This whole thing is documented in
+[Talos's multihoming guide](https://docs.siderolabs.com/talos/v1.13/networking/multihoming/),
+which I should have read before adding the Tailscale extension. I hadn't,
+because the previous hand-built cluster also had the extension and worked
+fine, what I'd missed was that the *old* etcd had been bootstrapped before
+the extension was installed, so it picked the LAN IP by default and never
+revisited that decision. Greenfield bootstraps don't have that grace.
+
+## The Mac problem
+
+This is the bit where I lost the most time and got the angriest.
+
+At some point in the troubleshooting, OpenTofu started failing with
+`dial tcp 192.168.1.8:8006: connect: no route to host` when trying to
+talk to Proxmox. Which would have been weird because I could `ping` the
+box. I could `curl` it. I could open it in a browser. But my OpenTofu
+binary, talking to my Proxmox box on my own LAN, couldn't reach it.
+
+After about an hour of disabling Tailscale, disabling IPv6, fiddling
+with macOS network settings, I tried this:
+
+```bash
+systemextensionsctl list
+```
+
+And there it was. My work Mac has Palo Alto Cortex XDR (a.k.a. Traps)
+installed by my employer's IT. It registers a Network Extension that
+does per-process traffic inspection. Standard Apple-signed binaries
+like `curl` and `nc` are whitelisted. User-compiled Go binaries like
+OpenTofu, talosctl, kubectl, silently dropped, with the kernel
+returning EHOSTUNREACH so the failure looks like a routing problem.
+
+There's no good fix for this. I'm not going to demand my employer take
+security software off my work laptop for a homelab project. So I
+sshed into the Proxmox box, installed OpenTofu directly on it, and ran
+apply from there. The `tfstate` is on Garage, reachable from any
+machine on the tailnet, so it didn't matter which host drove the
+apply. About twenty minutes of "is this thing on?" and a handful of
+intermittent Tailscale flakes later, I had a working cluster again.
+
+I'm filing this one in the "lessons" pile permanently. I'm aware enough
+of corporate endpoint security that I should have suspected it sooner,
+but I'd never seen it manifest as a "looks like a network problem"
+failure before.
+
+## The worker problem
+
+After the control planes were healthy and Flux had bootstrapped, the
+workers refused to register with Kubernetes. `kubectl get nodes` showed
+three CPs and no workers. The kubelet logs were full of:
+
+```
+Error updating node status, will retry — nodes "talos-worker-01" not found
+```
+
+The kubelet was trying to *update* its node, meaning it thought the
+node already existed and just needed a status patch. Except it didn't,
+because at some point during my reset cycling, the entire Kubernetes
+state (including the Node objects) got wiped. The worker kubelets,
+which I never reset, were running with cached state pointing at a node
+that no longer existed. They'd been retrying patch-update in a tight
+loop for hours.
+
+Fix: reset the workers with `--system-labels-to-wipe EPHEMERAL`. Just
+enough to wipe their cached state but not their machine config. They
+came back up, registered fresh, joined the cluster.
+
+I'd never seen this failure mode before either. Worth knowing: if you
+ever wipe etcd on the control plane side of a Talos cluster, also
+reset the kubelets on the data plane, or they'll never figure out they
+need to re-register themselves.
+
+## Where it landed
+
+```
+$ kubectl get nodes
+NAME              STATUS   ROLES           VERSION
+talos-cp-01       Ready    control-plane   v1.34.0
+talos-cp-02       Ready    control-plane   v1.34.0
+talos-cp-03       Ready    control-plane   v1.34.0
+talos-worker-01   Ready    <none>          v1.34.0
+talos-worker-02   Ready    <none>          v1.34.0
+```
+
+Flux is reconciling the whole `kubernetes/` tree against the same git
+repo it was using before. democratic-csi found its old NFS PVCs on
+TrueNAS without me telling it to. The kube-prometheus-stack came back
+up with monitoring. The Tailscale Kubernetes Operator created tailnet
+devices for the services that need them. The old hand-built cluster's
+VMs are powered off in Proxmox, waiting to be deleted once I'm confident
+enough to do that.
+
+The thing I keep noticing about this build is how much of the failure
+surface came from interactions between systems. Talos with Tailscale:
+each works fine on its own, but the two-IPs-per-node thing turned out
+to matter in a way I hadn't thought about. The HostnameConfig schema
+split was a Talos versioning thing I'd have hit regardless of the
+orchestration tool. The Mac firewall was completely orthogonal. The
+worker kubelet state thing was a side effect of how I was *recovering*
+from problems, not the problems themselves.
+
+OpenTofu didn't solve any of this. What it did was give me a place to
+record the solutions. A comment in the patch template explaining why
+we constrain etcd to the LAN subnet. A README section listing the
+Proxmox token privileges the bpg provider actually exercises (which is
+not the set the bpg docs list, because Proxmox keeps shuffling them
+around). A commit history that's an audit log of what I learned. Next
+time the cluster needs to be rebuilt, and homelabs being homelabs,
+there'll be a next timem the rebuild is one `tofu apply`. The
+knowledge isn't trapped in my bash history anymore.
+
+If you're thinking about doing this yourself, the OpenTofu +
+`siderolabs/talos` + `bpg/proxmox` combination is well-supported and
+the modules are easy enough to read in a sitting. The
+[homelab repo is on GitHub](https://github.com/H-Mateus/homelab) if you
+want to crib from it. Bring patience. Bring snacks.
+

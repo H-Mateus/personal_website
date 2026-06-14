@@ -21,56 +21,84 @@
     <lastmod>2026-01-28T23:34:51.163Z</lastmod>
   </url>
   <url>
-    <loc>https://mateusharrington.com/blog/2022-10-21-testing-normality-in-r/index.html</loc>
-    <lastmod>2026-01-28T22:27:23.471Z</lastmod>
+    <loc>https://mateusharrington.com/blog/2026-05-26-tailscale-the-saga/index.html</loc>
+    <lastmod>2026-05-24T19:11:09.210Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/blog/2020-07-27-first-publication/index.html</loc>
+    <lastmod>2026-01-28T23:31:48.598Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/blog/2026-05-23-homelab-k8s-journey/index.html</loc>
+    <lastmod>2026-05-24T19:10:40.265Z</lastmod>
   </url>
   <url>
     <loc>https://mateusharrington.com/blog/2022-01-26-progress-in-open-research/index.html</loc>
     <lastmod>2026-01-28T23:43:50.569Z</lastmod>
   </url>
   <url>
-    <loc>https://mateusharrington.com/blog/2025-06-01-first-soldering-adventure/index.html</loc>
-    <lastmod>2026-01-28T22:27:23.529Z</lastmod>
+    <loc>https://mateusharrington.com/blog/2026-05-27-grafana-finally/index.html</loc>
+    <lastmod>2026-06-14T10:00:29.259Z</lastmod>
   </url>
   <url>
-    <loc>https://mateusharrington.com/blog/2021-05-11-how-might-science-be-done-better/index.html</loc>
-    <lastmod>2026-01-28T23:39:52.407Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/about/index.html</loc>
-    <lastmod>2026-01-28T23:55:35.420Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/publications/index.html</loc>
-    <lastmod>2026-01-28T22:27:23.541Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/publications/2022-10-25-a-multimodal-approach-to-biomarker-discovery-for-spinal-cord-injury/index.html</loc>
-    <lastmod>2026-01-28T22:27:23.537Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/publications/perlim_modelling_paper/index.html</loc>
-    <lastmod>2026-01-28T22:27:23.544Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/publications/modelling_paper_500/index.html</loc>
-    <lastmod>2026-01-28T22:27:23.542Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/publications/2022-10-25-sci-human-proteomics/index.html</loc>
-    <lastmod>2026-01-28T22:27:23.538Z</lastmod>
+    <loc>https://mateusharrington.com/blog/2026-06-12-rebuilding-my-cluster-with-opentofu/index.html</loc>
+    <lastmod>2026-06-13T07:49:46.086Z</lastmod>
   </url>
   <url>
     <loc>https://mateusharrington.com/index.html</loc>
     <lastmod>2026-01-29T18:53:20.622Z</lastmod>
   </url>
   <url>
+    <loc>https://mateusharrington.com/publications/2022-10-25-sci-human-proteomics/index.html</loc>
+    <lastmod>2026-01-28T22:27:23.538Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/publications/modelling_paper_500/index.html</loc>
+    <lastmod>2026-01-28T22:27:23.542Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/publications/perlim_modelling_paper/index.html</loc>
+    <lastmod>2026-01-28T22:27:23.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/publications/2022-10-25-a-multimodal-approach-to-biomarker-discovery-for-spinal-cord-injury/index.html</loc>
+    <lastmod>2026-01-28T22:27:23.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/publications/index.html</loc>
+    <lastmod>2026-01-28T22:27:23.541Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/about/index.html</loc>
+    <lastmod>2026-01-28T23:55:35.420Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/blog/2021-05-11-how-might-science-be-done-better/index.html</loc>
+    <lastmod>2026-01-28T23:39:52.407Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/blog/2026-05-24-from-truenas-to-kubernetes/index.html</loc>
+    <lastmod>2026-05-24T19:10:51.926Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/blog/2025-06-01-first-soldering-adventure/index.html</loc>
+    <lastmod>2026-01-28T22:27:23.529Z</lastmod>
+  </url>
+  <url>
     <loc>https://mateusharrington.com/blog/index.html</loc>
     <lastmod>2026-05-24T19:09:41.032Z</lastmod>
   </url>
   <url>
-    <loc>https://mateusharrington.com/blog/2020-07-27-first-publication/index.html</loc>
-    <lastmod>2026-01-28T23:31:48.598Z</lastmod>
+    <loc>https://mateusharrington.com/blog/2026-05-09-homelab-adventures/index.html</loc>
+    <lastmod>2026-05-23T23:00:01.175Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/blog/2026-05-25-flux-and-sops/index.html</loc>
+    <lastmod>2026-05-24T19:11:00.353Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mateusharrington.com/blog/2022-10-21-testing-normality-in-r/index.html</loc>
+    <lastmod>2026-01-28T22:27:23.471Z</lastmod>
   </url>
   <url>
     <loc>https://mateusharrington.com/blog/2020-06-05-testing-out-blogdown/index.html</loc>
@@ -87,53 +115,5 @@
   <url>
     <loc>https://mateusharrington.com/talk/index.html</loc>
     <lastmod>2026-01-28T22:27:23.558Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-09-homelab-adventures/index.html</loc>
-    <lastmod>2026-05-23T23:00:01.175Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-09-homelab-adventures/2026-05-23-homelab-k8s-journey.html</loc>
-    <lastmod>2026-05-23T23:31:17.791Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-23-homelab-k8s-journey/2026-05-23-homelab-k8s-journey.html</loc>
-    <lastmod>2026-05-23T23:00:01.125Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-23-flux-and-sops.html</loc>
-    <lastmod>2026-05-23T22:52:59.997Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-23-from-truenas-to-kubernetes.html</loc>
-    <lastmod>2026-05-23T22:52:59.998Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-23-grafana-finally.html</loc>
-    <lastmod>2026-05-23T22:52:59.998Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-23-homelab-k8s-journey/index.html</loc>
-    <lastmod>2026-05-24T19:10:40.265Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-23-tailscale-the-saga.html</loc>
-    <lastmod>2026-05-23T22:52:59.999Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-24-from-truenas-to-kubernetes/index.html</loc>
-    <lastmod>2026-05-24T19:10:51.926Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-26-tailscale-the-saga/index.html</loc>
-    <lastmod>2026-05-24T19:11:09.210Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-25-flux-and-sops/index.html</loc>
-    <lastmod>2026-05-24T19:11:00.353Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mateusharrington.com/blog/2026-05-27-grafana-finally/index.html</loc>
-    <lastmod>2026-05-26T09:19:46.778Z</lastmod>
   </url>
 </urlset>

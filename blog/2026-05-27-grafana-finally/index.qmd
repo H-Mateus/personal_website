@@ -235,9 +235,9 @@ forgot to provision the Ingress device. Or you renamed something
 in the ACL. Good luck.
 
 [index]: /blog/2026-05-23-homelab-k8s-journey/
-[part1]: /blog/2026-05-23-from-truenas-to-kubernetes/
-[part2]: /blog/2026-05-23-flux-and-sops/
-[part3]: /blog/2026-05-23-tailscale-the-saga/
+[part1]: /blog/2026-05-24-from-truenas-to-kubernetes/
+[part2]: /blog/2026-05-25-flux-and-sops/
+[part3]: /blog/2026-05-26-tailscale-the-saga/
 [kps]: https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
 [tsop]: https://tailscale.com/kb/1236/kubernetes-operator
 [readme]: https://github.com/H-Mateus/homelab

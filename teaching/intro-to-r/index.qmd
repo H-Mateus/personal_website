@@ -18,10 +18,10 @@ layout: single
 links:
 - icon: door-open
   name: website
-  url: https://h-mateus.github.io/MET581---Computing-for-Bioinformatics-and-Genetic-Epidemiology/
+  url: "https://h-mateus.github.io/MET581\\-\\-\\-Computing-for-Bioinformatics-and-Genetic-Epidemiology/"
 - icon: github
   name: code
-  url: https://github.com/H-Mateus/MET581---Computing-for-Bioinformatics-and-Genetic-Epidemiology
+  url: "https://github.com/H-Mateus/MET581\\-\\-\\-Computing-for-Bioinformatics-and-Genetic-Epidemiology"
 location: Heath Campus
 show_post_time: false
 #subtitle: Testing

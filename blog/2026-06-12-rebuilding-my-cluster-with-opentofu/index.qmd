@@ -18,11 +18,12 @@ execute:
 image: index-img/260613-082553.avif
 ---
 
-A while back I built a small Kubernetes cluster on my Proxmox box using
-Talos Linux. One control plane, two workers, very much a "let's see if
-this works" setup. It did work, and I've been running Flux against it
-for a few weeks, Immich for the photos, the *arr stack for everything
-else, monitoring, the usual homelab fare.
+A couple weeks ago [I documented](/blog/2026-05-23-homelab-k8s-journey/) 
+building a small Kubernetes cluster on my Proxmox box using Talos Linux. 
+One control plane, two workers, very much a "let's see if this works" 
+setup. It did work, and I've been running Flux against it, Immich 
+for the photos, the *arr stack for everything else, monitoring, 
+the usual homelab fare.
 
 The problem with the cluster was how it was built. I'd followed the
 Talos docs, generated machine configs in a `proxmox/` directory, pushed
